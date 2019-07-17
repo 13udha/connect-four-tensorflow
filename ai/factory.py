@@ -1,6 +1,6 @@
-from minimax.minimax import Minimax
-from neural_network.neural_network import NeuralNetwork
-from human.human import Human
+from .minimax.minimax import Minimax
+from .neural_network.neural_network import NeuralNetwork
+from .human.human import Human
 
 
 def create(ai_name, player):

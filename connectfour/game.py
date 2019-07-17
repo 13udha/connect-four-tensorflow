@@ -1,5 +1,6 @@
 from random import random, randint
 import tensorflow as tf
+tf.disable_v2_behavior
 
 from tool.array_consecutive import number_of_consecutive_values_2d as number_of_consecutive_values
 from tool.array_transposer import transpose_horizontally, transpose_diagonally

@@ -1,4 +1,6 @@
 import tensorflow as tf
+tf.disable_v2_behavior
+import sys
 
 from copy import deepcopy
 
@@ -21,7 +23,8 @@ board = tf.placeholder("float", [4, 4])
 x_p1 = tf.cast(tf.equal(board, -1), "float")
 x_p2 = tf.cast(tf.equal(board, 1), "float")
 x_empty = tf.cast(tf.equal(board, 0), "float")
-x = tf.reshape(tf.concat(0,[x_p1, x_p2, x_empty]), [1, n_input])
+#x = tf.reshape(tf.concat(0,[x_p1, x_p2, x_empty]), [1, n_input])
+x = tf.reshape([x_p1, x_p2, x_empty], [1, n_input])
 rating = tf.placeholder("float", [4])
 y = tf.reshape(rating, [1, n_classes])
 
@@ -100,7 +103,10 @@ class NeuralNetwork:
         })
         legal_moves = game.get_legal_moves()
 
-        score = None
+        #score = None
+        score = sys.float_info.min
+        #print([sys.float_info.min])
+        #print(type(predictions[0][0]))
         column = -1
         for index, prediction in enumerate(predictions[0][0]):
             if prediction > score and legal_moves[index]:

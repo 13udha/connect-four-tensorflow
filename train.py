@@ -53,11 +53,11 @@ def main(argv):
         opts, args = getopt.getopt(argv, "hv", [
                                    "p1=", "p2=", "board_width=", "board_height=", "iterations=", "randomness="])
     except getopt.GetoptError:
-        print 'train.py --p1 <1st player type> --p2 <2nd player type>'
+        print('train.py --p1 <1st player type> --p2 <2nd player type>')
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
-            print 'train.py --p1 <1st player type> --p2 <2nd player type>'
+            print('train.py --p1 <1st player type> --p2 <2nd player type>')
             sys.exit()
         if opt == '-v':
             global verbose
@@ -67,13 +67,17 @@ def main(argv):
         elif opt in ("--p2"):
             p2_type = arg
         elif opt in ("--board_width"):
-            board_width = string.atoi(arg)
+            #board_width = string.atoi(arg)
+            board_width = int(arg)
         elif opt in ("--board_height"):
-            board_height = string.atoi(arg)
+            #board_height = string.atoi(arg)
+            board_height = int(arg)
         elif opt in ("--iterations"):
-            number_of_games = string.atoi(arg)
+            #number_of_games = string.atoi(arg)
+            number_of_games = int(arg)
         elif opt in ("--randomness"):
-            randomness = string.atof(arg)
+            #randomness = string.atof(arg)
+            randomness = float(arg)
 
     game = Game(board_width, board_height)
 
