@@ -18,7 +18,7 @@ class Human:
         print(np.matrix(game.board).transpose())
         try:
             best_move = int(
-                raw_input(
+                input(
                     '[' + str(self.player) + '] Which column do you want to play:')
             )
         except ValueError:

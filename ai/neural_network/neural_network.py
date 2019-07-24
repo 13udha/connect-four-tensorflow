@@ -1,5 +1,4 @@
 import tensorflow as tf
-tf.disable_v2_behavior
 import sys
 
 from copy import deepcopy
@@ -18,14 +17,16 @@ n_hidden_4 = 26
 n_input = board_width * board_height * 3
 n_classes = board_width
 
-# tf Graph input
-board = tf.placeholder("float", [4, 4])
+# tf Graph input 
+#board = tf.placeholder("float", [4, 4])
+board = tf.compat.v1.placeholder("float", [4, 4])
 x_p1 = tf.cast(tf.equal(board, -1), "float")
 x_p2 = tf.cast(tf.equal(board, 1), "float")
 x_empty = tf.cast(tf.equal(board, 0), "float")
-#x = tf.reshape(tf.concat(0,[x_p1, x_p2, x_empty]), [1, n_input])
+#x = tf.reshape(tf.concat(0,[x_p1, x_p2, x_empty]), [1, n_input]) #das sollte noch wieder einkommentiert und dafür gefixt werden 
 x = tf.reshape([x_p1, x_p2, x_empty], [1, n_input])
-rating = tf.placeholder("float", [4])
+#rating = tf.placeholder("float", [4])
+rating = tf.compat.v1.placeholder("float", [4])
 y = tf.reshape(rating, [1, n_classes])
 
 
@@ -49,6 +50,11 @@ def multilayer_network(x, weights, biases):
 
 # Store layers weight & bias
 weights = {
+    #'h1': tf.Variable(tf.random_normal([n_input, n_hidden_1])),
+    #'h2': tf.Variable(tf.random_normal([n_hidden_1, n_hidden_2])),
+    #'h3': tf.Variable(tf.random_normal([n_hidden_2, n_hidden_3])),
+    #'h4': tf.Variable(tf.random_normal([n_hidden_3, n_hidden_4])),
+    #'out': tf.Variable(tf.random_normal([n_hidden_4, n_classes]))
     'h1': tf.Variable(tf.random_normal([n_input, n_hidden_1])),
     'h2': tf.Variable(tf.random_normal([n_hidden_1, n_hidden_2])),
     'h3': tf.Variable(tf.random_normal([n_hidden_2, n_hidden_3])),
@@ -56,6 +62,11 @@ weights = {
     'out': tf.Variable(tf.random_normal([n_hidden_4, n_classes]))
 }
 biases = {
+    #'b1': tf.Variable(tf.random_normal([n_hidden_1])),
+    #'b2': tf.Variable(tf.random_normal([n_hidden_2])),
+    #'b3': tf.Variable(tf.random_normal([n_hidden_3])),
+    #'b4': tf.Variable(tf.random_normal([n_hidden_4])),
+    #'out': tf.Variable(tf.random_normal([n_classes]))
     'b1': tf.Variable(tf.random_normal([n_hidden_1])),
     'b2': tf.Variable(tf.random_normal([n_hidden_2])),
     'b3': tf.Variable(tf.random_normal([n_hidden_3])),
@@ -66,7 +77,7 @@ biases = {
 # Construct model
 predict = multilayer_network(x, weights, biases)
 
-# Backward propagation
+# Backward propagation die sachen hier waren schon auskommentiert
 
 # cost = tf.reduce_mean(tf.square(y - predict))
 cost = tf.contrib.losses.softmax_cross_entropy(predict, y)
@@ -105,8 +116,6 @@ class NeuralNetwork:
 
         #score = None
         score = sys.float_info.min
-        #print([sys.float_info.min])
-        #print(type(predictions[0][0]))
         column = -1
         for index, prediction in enumerate(predictions[0][0]):
             if prediction > score and legal_moves[index]:
