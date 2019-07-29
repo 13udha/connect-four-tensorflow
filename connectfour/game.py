@@ -24,6 +24,8 @@ class Game:
     def __init__(self, board_width, board_height):
         self.board_width = board_width
         self.board_height = board_height
+        self.turn = 0
+        self.winner = 0
         self.reset()
 
     def reset(self):

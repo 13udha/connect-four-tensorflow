@@ -3,11 +3,19 @@ import numpy as np
 import sys
 import getopt
 import string
+import pickle
 
 from connectfour.game import Game, GAME_STATUS
 import ai.factory
 
 verbose = False
+filename = 'data'
+try:
+    infile = open(filename,'rb')
+    recorded_games = pickle.load(infile)
+    infile.close()
+except FileNotFoundError:
+    recorded_games = [tuple()]
 
 
 def printv(to_print):
@@ -128,13 +136,21 @@ def main(argv):
                     batch_statuses['won_p2'] += 1
                 else:
                     batch_statuses['draw'] += 1
-
+                recorded_games.append((game.winner,game.turn))
                 game.reset()
                 if game_number > 1 and game_number % 100 == 0:
                     print("### BATCH N " + str(batch_number) + " ###")
                     batch_number += 1
                     handle_stats(game_statuses, batch_statuses,
                                  p1_type, p2_type)
+
+    if recorded_games[0]==():
+        del recorded_games[0]
+    outfile = open(filename,'wb')
+    pickle.dump(recorded_games,outfile)
+    outfile.close()
+    
+    print(recorded_games)
 
 if __name__ == "__main__":
     main(sys.argv[1:])
