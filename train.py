@@ -150,7 +150,6 @@ def main(argv):
     pickle.dump(recorded_games,outfile)
     outfile.close()
     
-    print(recorded_games)
 
 if __name__ == "__main__":
     main(sys.argv[1:])

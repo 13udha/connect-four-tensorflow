@@ -55,11 +55,11 @@ weights = {
     #'h3': tf.Variable(tf.random_normal([n_hidden_2, n_hidden_3])),
     #'h4': tf.Variable(tf.random_normal([n_hidden_3, n_hidden_4])),
     #'out': tf.Variable(tf.random_normal([n_hidden_4, n_classes]))
-    'h1': tf.Variable(tf.random_normal([n_input, n_hidden_1])),
-    'h2': tf.Variable(tf.random_normal([n_hidden_1, n_hidden_2])),
-    'h3': tf.Variable(tf.random_normal([n_hidden_2, n_hidden_3])),
-    'h4': tf.Variable(tf.random_normal([n_hidden_3, n_hidden_4])),
-    'out': tf.Variable(tf.random_normal([n_hidden_4, n_classes]))
+    'h1': tf.Variable(tf.random.normal([n_input, n_hidden_1])),
+    'h2': tf.Variable(tf.random.normal([n_hidden_1, n_hidden_2])),
+    'h3': tf.Variable(tf.random.normal([n_hidden_2, n_hidden_3])),
+    'h4': tf.Variable(tf.random.normal([n_hidden_3, n_hidden_4])),
+    'out': tf.Variable(tf.random.normal([n_hidden_4, n_classes]))
 }
 biases = {
     #'b1': tf.Variable(tf.random_normal([n_hidden_1])),
@@ -67,11 +67,11 @@ biases = {
     #'b3': tf.Variable(tf.random_normal([n_hidden_3])),
     #'b4': tf.Variable(tf.random_normal([n_hidden_4])),
     #'out': tf.Variable(tf.random_normal([n_classes]))
-    'b1': tf.Variable(tf.random_normal([n_hidden_1])),
-    'b2': tf.Variable(tf.random_normal([n_hidden_2])),
-    'b3': tf.Variable(tf.random_normal([n_hidden_3])),
-    'b4': tf.Variable(tf.random_normal([n_hidden_4])),
-    'out': tf.Variable(tf.random_normal([n_classes]))
+    'b1': tf.Variable(tf.random.normal([n_hidden_1])),
+    'b2': tf.Variable(tf.random.normal([n_hidden_2])),
+    'b3': tf.Variable(tf.random.normal([n_hidden_3])),
+    'b4': tf.Variable(tf.random.normal([n_hidden_4])),
+    'out': tf.Variable(tf.random.normal([n_classes]))
 }
 
 # Construct model
