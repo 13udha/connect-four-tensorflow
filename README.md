@@ -31,6 +31,7 @@ python train.py --p1 <xxx> --p2 <xxx> --board_width <x> --board_height <x> --ite
 Example :
 ```
 python train.py --p1 minimax --p2 neural_network --iterations 200000 --randomness 0.1
+python train.py --p1 minimax --p2 human --iterations 1 --randomness 0.1 --board_width 7 --board_height 6
 ```
 
 ## Test
