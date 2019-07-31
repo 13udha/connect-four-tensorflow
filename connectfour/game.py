@@ -29,8 +29,8 @@ class Game:
         self.reset()
 
     def reset(self):
-        self.board = [[0 for i in range(self.board_width)]
-                      for j in range(self.board_height)]
+        self.board = [[0 for i in range(self.board_height)] #height width switched
+                      for j in range(self.board_width)]
         self.current_player = -1 if random() < 0.5 else 1
         self.winner = 0
         self.status = GAME_STATUS['PLAYING']
@@ -107,13 +107,13 @@ class Game:
             return 0
 
     def is_move_legal(self, column):
-        for i in range(4):
+        for i in range(self.board_height): #4
             if self.board[column][i] == 0:
                 return True
         return False
 
     def get_legal_moves(self):
         legal_moves = []
-        for column_number in range(4):
+        for column_number in range(self.board_width): #4
             legal_moves.append(self.is_move_legal(column_number))
         return legal_moves

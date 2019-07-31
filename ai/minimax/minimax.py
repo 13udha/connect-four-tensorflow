@@ -26,7 +26,7 @@ class Minimax:
         opponent_player = self.get_opponent(self.player)
 
         legal_moves = {}
-        for col in range(4):
+        for col in range(game.board_width): #4
             if game.is_move_legal(col):
                 game_copy = deepcopy(game)
                 game_copy.play(col, self.player)
@@ -61,7 +61,7 @@ class Minimax:
         if game is None:
             game = self.game
 
-        for i in range(4):
+        for i in range(game.board_width): #4
             if game.is_move_legal(i):
                 game_copy = deepcopy(game)
                 game_copy.play(i, current_player)
