@@ -149,7 +149,7 @@ class NeuralNetwork:
             print("Saving session graph")
 
     def back_propagation(self, game_board, column, score):
-        output_data = [0., 0., 0., 0.]
+        output_data = [0., 0., 0., 0.] #Change size!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!(append)
         output_data[column] = score
 
         _, c = self.session.run([optimizer, cost], feed_dict={
