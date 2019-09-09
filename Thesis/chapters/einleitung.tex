@@ -3,37 +3,40 @@
 
 %Was will ich machen?
 In der Bachelorarbeit soll ein Programm entwickelt werden das mit Hilfe von maschine learning trainiert um das Spiel Vier Gewinnt zu erlernen. 
-Es wird ein maschine learning Ansatz gewählt da hierdurch im Vergleich zu normalen Algorithmen für jeden Spieler individuellere Gegner geschafft werden können die das können des Spielers besser widerspiegeln.
-Dies soll den Spielspaß und den Lerneffekt optimieren.%???
+Es wird ein maschine learning Ansatz gewählt da hierdurch automatisiert individuelle Gegner geschaffen werden können die das können unterschiedlicher Spieler widerspiegeln.%???
 %Spiele müssen competetiv bleiben um spannend zu sein daher anpassen wichtig
 %Klassische spiele digital umsetzen bsp alhpa go
 
 
 \section{Motivation}
 %Warum will ich das machen?
-Warum spielen wir? Wir spielen um Fähigkeiten zu erlernen, ein Kind lernt Objekte nach Formen zu sortieren oder eine Katze lernt spielerisch das Jagen von Beute. Doch auch erwachsene Menschen spielen noch und können hierdurch ihre Fähigkeiten verbessern.  Um den bestmöglichen Effekt zu haben muss das Spiel eine gewisse Schwierigkeit haben die aber noch zu bewältigen sein muss. Da aber jeder Mensch, egal wie erfahren, das Spiel spielen soll ist es oft Hilfreich einen Gegner zu haben der ein ähnliches Level an Erfahrung mitbringt. Wenn nun diese Rolle des Gegners nicht von einem Menschen besetzt werden kann ist es naheliegend einen Computergegner zu erschaffen. Die Frage die ich in dieser Bachelorarbeit versuche zu beantworten ist: Ist es möglich einen Computergegner zu erschaffen der für jeden Spieler individuell genau so gut ist dass er nicht frustrierend gut oder zu einfach ist.
+Warum spielen wir? Wir spielen um Fähigkeiten zu erlernen, ein Kind lernt Objekte nach Formen zu sortieren oder eine Katze lernt spielerisch das Jagen von Beute. Doch auch erwachsene Menschen spielen noch und können hierdurch ihre Fähigkeiten verbessern.  Um den bestmöglichen Effekt zu haben muss das Spiel eine gewisse Schwierigkeit haben die aber noch zu bewältigen sein muss. Da aber jeder Mensch, egal wie erfahren, das Spiel spielen soll ist es oft Hilfreich einen Gegner zu haben der ein ähnliches Level an Erfahrung mitbringt. Wenn nun diese Rolle des Gegners nicht von einem Menschen besetzt werden kann ist es naheliegend einen Computergegner zu erschaffen. Die Frage die ich in dieser Bachelorarbeit versuche zu beantworten ist: Ist es möglich automatisiert verschieden starke Computergegner aus einer Simulation zu extrahieren.
 %Gehören schon immer zum menschlichen miteinander... barrieren abbauen
 
 
 \section{Problemstellung}
 %Was steht zur Verfügung? Was ist das Problem genau(mathematisch)? Random vs best move every turn~
 %genau das spiel beschreiben und was das problem dann ist und wie das gelöst werden kann
-Vier Gewinnt ist ein Spiel für 2 Spieler in dem abwechselnd Spielsteine in ein vertikales Spielfeld eingeworfen werden. Jeder Spieler kann sich in seinem Zug zwischen einem von sieben Einwurflöchern entscheiden. Wird ein Spielstein eingeworfen so fällt dieser auf die niedrigste der sechs Positionen die noch nicht durch andere Spielsteine gefüllt ist. Sind schon sechs Spielsteine in ein bestimmtest Einwurfloch gesteckt wurden so darf hier kein weiterer Spielstein eingeworfen werden. Ein Spieler gewinnt das Spiel wenn er es geschafft  hat, dass sich vier seiner Spielsteine in einer Reihe befinden. Eine Reihe kann horizontal, vertikal oder diagonal gebildet werden. Werden alle 42 Positionen mit Spielsteinen befüllt ohne eine Reihe von vier Steinen des selben Spielers zu bilden geht die Partie unentschieden aus.
-Ein Computergegner der für dieses Spiel erschaffen wird kann auf verschiedenen Algorithmen basieren er könnte zum Beispiel in jedem Zug einfach zufällig eines der sieben möglichen Einwurflöcher bedienen oder er könnte durch einen Minimax Algorithmus zu jedem Zeitpunkt den bestmöglichen Zug errechnen. Das Problem an solchen Algorithmen ist, dass sie immer gleich agieren egal wie gut oder schlecht der Spieler ist gegen den sie spielen. 
-Es ist natürlich möglich auch einen Computergegner zu entwerfen der je nach Anzahl der gewonnenen und verlorenen Spiele unterschiedliche Algorithmen auswählt und somit ein besseres Spielerlebnis erzeugt. Das Problem hieran ist, dass jeder einzelne Algorithmus programmiert werden muss und somit ein enormer Arbeitsaufwand entstehen kann.
-Ein Lösungsansatz für diese Problem sind selbstlernende Algorithmen die mit Hilfe von reinforement learning und neuronalen Netzen selbstständig erlernen, ähnlich wie ein Mensch, wie das Spiel zu gewinnen ist.
+Vier Gewinnt ist ein Spiel für 2 Spieler in dem abwechselnd Spielsteine in ein vertikales Spielfeld eingeworfen werden. Jeder Spieler kann sich in seinem Zug zwischen einem von sieben Einwurflöchern entscheiden. Wird ein Spielstein eingeworfen so fällt dieser auf die niedrigste der sechs Positionen die noch nicht durch andere Spielsteine gefüllt ist. Sind schon sechs Spielsteine in ein bestimmtest Einwurfloch gesteckt wurden so darf hier kein weiterer Spielstein eingeworfen werden. Ein Spieler gewinnt das Spiel wenn er es geschafft  hat, dass sich vier seiner Spielsteine in einer Reihe befinden. Eine Reihe kann horizontal, vertikal oder diagonal gebildet werden. Werden alle 42 Positionen mit Spielsteinen befüllt ohne eine Reihe von vier Steinen des selben Spielers zu bilden geht die Partie unentschieden aus.\\
+Ein Computergegner der für dieses Spiel erschaffen wird kann auf verschiedenen Algorithmen basieren er könnte zum Beispiel in jedem Zug einfach zufällig eines der sieben möglichen Einwurflöcher bedienen oder er könnte durch einen Minimax Algorithmus zu jedem Zeitpunkt den bestmöglichen Zug errechnen. 
+Das Problem hieran ist, dass jeder einzelne Algorithmus programmiert werden muss und somit ein enormer Arbeitsaufwand entstehen kann.
+Ein Lösungsansatz für diese Problem sind selbstlernende Algorithmen die mit Hilfe von reinforement learning und neuronalen Netzen selbstständig ähnlich wie ein Mensch erlernen wie das Spiel zu gewinnen ist.
+Hierraus können dann automatisch Computergegner generiert werden.
 
 \section{Umsetzung}
 %Wie gehe ich vor?
 %Minmax algorithmus als gegner erstellen und an dem dann trainieren
 %minmax da für dieses spiel möglich
 
-Es wird eine digitale Version des Spiels Vier Gewinnt erstellt und für eine Schnittstelle erschafft die es ermöglicht auszuwählen ob ein Mensch oder der Computer die Rolle der Spieler übernimmt. Spielt der Computer soll zwischen verschiedenen Algorithmen ausgewählt werden können. Dies ist wichtig da ein selbstlernender Algorithmus viele Spiele durchlaufen muss um einen Lernfortschritt aufzuzeigen. Somit kann in der Simulation dann trainiert werden ohne jedes einzelne Spiel gegen einen Menschen spielen zu müssen. Als Trainingsgegner wird ein Minimax Algorithmus dienen. Nachdem die Simulation dann durchlaufen ist können verschieden gute Varianten des selbstlernenden Algorithmus extrahiert werden indem die aktuelle Version zu verschiedenen Trainingsstadien abgespeichert wird.
+Es wird eine digitale Version des Spiels Vier Gewinnt erstellt und eine Schnittstelle erschafft die es ermöglicht auszuwählen ob ein Mensch oder der Computer die Rolle der Spieler übernimmt. Spielt der Computer soll zwischen verschiedenen Algorithmen ausgewählt werden können. Dies ist wichtig da ein selbstlernender Algorithmus viele Spiele durchlaufen muss um einen Lernfortschritt aufzuzeigen. Somit kann in der Simulation dann trainiert werden ohne jedes einzelne Spiel gegen einen Menschen spielen zu müssen. Als Trainingsgegner wird ein Minimax Algorithmus dienen. Nachdem die Simulation dann durchlaufen ist können verschieden gute Varianten des selbstlernenden Algorithmus extrahiert werden indem die aktuelle Version zu verschiedenen Trainingsstadien abgespeichert wird. Die Auswahl der Varianten wird anhand der prozentualen Gewinnchance durchgeführt. 
 
 %Wie wird das am Ende evaluiert? 
 %was macht hier sinn? betreuer nochmal fragen
 \section{Evaluation}
-Ich habe noch keine Ahnung wie die Evaluierung aussehen kann.
+Um zu testen wie gut der maschine learning Algorithmus das Spiel in seinen verschiedenen Trainingsstadien gelernt hat werden die Varianten gegen den Minimax Algorithmus mit unterschiedlicher Suchtiefe antreten. 
+Die unterschiedlichen Suchtiefen stellen dann die Spieler mit bestimmt guten Kenntnissen über das Spiel dar. Somit kann die Stärke der verschieden stark trainierten Varianten an Gegnern getestet werden die nicht weiter dazu lernen und somit einen guten Vergleich bieten.
+Zu erwarten ist, dass die weniger trainierten Varianten früher mehr gegen die Gegner mit ansteigender Suchtiefe verlieren werden als die mehr trainierten Varianten. 
+Hierdurch soll sich dann zeigen, dass durch das maschine learning Gegner auf automatisierte Weise geschaffen werden können die einen fein granularen Schwierigkeitsanstieg bieten können.
 
 \section{Related work}
 %related work???
