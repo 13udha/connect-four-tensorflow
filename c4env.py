@@ -57,5 +57,6 @@ class C4Env(gym.Env):
                     print('\033[33m' + "\u25CF" , end =" ")
                 else:
                     print('\033[30m' + "\u25CF" , end =" ")
-            print()
-        print(Style.RESET_ALL)
+            print(Style.RESET_ALL + '\x1b[K')
+            print(Back.BLUE, end ="")
+        print(Style.RESET_ALL+'\x1b[K')
