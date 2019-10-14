@@ -2,6 +2,9 @@ import gym
 from gym import spaces
 import numpy as np
 from typing import List
+from colorama import init, Fore , Back , Style
+
+init()
 
 from connectfour.game import Game, GAME_STATUS
 
@@ -43,5 +46,16 @@ class C4Env(gym.Env):
 
     def render(self, mode='human', close=False):
         # Render the environment to the screen
-        print()
-        print(np.matrix(self.game.board).transpose())
+        input = np.rot90(self.game.board, axes=(1,0))
+
+        print(Back.BLUE)
+        for i in range(len(input)):
+            for j in range(len(input[i])):
+                if input[i][j]==-1:
+                    print('\033[31m' + "\u25CF" , end =" ")
+                elif input[i][j]==1:
+                    print('\033[33m' + "\u25CF" , end =" ")
+                else:
+                    print('\033[30m' + "\u25CF" , end =" ")
+            print()
+        print(Style.RESET_ALL)
