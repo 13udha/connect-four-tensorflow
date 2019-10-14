@@ -46,7 +46,7 @@ class C4Env(gym.Env):
 
     def render(self, mode='human', close=False):
         # Render the environment to the screen
-        input = np.rot90(self.game.board, axes=(1,0))
+        input = np.fliplr(np.rot90(self.game.board, axes=(1,0)))
 
         print(Back.BLUE)
         for i in range(len(input)):

@@ -2,7 +2,7 @@ import gym
 from c4env import C4Env
 
 env = C4Env()
-for i_episode in range(20):
+for i_episode in range(10):
     observation = env.reset()
     for t in range(42):
         env.render()
