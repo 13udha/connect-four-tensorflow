@@ -4,9 +4,9 @@ from colorama import init, Fore , Back , Style
 import copy
 import datetime
 
-board_width = 7
-board_height = 6
-game = Game(board_width, board_height)
+BOARD_WIDTH = 7
+BOARD_HIGHT = 6
+game = Game(BOARD_WIDTH, BOARD_HIGHT)
 
 # game.play(3, game.current_player)
 # game.play(2, game.current_player)
@@ -60,13 +60,18 @@ def checknext(board, depth):
         return chances
     else:
         return 0
+        
+#TODO find best move
+def find_best_move(mmtree):
+    for i in mmtree:
+        print(i)
+    return 3
 
-
-
-before = datetime.datetime.now()
-minmax(game,7)
-after = datetime.datetime.now()
-print(after-before)
+# before = datetime.datetime.now()
+# minmax(game,7)
+# after = datetime.datetime.now()
+# print(after-before)
+find_best_move(minmax(game,4))
 
 input = np.fliplr(np.rot90(game.board, axes=(1,0)))
 
