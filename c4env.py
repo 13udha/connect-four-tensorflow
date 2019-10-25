@@ -27,7 +27,7 @@ class C4Env(gym.Env):
 
     def step(self, action):
         # Execute one time step within the environment
-        if(self.game.current_player==-1):
+        if(self.game.current_player==1):
             self.game.play(self.game.random_action(), self.game.current_player) #needs to be minmax
         else:
             self.game.play(action, self.game.current_player)

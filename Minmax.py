@@ -3,24 +3,20 @@ import numpy as np
 from colorama import init, Fore , Back , Style
 import copy
 import datetime
+import random
 
 BOARD_WIDTH = 7
 BOARD_HIGHT = 6
 game = Game(BOARD_WIDTH, BOARD_HIGHT)
 
-# game.play(3, game.current_player)
-# game.play(2, game.current_player)
-# game.play(3, game.current_player)
-# game.play(2, game.current_player)
-# # game.play(3, game.current_player)
-# # game.play(2, game.current_player)
-# # game.play(3, game.current_player)
-# game.play(4, game.current_player)
-# game.play(4, game.current_player)
-# game.play(4, game.current_player)
-# game.play(4, game.current_player)
-# game.play(4, game.current_player)
-# game.play(4, game.current_player)
+# game.current_player= 1
+# game.play(2, 1)
+# game.play(2, -1)
+# game.play(4, 1)
+# game.play(4, -1)
+
+
+
 
 
 
@@ -61,29 +57,52 @@ def checknext(board, depth):
     else:
         return 0
         
-#TODO find best move
 def find_best_move(mmtree):
-    for i in mmtree:
-        print(i)
-    return 3
+    moves = []
+    for elem in mmtree:
+        if isinstance(elem, list): 
+            moves.append(go_deeper(elem))
+        else:
+            if elem != None:
+                moves.append(elem)
+    if moves.count(max(moves))==1:
+        return moves.index(max(moves))  
+    else:
+        indices = [i for i, x in enumerate(moves) if x == max(moves)]
+        print (max(moves))
+        print (indices)
+        return random.choice(indices)
 
+def go_deeper(branch):
+    chance = []
+    for elem in branch:
+        if isinstance(elem, list): 
+            chance.append(go_deeper(elem))
+        else:
+            if elem != None:
+                chance.append(elem)
+
+    return (sum(chance)/len(chance)) 
+   
 # before = datetime.datetime.now()
 # minmax(game,7)
 # after = datetime.datetime.now()
 # print(after-before)
-find_best_move(minmax(game,4))
+print(find_best_move(minmax(game,4)))
 
-input = np.fliplr(np.rot90(game.board, axes=(1,0)))
 
-print(Back.BLUE, end ="")
-for i in range(len(input)):
-    for j in range(len(input[i])):
-        if input[i][j]==-1:
-            print('\033[31m' + "\u25CF" , end =" ")
-        elif input[i][j]==1:
-            print('\033[33m' + "\u25CF" , end =" ")
-        else:
-            print('\033[30m' + "\u25CF" , end =" ")
-    print(Style.RESET_ALL + '\x1b[K')
-    print(Back.BLUE, end ="")
-print(Style.RESET_ALL+'\x1b[K')
+
+# input = np.fliplr(np.rot90(game.board, axes=(1,0)))
+
+# print(Back.BLUE, end ="")
+# for i in range(len(input)):
+#     for j in range(len(input[i])):
+#         if input[i][j]==-1:
+#             print('\033[31m' + "\u25CF" , end =" ")
+#         elif input[i][j]==1:
+#             print('\033[33m' + "\u25CF" , end =" ")
+#         else:
+#             print('\033[30m' + "\u25CF" , end =" ")
+#     print(Style.RESET_ALL + '\x1b[K')
+#     print(Back.BLUE, end ="")
+# print(Style.RESET_ALL+'\x1b[K')
