@@ -3,6 +3,7 @@ from gym import spaces
 import numpy as np
 from typing import List
 from colorama import init, Fore , Back , Style
+from minmax import minmax,find_best_move
 
 init()
 
@@ -26,11 +27,15 @@ class C4Env(gym.Env):
         self.observation_space = spaces.Box(low=-1, high=1, shape=(self.board_width, self.board_height), dtype=np.int8)
 
     def step(self, action):
-        # Execute one time step within the environment
+        # Execute one time step within the environment (each player makes a move)
         if(self.game.current_player==1):
-            self.game.play(self.game.random_action(), self.game.current_player) #needs to be minmax
+            self.game.play(find_best_move(minmax(self.game,4)), self.game.current_player) 
+            if(not self.game.get_status()):
+                self.game.play(action, self.game.current_player)
         else:
             self.game.play(action, self.game.current_player)
+            if(not self.game.get_status()):
+                self.game.play(find_best_move(minmax(self.game,4)), self.game.current_player) 
         
 
         reward = 0  # self.balance * delay_modifier

@@ -5,9 +5,9 @@ import copy
 import datetime
 import random
 
-BOARD_WIDTH = 7
-BOARD_HIGHT = 6
-game = Game(BOARD_WIDTH, BOARD_HIGHT)
+# BOARD_WIDTH = 7
+# BOARD_HIGHT = 6
+# game = Game(BOARD_WIDTH, BOARD_HIGHT)
 
 # game.current_player= 1
 # game.play(2, 1)
@@ -88,7 +88,7 @@ def go_deeper(branch):
 # minmax(game,7)
 # after = datetime.datetime.now()
 # print(after-before)
-print(find_best_move(minmax(game,4)))
+# print(find_best_move(minmax(game,4)))
 
 
 
