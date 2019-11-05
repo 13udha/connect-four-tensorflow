@@ -7,7 +7,7 @@ import datetime
 BOARD_WIDTH = 7
 BOARD_HIGHT = 6
 game = Game(BOARD_WIDTH, BOARD_HIGHT)
-
+print(game.board)
 # game.current_player= 1
 # game.play(2, 1)
 # game.play(2, -1)

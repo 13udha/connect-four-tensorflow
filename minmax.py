@@ -69,8 +69,8 @@ def find_best_move(mmtree):
         return moves.index(max(moves))  
     else:
         indices = [i for i, x in enumerate(moves) if x == max(moves)]
-        print (max(moves))
-        print (indices)
+        #print (max(moves))
+        #print (indices)
         return random.choice(indices)
 
 def go_deeper(branch):

@@ -10,7 +10,7 @@ init()
 from connectfour.game import Game, GAME_STATUS
 
 
-class C4Env(gym.Env):
+class RandomEnv(gym.Env):
     """Custom Environment that follows gym interface"""
     metadata = {'render.modes': ['human']}
 
@@ -19,23 +19,24 @@ class C4Env(gym.Env):
     game = Game(board_width, board_height)
 
     def __init__(self):
-        super(C4Env, self).__init__()
+        super(RandomEnv, self).__init__()
         self.reset()
         # The player has the option to
-        self.action_space = spaces.Discrete(self.board_width)
+        # action space kann nicht verändert werden daher besteht immer die möglichkeit in volle reihen zu werfen 
+        self.action_space = spaces.Discrete(self.board_width)# wenn in voll -> verloren TODO oder die policy verändern dass es nicht mehr möglich ist
         # Example for using image as input:
         self.observation_space = spaces.Box(low=-1, high=1, shape=(self.board_width, self.board_height), dtype=np.int8)
 
     def step(self, action):
         # Execute one time step within the environment (each player makes a move)
         if(self.game.current_player==1):
-            self.game.play(find_best_move(minmax(self.game,4)), self.game.current_player) 
+            self.game.play(self.game.random_action(), self.game.current_player) 
             if(not self.game.get_status()):
                 self.game.play(action, self.game.current_player)
         else:
             self.game.play(action, self.game.current_player)
             if(not self.game.get_status()):
-                self.game.play(find_best_move(minmax(self.game,4)), self.game.current_player) 
+                self.game.play(self.game.random_action(), self.game.current_player) 
         
         self.steps += 1
         reward = -self.game.winner / self.steps 
