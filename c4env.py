@@ -14,12 +14,10 @@ class C4Env(gym.Env):
     """Custom Environment that follows gym interface"""
     metadata = {'render.modes': ['human']}
 
-    board_width = 7
-    board_height = 6
-    game = Game(board_width, board_height)
-
-    def __init__(self):
+    def __init__(self,board_width=7,board_height=6):
         super(C4Env, self).__init__()
+        self.board_width = board_width
+        self.board_height = board_height
         self.reset()
         # The player has the option to
         self.action_space = spaces.Discrete(self.board_width)
@@ -28,17 +26,13 @@ class C4Env(gym.Env):
 
     def step(self, action):
         # Execute one time step within the environment (each player makes a move)
-        if(self.game.current_player==1):
+
+        self.game.play(action, self.game.current_player)
+        if (not self.game.get_status()):
             self.game.play(find_best_move(minmax(self.game,4)), self.game.current_player) 
-            if(not self.game.get_status()):
-                self.game.play(action, self.game.current_player)
-        else:
-            self.game.play(action, self.game.current_player)
-            if(not self.game.get_status()):
-                self.game.play(find_best_move(minmax(self.game,4)), self.game.current_player) 
         
         self.steps += 1
-        reward = -self.game.winner / self.steps 
+        reward = float(-self.game.winner) / self.steps 
         
         done = self.game.get_status()
         
@@ -49,6 +43,8 @@ class C4Env(gym.Env):
         # Reset the state of the environment to an initial state
         self.game = Game(self.board_width, self.board_height)
         self.steps = 0
+        if (self.game.current_player==1): #  so ist immer der RL Agent als erstes im step dran und kann keinen illegalen zug machen wenn er als action das selbe feld wählt wie der Gegner
+            self.game.play(find_best_move(minmax(self.game,4)), self.game.current_player) 
         return np.array(self.game.board)
 
     def render(self, mode='human', close=False):
@@ -67,3 +63,6 @@ class C4Env(gym.Env):
             print(Style.RESET_ALL + '\x1b[K')
             print(Back.BLUE, end ="")
         print(Style.RESET_ALL+'\x1b[K')
+
+    def get_legal_moves(self):
+        return self.game.get_legal_moves()

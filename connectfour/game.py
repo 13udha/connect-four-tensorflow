@@ -43,6 +43,8 @@ class Game:
         return column
 
     def play(self, column_number, current_player):
+        if not self.is_move_legal(column_number):
+            raise Exception ("ILLEGAL MOVE")
         column = self.board[column_number]
         for row_number in range(len(column) - 1, -1, -1):
             if column[row_number] == 0:

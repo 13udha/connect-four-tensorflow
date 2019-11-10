@@ -49,3 +49,8 @@ Where the things happen :
 - train.py : handles the differnt games and calls the different AIs
 - ai/neural-network/neural-network.py : create the neural network, uses it for prediction and handles back propagation
 - connectfour/game.py : handles connect four game, makes AIs play and check who wins
+
+## Notes
+
+1 = Environment (Gelb)
+-1 = RL (Rot)
