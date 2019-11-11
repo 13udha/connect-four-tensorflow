@@ -26,11 +26,10 @@ class C4Env(gym.Env):
 
     def step(self, action):
         # Execute one time step within the environment (each player makes a move)
-
         self.game.play(action, self.game.current_player)
         if (not self.game.get_status()):
             self.game.play(find_best_move(minmax(self.game,4)), self.game.current_player) 
-        
+            self.game.get_status()
         self.steps += 1
         reward = float(-self.game.winner) / self.steps 
         

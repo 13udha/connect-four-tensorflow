@@ -17,11 +17,11 @@ class RandomEnv(C4Env):
         self.game.play(action, self.game.current_player)
         if (not self.game.get_status()):
             self.game.play(self.game.random_action(), self.game.current_player) 
-    
+            self.game.get_status()
         self.steps += 1
         reward = float(-self.game.winner) / self.steps 
-        done = self.game.get_status()
 
+        done = self.game.get_status()
         
         obs = self.game.board
         return obs, reward, done, {} #TODO was ist {}

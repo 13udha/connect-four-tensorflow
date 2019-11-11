@@ -15,7 +15,7 @@ from rl.memory import SequentialMemory
 
 
 # Get the environment and extract the number of actions.
-env = RandomEnv(7, 6)
+env = RandomEnv()
 np.random.seed(123)
 env.seed(123)
 nb_actions = env.action_space.n

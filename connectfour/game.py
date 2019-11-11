@@ -69,7 +69,6 @@ class Game:
             self.winner = -1
         elif player2_won:
             self.winner = 1
-
         status = GAME_STATUS['FINISHED'] \
             if player1_won or player2_won or self.is_board_full() \
             else GAME_STATUS['PLAYING']
