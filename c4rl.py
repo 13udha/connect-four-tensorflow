@@ -19,6 +19,8 @@ env = RandomEnv()
 np.random.seed(123)
 env.seed(123)
 nb_actions = env.action_space.n
+results_path = './results/'
+weights_filename = results_path + 'dqn_weights.h5f'
 
 # Next, we build a very simple model.
 model = Sequential()
@@ -41,6 +43,11 @@ dqn = DQNAgent(model=model, nb_actions=nb_actions, memory=memory, nb_steps_warmu
                target_model_update=1e-2, policy=policy,test_policy=policy)
 dqn.compile(Adam(lr=1e-3), metrics=['mae'])
 
+# Load weights
+try:
+    dqn.load_weights(weights_filename)
+except OSError:
+    print("no weights found")
 # Okay, now it's time to learn something! We visualize the training here for show, but this
 # slows down training quite a lot. You can always safely abort the training prematurely using
 # Ctrl + C.
@@ -51,3 +58,6 @@ dqn.fit(env, nb_steps=50000, visualize=False, verbose=2)
 
 # Finally, evaluate our algorithm for 5 episodes.
 dqn.test(env, nb_episodes=5, visualize=True)
+
+# Save weights
+dqn.save_weights(weights_filename, overwrite=True)
