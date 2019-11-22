@@ -4,6 +4,8 @@ import numpy as np
 from typing import List
 from colorama import init, Fore , Back , Style
 from minmax import minmax,find_best_move
+from time import time
+import pickle
 
 init()
 
@@ -18,6 +20,10 @@ class C4Env(gym.Env):
         super(C4Env, self).__init__()
         self.board_width = board_width
         self.board_height = board_height
+        self.reward_list_name = 'reward{}.pickle'.format(str(time()).replace('.',''))
+        self.reward_file = open(self.reward_list_name, mode='wb')
+        self.reward_list = []
+        
         self.reset()
         # The player has the option to
         self.action_space = spaces.Discrete(self.board_width)
@@ -34,6 +40,9 @@ class C4Env(gym.Env):
         reward = float(-self.game.winner) / self.steps 
         
         done = self.game.get_status()
+        if(done):
+            self.reward_list.append(reward) 
+            pickle.dump(self.reward_list,self.reward_file)
         
         obs = self.game.board
         return obs, reward, done, {} #TODO was ist {}
