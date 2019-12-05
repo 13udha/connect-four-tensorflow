@@ -2,29 +2,53 @@
 
 \label{cha:Schluss}
 
-Eine Liste der genutzten Technologien.
-
-\section{Reinforcement Learning}
-\subsection{psychologischer Hintergrund}
-
-\subsection{Agent}
-
-\subsection{Environment}
-
-\subsection{Policy}
-
-\subsection{Reward}
-
-\subsection{State}
-
-\subsection{Actions}
-
-\subsection{Q-Funktion}
+In dieser Arbeit werden einige Technologien genutzt um die Problemstellung zu lösen.
+Die wichtigsten dieser Technologien werden hier erklärt um das weitere Verständniss des Lesers zu gewährleisten. 
 
 
 \section{Vier Gewinnt}
-Alles was es über das Spiel zu wissen gibt
+Vier Gewinnt ist ein Spiel für 2 Spieler in dem abwechselnd Spielsteine in ein vertikales Spielfeld eingeworfen werden. Jeder Spieler kann sich in seinem Zug zwischen einem von sieben Einwurflöchern entscheiden. Wird ein Spielstein eingeworfen so fällt dieser auf die niedrigste der sechs Positionen die noch nicht durch andere Spielsteine gefüllt ist. Sind schon sechs Spielsteine in ein bestimmtest Einwurfloch gesteckt wurden so darf hier kein weiterer Spielstein eingeworfen werden. Ein Spieler gewinnt das Spiel wenn er es geschafft  hat, dass sich vier seiner Spielsteine in einer Reihe befinden. Eine Reihe kann horizontal, vertikal oder diagonal gebildet werden. Werden alle 42 Positionen mit Spielsteinen befüllt ohne eine Reihe von vier Steinen des selben Spielers zu bilden geht die Partie unentschieden aus.
 
-\section{Python}
-\section{Tensorflow}
-\section{andere Software?}
+\section{Reinforcement Learning}
+Reinforcement Learning (Bestärkendes Lernen) ist eine Maschine-Learning Methode bei der ein Agent mit Hilfe eines Environments, Policy, State, Actions und eines Rewards lernt eine ihm gegebene Aufgabe zu lösen.
+Die Aufgabe ist in diesem Fall das Spiel Vier Gewinnt zu meistern.
+
+\subsection{Agent}
+Bei dem Agenten handelt es sich um den Acteur der die ihm gegebene Aufgabe meistern soll. Er sieht das Environment und wählt mittels der Policy die ihm am besten erscheinende Action aus.
+Hier ist der Agent einer der beiden Spieler von Vier Gewinnt.
+
+\subsection{Environment}
+Das Environment beschreibt das gesamte Problem dass der Agent versucht zu lösen.
+In Vier Gewinnt ist dies das Spielfeld und der Gegner. 
+
+\subsection{Policy}
+Mit der Policy wird das Verhalten beschrieben nach dem der Agent entscheidet welche der möglichen Actions die aktuel beste ist um den Reward zu maximieren.\\
+TODO %welche wird genommen?
+
+\subsection{State}
+Der State beschreibt den actuellen Zustand des Environments.
+Für Vier Gewinnt beschreibt der State welche der 42 Felder mit welchen Steinen befüllt sind. 
+
+\subsection{Actions}
+Actions sind die möglichen Aktionen zwischen denen sich der Agent je nach State entscheiden muss.
+Die Actions in Vier Gewinnt beschreiben die sieben Löcher in die der Agent Steine werfen kann.
+
+\subsection{Reward}
+
+\subsection{psychologischer Hintergrund}
+Reinforcement Learning funktioniert nach dem Prinzip von Trial-and-Error.\\
+TODO %ausführen
+
+\subsection{Q-Funktion}
+TODO %ausführen
+
+
+\section{Software}
+Um die Problemstellung zu bearbeiten wurde eine Implementierung des Spiels in Python genutzt und aus dieser mit openai gym ein Environment geschaffen. An diesem Environment trainiert dann ein Agenten der durch Keras-RL erschaffen wurde.
+
+\subsection{Python}
+TODO
+\subsection{Tensorflow}
+TODO
+\subsection{Keras-RL}
+TODO
