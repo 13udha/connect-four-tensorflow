@@ -16,7 +16,7 @@ class C4Env(gym.Env):
     """Custom Environment that follows gym interface"""
     metadata = {'render.modes': ['human']}
 
-    def __init__(self,board_width=7,board_height=6):
+    def __init__(self,board_width=4,board_height=4): # should be 7 , 6
         super(C4Env, self).__init__()
         self.board_width = board_width
         self.board_height = board_height
