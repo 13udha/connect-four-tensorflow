@@ -1,0 +1,25 @@
+{
+    "root": "C:/Users/Pablo Lubitz/Desktop/Projekte/connect-four-tensorflow",
+    "program": "c:/Users/Pablo Lubitz/Desktop/Projekte/connect-four-tensorflow/c4rl.py",
+    "git": {
+        "remote": "https://github.com/13udha/connect-four-tensorflow.git",
+        "commit": "0acea389c93a3b32020e8b62e83355c4825c0b2a"
+    },
+    "email": "13udha666@gmail.com",
+    "startedAt": "2019-12-20T14:02:44.409998",
+    "host": "DESKTOP-I4OAINL",
+    "username": "Pablo Lubitz",
+    "executable": "C:\\Users\\Pablo Lubitz\\AppData\\Local\\Programs\\Python\\Python36\\python.exe",
+    "os": "Windows-10-10.0.18362-SP0",
+    "python": "3.6.7",
+    "gpu": "GeForce GT 650M",
+    "gpu_count": 1,
+    "cpu_count": 8,
+    "args": [],
+    "state": "failed",
+    "jobType": null,
+    "mode": "run",
+    "project": "connect-four-tensorflow",
+    "heartbeatAt": "2019-12-20T14:02:49.430501",
+    "exitcode": 1
+}
