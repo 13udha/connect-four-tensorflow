@@ -5,7 +5,6 @@ from typing import List
 from colorama import init, Fore , Back , Style
 from minmax import minmax,find_best_move
 from c4env import C4Env
-import pickle
 init()
 
 from connectfour.game import Game, GAME_STATUS
@@ -26,11 +25,7 @@ class RandomEnv(C4Env):
         #reward = float(-self.game.winner) / self.steps 
 
         done = self.game.get_status()
-        if(done):
-            self.reward_list.append(reward) 
-            self.reward_file = open(self.reward_list_name, mode='wb')
-            pickle.dump(self.reward_list,self.reward_file)
-            self.reward_file.close()
+
         obs = self.game.board
         return obs, reward, done, {} #TODO was ist {}
 
