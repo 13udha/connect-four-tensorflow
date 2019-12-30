@@ -72,7 +72,7 @@ except OSError:
 # slows down training quite a lot. You can always safely abort the training prematurely using
 # Ctrl + C.
 #dqn.fit(env, nb_steps=5000000, visualize=False, verbose=2)
-sarsa.fit(env, nb_steps=50000, visualize=False, verbose=2, callbacks=[WandbCallback()])
+sarsa.fit(env, nb_steps=50000, visualize=False, verbose=1, callbacks=[WandbCallback()])
 
 # After training is done, we save the final weights.
 #dqn.save_weights('dqn_{}_weights.h5f'.format(ENV_NAME), overwrite=True)

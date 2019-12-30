@@ -5,7 +5,6 @@ from typing import List
 from colorama import init, Fore , Back , Style
 from minmax import minmax,find_best_move
 from time import time
-import pickle
 
 init()
 
@@ -16,13 +15,10 @@ class C4Env(gym.Env):
     """Custom Environment that follows gym interface"""
     metadata = {'render.modes': ['human']}
 
-    def __init__(self,board_width=4,board_height=4): # should be 7 , 6
+    def __init__(self,board_width=7,board_height=6):
         super(C4Env, self).__init__()
         self.board_width = board_width
         self.board_height = board_height
-        self.reward_list_name = 'reward{}.pickle'.format(str(time()).replace('.',''))
-        self.reward_file = open(self.reward_list_name, mode='wb')
-        self.reward_list = []
         
         self.reset()
         # The player has the option to
@@ -40,10 +36,7 @@ class C4Env(gym.Env):
         reward = float(-self.game.winner) / self.steps 
         
         done = self.game.get_status()
-        if(done):
-            self.reward_list.append(reward) 
-            pickle.dump(self.reward_list,self.reward_file)
-        
+
         obs = self.game.board
         return obs, reward, done, {} #TODO was ist {}
 

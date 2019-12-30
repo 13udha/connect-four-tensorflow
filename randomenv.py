@@ -20,7 +20,10 @@ class RandomEnv(C4Env):
             self.game.play(self.game.random_action(), self.game.current_player) 
             self.game.get_status()
         self.steps += 1
-        reward = float(-self.game.winner) / self.steps 
+
+        reward =self.boardchecker()
+
+        #reward = float(-self.game.winner) / self.steps 
 
         done = self.game.get_status()
         if(done):
@@ -38,3 +41,7 @@ class RandomEnv(C4Env):
         if (self.game.current_player==1): # so ist immer der RL Agent als erstes im step dran und kann keinen illegalen zug machen wenn er als action das selbe feld wählt wie der Gegner
             self.game.play(self.game.random_action(), self.game.current_player) 
         return np.array(self.game.board)
+
+    def boardchecker(self):
+        #Anzahl der 2er,3er und 4er Ketten der Spieler werden verrechnet
+        return (self.game.check_for_streak(-1,2) + (self.game.check_for_streak(-1,3)*10)+ (self.game.check_for_streak(-1,4)*1000))-(self.game.check_for_streak(1,2) + (self.game.check_for_streak(1,3)*10)+ (self.game.check_for_streak(1,4)*1000))
