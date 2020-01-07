@@ -36,17 +36,21 @@ env = RandomEnv()
 np.random.seed(123)
 env.seed(123)
 nb_actions = env.action_space.n
+
+# Each Layer has a Size of two times the boardsize
+layersize = env.observation_space.shape[0] * env.observation_space.shape[1] * 2
+
 results_path = './results/'
 weights_filename = results_path + 'dqn_weights.h5f'
 
 # Next, we build a very simple model.
 model = Sequential()
 model.add(Flatten(input_shape=(1,) + env.observation_space.shape))
-model.add(Dense(32))
+model.add(Dense(layersize))
 model.add(Activation('relu'))
-model.add(Dense(32))
+model.add(Dense(layersize))
 model.add(Activation('relu'))
-model.add(Dense(32))
+model.add(Dense(layersize))
 model.add(Activation('relu'))
 model.add(Dense(nb_actions))
 model.add(Activation('linear'))

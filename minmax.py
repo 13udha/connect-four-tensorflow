@@ -57,32 +57,32 @@ def checknext(board, depth):
     else:
         return 0
         
-def find_best_move(mmtree):
-    moves = []
-    for elem in mmtree:
-        if isinstance(elem, list): 
-            moves.append(go_deeper(elem))
+    def find_best_move(mmtree):
+        moves = []
+        for elem in mmtree:
+            if isinstance(elem, list): 
+                moves.append(go_deeper(elem))
+            else:
+                if elem != None:
+                    moves.append(elem)
+        if moves.count(max(moves))==1:
+            return moves.index(max(moves))  
         else:
-            if elem != None:
-                moves.append(elem)
-    if moves.count(max(moves))==1:
-        return moves.index(max(moves))  
-    else:
-        indices = [i for i, x in enumerate(moves) if x == max(moves)]
-        #print (max(moves))
-        #print (indices)
-        return random.choice(indices)
+            indices = [i for i, x in enumerate(moves) if x == max(moves)]
+            #print (max(moves))
+            #print (indices)
+            return random.choice(indices)
 
-def go_deeper(branch):
-    chance = []
-    for elem in branch:
-        if isinstance(elem, list): 
-            chance.append(go_deeper(elem))
-        else:
-            if elem != None:
-                chance.append(elem)
+    def go_deeper(branch):
+        chance = []
+        for elem in branch:
+            if isinstance(elem, list): 
+                chance.append(go_deeper(elem))
+            else:
+                if elem != None:
+                    chance.append(elem)
 
-    return (sum(chance)/len(chance)) 
+        return (sum(chance)/len(chance)) 
    
 # before = datetime.datetime.now()
 # minmax(game,7)

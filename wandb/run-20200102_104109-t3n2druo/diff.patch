@@ -1,0 +1,62 @@
+diff --git a/c4rl.py b/c4rl.py
+index 17d9ec5..ffc72bd 100644
+--- a/c4rl.py
++++ b/c4rl.py
+@@ -36,17 +36,21 @@ env = RandomEnv()
+ np.random.seed(123)
+ env.seed(123)
+ nb_actions = env.action_space.n
++
++# Each Layer has a Size of two times the boardsize
++layersize = env.observation_space.shape[0] * env.observation_space.shape[1] * 2
++
+ results_path = './results/'
+ weights_filename = results_path + 'dqn_weights.h5f'
+ 
+ # Next, we build a very simple model.
+ model = Sequential()
+ model.add(Flatten(input_shape=(1,) + env.observation_space.shape))
+-model.add(Dense(32))
++model.add(Dense(layersize))
+ model.add(Activation('relu'))
+-model.add(Dense(32))
++model.add(Dense(layersize))
+ model.add(Activation('relu'))
+-model.add(Dense(32))
++model.add(Dense(layersize))
+ model.add(Activation('relu'))
+ model.add(Dense(nb_actions))
+ model.add(Activation('linear'))
+@@ -72,7 +76,7 @@ except OSError:
+ # slows down training quite a lot. You can always safely abort the training prematurely using
+ # Ctrl + C.
+ #dqn.fit(env, nb_steps=5000000, visualize=False, verbose=2)
+-sarsa.fit(env, nb_steps=50000, visualize=False, verbose=1, callbacks=[WandbCallback()])
++sarsa.fit(env, nb_steps=500000, visualize=False, verbose=1, callbacks=[WandbCallback()])
+ 
+ # After training is done, we save the final weights.
+ #dqn.save_weights('dqn_{}_weights.h5f'.format(ENV_NAME), overwrite=True)
+diff --git a/results/dqn_weights.h5f b/results/dqn_weights.h5f
+deleted file mode 100644
+index 28810f2..0000000
+Binary files a/results/dqn_weights.h5f and /dev/null differ
+diff --git a/wandb/run-20191230_142345-fv5wdbg6/wandb-events.jsonl b/wandb/run-20191230_142345-fv5wdbg6/wandb-events.jsonl
+index 28585c3..26ce1fe 100644
+--- a/wandb/run-20191230_142345-fv5wdbg6/wandb-events.jsonl
++++ b/wandb/run-20191230_142345-fv5wdbg6/wandb-events.jsonl
+@@ -3,3 +3,4 @@
+ {"system.cpu": 32.85, "system.memory": 81.33, "system.disk": 84.6, "system.proc.memory.availableMB": 1471.4, "system.network.sent": 103257, "system.network.recv": 812144, "_wandb": true, "_timestamp": 1577715921, "_runtime": 95}
+ {"system.cpu": 33.17, "system.memory": 81.76, "system.disk": 84.6, "system.proc.memory.availableMB": 1438.68, "system.network.sent": 136341, "system.network.recv": 867003, "_wandb": true, "_timestamp": 1577715952, "_runtime": 126}
+ {"system.cpu": 34.72, "system.memory": 81.7, "system.disk": 84.6, "system.proc.memory.availableMB": 1442.84, "system.network.sent": 168485, "system.network.recv": 1260720, "_wandb": true, "_timestamp": 1577715983, "_runtime": 158}
++{"system.cpu": 38.3, "system.memory": 81.71, "system.disk": 84.6, "system.proc.memory.availableMB": 1443.74, "system.network.sent": 227093, "system.network.recv": 1351001, "_wandb": true, "_timestamp": 1577716015, "_runtime": 189}
+diff --git a/wandb/run-20191230_142345-fv5wdbg6/wandb-metadata.json b/wandb/run-20191230_142345-fv5wdbg6/wandb-metadata.json
+index 30d35ab..86236b1 100644
+--- a/wandb/run-20191230_142345-fv5wdbg6/wandb-metadata.json
++++ b/wandb/run-20191230_142345-fv5wdbg6/wandb-metadata.json
+@@ -20,5 +20,5 @@
+     "jobType": null,
+     "mode": "run",
+     "project": "connect-four-tensorflow",
+-    "heartbeatAt": "2019-12-30T14:26:30.439173"
++    "heartbeatAt": "2019-12-30T14:26:46.485283"
+ }
