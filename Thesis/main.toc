@@ -53,32 +53,34 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.2}Tensorflow}{4}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}Keras-RL}{4}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.3}Keras}{5}{subsection.2.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Konzept}{5}{chapter.3}
+\contentsline {subsection}{\numberline {2.3.4}Ai Gym}{5}{subsection.2.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Plan}{5}{section.3.1}
+\contentsline {chapter}{\numberline {3}Konzept}{6}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Implementierung}{6}{chapter.4}
+\contentsline {section}{\numberline {3.1}Plan}{6}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Agent}{6}{section.4.1}
+\contentsline {chapter}{\numberline {4}Implementierung}{7}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Environment}{6}{section.4.2}
+\contentsline {section}{\numberline {4.1}Agent}{7}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Policy}{6}{section.4.3}
+\contentsline {section}{\numberline {4.2}Environment}{7}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Reward}{6}{section.4.4}
+\contentsline {section}{\numberline {4.3}Policy}{7}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}State}{6}{section.4.5}
+\contentsline {section}{\numberline {4.4}Reward}{7}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Actions}{6}{section.4.6}
+\contentsline {section}{\numberline {4.5}State}{7}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Evaluierung}{7}{chapter.5}
+\contentsline {section}{\numberline {4.6}Actions}{7}{section.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Auswertung}{7}{section.5.1}
+\contentsline {chapter}{\numberline {5}Evaluierung}{8}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Fazit}{8}{chapter.6}
+\contentsline {section}{\numberline {5.1}Auswertung}{8}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Besonderheiten}{8}{section.6.1}
+\contentsline {chapter}{\numberline {6}Fazit}{9}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Quellenverzeichnis}{9}{appendix*.6}
+\contentsline {section}{\numberline {6.1}Besonderheiten}{9}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Quellenverzeichnis}{10}{appendix*.6}
