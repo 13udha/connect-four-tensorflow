@@ -43,15 +43,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.6}Reward}{4}{subsection.2.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.7}psychologischer Hintergrund}{4}{subsection.2.2.7}
+\contentsline {subsection}{\numberline {2.2.7}Q-Funktion}{4}{subsection.2.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.8}Q-Funktion}{4}{subsection.2.2.8}
+\contentsline {subsection}{\numberline {2.2.8}psychologischer Hintergrund}{4}{subsection.2.2.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Software}{4}{section.2.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.1}Python}{4}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Tensorflow}{4}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.2}Tensorflow}{5}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.3}Keras}{5}{subsection.2.3.3}
 \defcounter {refsection}{0}\relax 
