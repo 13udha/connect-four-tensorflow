@@ -29,33 +29,37 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Vier Gewinnt}{3}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Reinforcement Learning}{3}{section.2.2}
+\contentsline {section}{\numberline {2.2}Minmax Algorithmus}{3}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Agent}{3}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.1}Negamax}{4}{subsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Environment}{4}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Reinforcement Learning}{4}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}Policy}{4}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Agent}{4}{subsection.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.4}State}{4}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.3.2}Environment}{4}{subsection.2.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.5}Actions}{4}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.3.3}Policy}{4}{subsection.2.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.6}Reward}{4}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.3.4}State}{4}{subsection.2.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.7}Q-Funktion}{4}{subsection.2.2.7}
+\contentsline {subsection}{\numberline {2.3.5}Actions}{4}{subsection.2.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.8}psychologischer Hintergrund}{4}{subsection.2.2.8}
+\contentsline {subsection}{\numberline {2.3.6}Reward}{4}{subsection.2.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Software}{4}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.7}Q-Funktion}{4}{subsection.2.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Python}{4}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.8}psychologischer Hintergrund}{5}{subsection.2.3.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Tensorflow}{5}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Software}{5}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}Keras}{5}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.4.1}Python}{5}{subsection.2.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.4}Ai Gym}{5}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.4.2}Tensorflow}{5}{subsection.2.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.3}Keras}{5}{subsection.2.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.4}Open AI Gym}{5}{subsection.2.4.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Konzept}{6}{chapter.3}
 \defcounter {refsection}{0}\relax 

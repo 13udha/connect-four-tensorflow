@@ -12,6 +12,10 @@ Vier Gewinnt ist ein Spiel für 2 Spieler in dem abwechselnd Spielsteine in ein 
 
 
 \section{Minmax Algorithmus}
+Ein Minmax Algorithmus beschreibt einen rekursiven Ansatz zum finden einer optimalen Lösung für Probleme von zwei Parteien mit widersetzlich Zielen. Dies sind in der Regel Nullsummenspiele mit perfekter Information, es gibt also für jeden Gewinn des einen Spielers genauso viel Verlust für den anderen und es gibt kein Spielelement, dass nur für einen Spieler einsehbar ist. Hierbei werden in jedem Rekursionsschritt alle möglichen Züge des derzeitigen Akteurs betrachtet und bewertet. Wenn der derzeitige Zug nicht zum Gewinn führt, findet eine Bewertung durch das Betrachten des nächsten Rekursionsschrittes statt. Der Name Minmax ergibt sich durch das Betrachten der abwechselnden Züge von den Akteuren wobei jeweils der maximal beste Zug für den einen der minimal beste Zug für den anderen bedeutet.  Dieses verfahren führt bei einfachen Spielen wie Tic-Tac-Toe zu einem \colorbox{red!30}{TODO}.\\
+
+\subsection{Negamax}
+Negamax ist eine Variante des Minmax Algorithmus die \colorbox{red!30}{TODO}.
 
 \section{Reinforcement Learning}
 Reinforcement Learning (Bestärkendes Lernen) ist eine Maschine-Learning Methode bei der ein Agent mit Hilfe eines Environments, Policy, State, Actions und eines Rewards lernt eine ihm gegebene Aufgabe zu lösen.
