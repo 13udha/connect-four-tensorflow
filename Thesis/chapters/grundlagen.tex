@@ -20,29 +20,27 @@ Negamax ist eine Variante des Minmax Algorithmus die \colorbox{red!30}{TODO}.
 \section{Reinforcement Learning}
 Reinforcement Learning (Bestärkendes Lernen) ist eine Maschine-Learning Methode bei der ein Agent mit Hilfe eines Environments, Policy, State, Actions und eines Rewards lernt eine ihm gegebene Aufgabe zu lösen.
 Die Aufgabe ist in diesem Fall das Spiel Vier Gewinnt zu meistern.
-\colorbox{red!30}{Split into info and used} %ausführen
-
-\subsection{Agent}
-Bei dem Agenten handelt es sich um den Acteur der die ihm gegebene Aufgabe meistern soll. Er sieht das Environment und wählt mittels der Policy die ihm am besten erscheinende Action aus.
-Hier ist der Agent einer der beiden Spieler von Vier Gewinnt.
 
 \subsection{Environment}
 Das Environment beschreibt das gesamte Problem dass der Agent versucht zu lösen.
-In Vier Gewinnt ist dies das Spielfeld und der Gegner. 
+
+
+\subsection{Agent}
+Bei dem Agenten handelt es sich um den Acteur der die ihm gegebene Aufgabe meistern soll. Er sieht das Environment und wählt mittels der Policy die ihm am besten erscheinende Action aus.
+
 
 \subsection{Policy}
 Mit der Policy wird das Verhalten beschrieben nach dem der Agent entscheidet welche der möglichen Actions die aktuell beste ist um den Reward zu maximieren.\\
-\colorbox{red!30}{TODO} %welche wird genommen?
+\colorbox{red!30}{TODO} %welche gibt es so?
 
 \subsection{State}
 Der State beschreibt den aktuellen Zustand des Environments.
-Für Vier Gewinnt beschreibt der State welche der 42 Felder mit welchen Steinen befüllt sind. 
 
 \subsection{Actions}
 Actions sind die möglichen Aktionen zwischen denen sich der Agent je nach State entscheiden muss.
-Die Actions in Vier Gewinnt beschreiben die sieben Löcher in die der Agent Steine werfen kann.
 
 \subsection{Reward}
+
 \colorbox{red!30}{TODO} %ausführen
 
 \subsection{Q-Funktion}
@@ -64,10 +62,13 @@ Der Schöpfer von Python beschreibt es selbst als einfach zu erlernende objektor
 \colorbox{red!30}{TODO https://dl.acm.org/doi/book/10.5555/1593511}
 
 \subsection{Tensorflow}
-\colorbox{red!30}{TODO}
+Bei Tensorflow handelt es sich um ein open source Framework für Maschine-Learning welches ursprünglich für den internen Bedarf bei Google, für zum Beispiel Spracherkennung oder Google Maps, entwickelt wurde. 
+\colorbox{red!30}{TODO mehr?}
 
 \subsection{Keras}
-\colorbox{red!30}{TODO}
+Keras ist eine open source Bibliothek die auf Tensorflow aufbaut welche die möglichkeit bietet vereinfacht neuronale Netze zu erstellen um diese in reinforcement Learning Algorithmen zu benutzen.
+\colorbox{red!30}{TODO mehr?}
 
-\subsection{Open AI Gym}
-\colorbox{red!30}{TODO Gym is a toolkit for developing and comparing reinforcement learning algorithms. It supports teaching agents everything from walking to playing games like Pong or Pinball.}
+\subsection{OpenAI Gym}
+Gym ist ein Werkzeug zum entwickeln und vergleichen von reinforcement learning Algorithmen welches von OpenAI, einem Forschungslabor aus San Francisco, zur Verfügung gestellt wird. Es bietet eine  \colorbox{red!30}{angleichende  Schnittstelle} zwischen dem Environment und dem Agenten. Hierdurch können neue Agenten und Environments nach gewissen Vorgaben erstellt werden. Somit ist es mit Gym einfacher möglich verschiedene Agenten an einem Environment zu Trainieren und diese zu vergleichen oder den selben Agenten an verschiedenen Environments auf seine Anpassungsfähigkeit zu testen.
+
