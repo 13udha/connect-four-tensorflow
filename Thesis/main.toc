@@ -69,19 +69,25 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Implementierung}{8}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Environment}{8}{section.4.1}
+\contentsline {section}{\numberline {4.1}Minmax}{8}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Agent}{8}{section.4.2}
+\contentsline {section}{\numberline {4.2}Reinforcement Learning}{8}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Policy}{8}{section.4.3}
+\contentsline {subsection}{\numberline {4.2.1}Environment}{8}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}State}{8}{section.4.4}
+\contentsline {subsection}{\numberline {4.2.2}Agent}{8}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Actions}{8}{section.4.5}
+\contentsline {subsection}{\numberline {4.2.3}Policy}{9}{subsection.4.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Reward}{9}{section.4.6}
+\contentsline {subsection}{\numberline {4.2.4}State}{9}{subsection.4.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.1}Q-Funktion}{9}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.2.5}Actions}{9}{subsection.4.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.6}Reward}{9}{subsection.4.2.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.7}Q-Funktion}{9}{subsection.4.2.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Lernen vom Gegner}{9}{section.4.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Evaluierung}{10}{chapter.5}
 \defcounter {refsection}{0}\relax 

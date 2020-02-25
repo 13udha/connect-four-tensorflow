@@ -6,28 +6,46 @@ Vorgehensweise bei der Implementierung
 %was man alles anpassen muss
 
 \colorbox{red!30}{DQN Algoritmus zum lernen des Spiels}\\
+
 \colorbox{red!30}{Trainiert gegen Random/Minmax}\\
+
 \colorbox{red!30}{Auswertung: ???}\\
 
 
-\section{Environment}
+Es wurde sich für eine bestehende grundlegende Implementierung entschieden welche schon die Spiellogik von Vier Gewinnt sowie einem sehr einfachen Reinforcement Learning Ansatz enthält. In dieser Version lernt der Agent gegen einen Gegner zu gewinnen der zufällige Züge macht.\\
+Diese Implentierung wurde um einen Gegner erweitert der seine Züge nach dem Minmax Algorithmus auswählt.\\
+Weitergehend wurde die Reinforcement Learning Implementierung überarbeitet um gegen den Minmax Algorithmus gewinnen zu können.\\
+Diese Implementierungen werden hier einmal genauer beschrieben:\\
+
+\section{Minmax}
+
+\section{Reinforcement Learning}
+\colorbox{red!30}{TODO link}
+
+\subsection{Environment}
 \colorbox{red!30}{TODO}In Vier Gewinnt ist dies das Spielfeld und der Gegner. 
 
-\section{Agent}
+\subsection{Agent}
 \colorbox{red!30}{TODO} Hier ist der Agent einer der beiden Spieler von Vier Gewinnt.
 
-\section{Policy}
+\subsection{Policy}
 \colorbox{red!30}{TODO}
 
-\section{State}
+\subsection{State}
 \colorbox{red!30}{TODO} Für Vier Gewinnt beschreibt der State welche der 42 Felder mit welchen Steinen befüllt sind. 
 
-\section{Actions}
+\subsection{Actions}
 \colorbox{red!30}{TODO} Die Actions in Vier Gewinnt beschreiben die sieben Löcher in die der Agent Steine werfen kann.
 
-\section{Reward}
-\colorbox{red!30}{TODO} Der Reward wird immer zum Ende einer Partie ausgegeben und beträgt beim Gewinn 1 beim Verlieren -1 und wenn die Partie unentschieden ausgeht 0. Neuer Ansatz:
-nach 4 Zügen gewonnen -> 1 und nach 21 zügen unentschieden -> 0  allles andere dazwischen und bei verlust *-1. also reward = 4/anzahl züge *winner?
+\subsection{Reward}
+\colorbox{red!30}{TODO}In der ursprünglichen Implementierung wird der Reward wird immer zum Ende einer Partie ausgegeben und beträgt beim Gewinn 1 beim Verlieren -1 und wenn die Partie unentschieden ausgeht 0.
+Dies wurde so erweitert, dass die Anzahl der Züge mit in die Bewertung einbezogen werden. Hierfür wird der Reward durch die Anzahl der Züge geteilt. Da es nicht möglich ist vor dem vierten Zug zu gewinnen wird erst ab diesem Zug gezählt.
+Hierdurch wird das schnelle Gewinnen mehr belohnt und das schnelle Verlieren mehr bestraft. \\
+\colorbox{red!30}{TODO Bild von der Rewardkurve} 
+
 
 \subsection{Q-Funktion}
 \colorbox{red!30}{TODO} %ausführen
+
+\section{Lernen vom Gegner}
+\colorbox{red!30}{TODO}
