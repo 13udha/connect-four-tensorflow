@@ -8,38 +8,42 @@ Die wichtigsten dieser Technologien werden hier erklärt um das weitere Verstän
 
 \section{Vier Gewinnt}
 Vier Gewinnt ist ein Spiel für 2 Spieler in dem abwechselnd Spielsteine in ein vertikales Spielfeld eingeworfen werden. Jeder Spieler kann sich in seinem Zug zwischen einem von sieben Einwurflöchern entscheiden. Wird ein Spielstein eingeworfen so fällt dieser auf die niedrigste der sechs Positionen die noch nicht durch andere Spielsteine gefüllt ist.Hierdurch ergibt sich ein Spielfeld mit 42 Feldern.  Sind schon sechs Spielsteine in ein bestimmtest Einwurfloch gesteckt wurden so darf hier kein weiterer Spielstein eingeworfen werden. Ein Spieler gewinnt das Spiel wenn er es geschafft  hat, dass sich vier seiner Spielsteine in einer Reihe befinden. Eine Reihe kann horizontal, vertikal oder diagonal gebildet werden. Werden alle 42 Positionen mit Spielsteinen befüllt ohne eine Reihe von vier Steinen des selben Spielers zu bilden geht die Partie unentschieden aus.
-%TODO BILD
+\colorbox{red!30}{TODO BILD}
 
 
 \section{Minmax Algorithmus}
-Ein Minmax Algorithmus beschreibt einen rekursiven Ansatz zum finden einer optimalen Lösung für Probleme von zwei Parteien mit widersetzlich Zielen. Dies sind in der Regel Nullsummenspiele mit perfekter Information, es gibt also für jeden Gewinn des einen Spielers genauso viel Verlust für den anderen und es gibt kein Spielelement, dass nur für einen Spieler einsehbar ist. Hierbei werden in jedem Rekursionsschritt alle möglichen Züge des derzeitigen Akteurs betrachtet und bewertet. Wenn der derzeitige Zug nicht zum Gewinn führt, findet eine Bewertung durch das Betrachten des nächsten Rekursionsschrittes statt. Der Name Minmax ergibt sich durch das Betrachten der abwechselnden Züge von den Akteuren wobei jeweils der maximal beste Zug für den einen der minimal beste Zug für den anderen bedeutet.  Dieses verfahren führt bei einfachen Spielen wie Tic-Tac-Toe zu einem \colorbox{red!30}{TODO}.\\
+Ein Minmax Algorithmus beschreibt einen rekursiven Ansatz zum finden einer optimalen Lösung für Probleme von zwei Parteien mit widersetzlich Zielen. Dies sind in der Regel Nullsummenspiele mit perfekter Information, es gibt also für jeden Gewinn des einen Spielers genauso viel Verlust für den anderen und es gibt kein Spielelement, dass nur für einen Spieler einsehbar ist. Der Minmax Algorithmus berechnet sich hierfür den Suchbaum des Spiels welcher alle möglichen Züge beider Spieler in nachvollziehbarer Reihenfolge enthält. Hierbei werden in jedem Rekursionsschritt alle möglichen Züge des derzeitigen Akteurs betrachtet und bewertet. Wenn der derzeitige Zug nicht zum Gewinn führt, findet eine Bewertung durch das Betrachten des nächsten Rekursionsschrittes statt. Der Name Minmax ergibt sich durch das Betrachten der abwechselnden Züge von den Akteuren wobei jeweils der maximal beste Zug für den einen der minimal beste Zug für den anderen bedeutet.  Dieses Verfahren führt bei einfachen Spielen wie Tic-Tac-Toe zu einem perfekten Spieler, da hier eine überschaubare Menge an möglichen Zügen betrachtet wird (9 Felder die von 2 Spielern gefüllt werden). Für komplexere Probleme gibt es die Möglichkeit eine Suchtiefe zu bestimmen wodurch die Rekursion  nur bis zu dieser Tiefe durchgeführt wird. Dies ist Sinnvoll da die Berechnung einzelner Züge sonst sehr lange dauern kann.
 
 \subsection{Negamax}
 Negamax ist eine Variante des Minmax Algorithmus die \colorbox{red!30}{TODO}.
 
+\subsection{Alpha-Beta?}
+\colorbox{red!30}{TODO}.
+
 \section{Reinforcement Learning}
-Reinforcement Learning (Bestärkendes Lernen) ist eine Maschine-Learning Methode bei der ein Agent mit Hilfe eines Environments, Policy, State, Actions und eines Rewards lernt eine ihm gegebene Aufgabe zu lösen.
+Reinforcement Learning (Bestärkendes Lernen) ist eine Maschine-Learning Methode bei der ein Agent mit Hilfe eines Environments, Policy, State, Actions und eines Rewards lernt eine ihm gegebene Aufgabe zu lösen. \\
 Die Aufgabe ist in diesem Fall das Spiel Vier Gewinnt zu meistern.
+\colorbox{red!30}{TODO Bild state action agent environment abhängigkeiten}.
 
 \subsection{Environment}
-Das Environment beschreibt das gesamte Problem dass der Agent versucht zu lösen.
+Das Environment beschreibt das gesamte Problem dass der Agent versucht zu lösen. Es beinhaltet alles was für das Spielen wichtig ist außer dem Spieler welcher von dem Agenten behandelt wird.  Dies ist bei den meisten Spielen ein Spielfeld mit den Positionen aller Akteure, Spielsteine oder sonstige Elemente die zum Spielen genutzt werden. Dazu kümmert sich das Environment auch noch um die Spiellogik. Die Spiellogik beschreibt alle Abläufe die durch die Regeln des Spiels definiert wurden. In dem Beispiel Vier Gewinnt wäre das unter anderem die Funktion dass die Spielsteine immer auf das untereste freie Feld fallen oder die überprüfung ob ein Spieler Gewonnen hat. Das letzte wichtige Element im Environment der meisten Spiele ist der Gegenspieler welcher im Falle von physikalischen Spielen normalerweise die selben Möglichkeiten besitzt wie der Spieler. Für das Verhalten des Gegenspielers werden im Normalfall Algorithmen genutzt die den bestmöglichen Zug errechnen, wie hier der Minmax Algorithmus. Für sehr komplexe Spiele bei denen sich kein optimalerZug berechnen lässt wird oft auf menschliche Spieler zurückgegriffen. Da ein Computer aber viel schneller im spielen ist und Reinforcement Learning viele Durchläufe absolvieren muss um Wirkung zu zeigen wird versucht dies zu vermeiden oder bestehende Datensätze genutzt. \colorbox{red!30}{TODO Bsp Alpha Star etc}.
 
 
 \subsection{Agent}
-Bei dem Agenten handelt es sich um den Acteur der die ihm gegebene Aufgabe meistern soll. Er sieht das Environment und wählt mittels der Policy die ihm am besten erscheinende Action aus.
-
+Bei dem Agenten handelt es sich um den Akteur der die ihm gegebene Aufgabe meistern soll. Er sieht das Environment und wählt mittels der Policy die ihm am besten erscheinende Action aus.
 
 \subsection{Policy}
 Mit der Policy wird das Verhalten beschrieben nach dem der Agent entscheidet welche der möglichen Actions die aktuell beste ist um den Reward zu maximieren.\\
 \colorbox{red!30}{TODO} %welche gibt es so?
 
 \subsection{State}
-Der State beschreibt den aktuellen Zustand des Environments.
+Der State beschreibt den aktuellen Zustand des Environments welcher in jedem Zug  an den Agenten weitergereicht wird damit dieser seine Auswahl treffen kann . 
 
 \subsection{Actions}
-Actions sind die möglichen Aktionen zwischen denen sich der Agent je nach State entscheiden muss.
+Actions sind die möglichen Aktionen zwischen denen sich der Agent je nach State entscheiden muss. Diese sind alle möglichen Züge die ein Spieler zu einer bestimmten Zeitpunkt ausführen kann.
 
 \subsection{Reward}
+Der Reward ist die Belohnung die der Agent für seine Aktionen bekommt. Hierbei ist es wichtig 
 
 \colorbox{red!30}{TODO} %ausführen
 
@@ -49,6 +53,14 @@ Actions sind die möglichen Aktionen zwischen denen sich der Agent je nach State
 \subsection{psychologischer Hintergrund}
 Reinforcement Learning funktioniert nach dem Prinzip von Trial-and-Error.\\
 \colorbox{red!30}{TODO} %ausführen
+
+
+
+
+
+
+
+
 
 
 

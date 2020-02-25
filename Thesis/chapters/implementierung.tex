@@ -26,7 +26,8 @@ Vorgehensweise bei der Implementierung
 \colorbox{red!30}{TODO} Die Actions in Vier Gewinnt beschreiben die sieben Löcher in die der Agent Steine werfen kann.
 
 \section{Reward}
-\colorbox{red!30}{TODO} Der Reward wird immer zum Ende einer Partie ausgegeben und beträgt beim Gewinn 1 beim Verlieren -1 und wenn die Partie unentschieden ausgeht 0.
+\colorbox{red!30}{TODO} Der Reward wird immer zum Ende einer Partie ausgegeben und beträgt beim Gewinn 1 beim Verlieren -1 und wenn die Partie unentschieden ausgeht 0. Neuer Ansatz:
+nach 4 Zügen gewonnen -> 1 und nach 21 zügen unentschieden -> 0  allles andere dazwischen und bei verlust *-1. also reward = 4/anzahl züge *winner?
 
 \subsection{Q-Funktion}
 \colorbox{red!30}{TODO} %ausführen
