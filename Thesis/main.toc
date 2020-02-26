@@ -51,11 +51,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.7}Q-Funktion}{5}{subsection.2.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.8}psychologischer Hintergrund}{5}{subsection.2.3.8}
+\contentsline {subsection}{\numberline {2.3.8}Markov Decision Process}{5}{subsection.2.3.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.9}psychologischer Hintergrund}{5}{subsection.2.3.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.4}Software}{5}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}Python}{5}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.1}Python}{6}{subsection.2.4.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.2}Tensorflow}{6}{subsection.2.4.2}
 \defcounter {refsection}{0}\relax 

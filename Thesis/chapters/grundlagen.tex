@@ -21,44 +21,51 @@ Negamax ist eine Variante des Minmax Algorithmus die \colorbox{red!30}{TODO}.
 \colorbox{red!30}{TODO}.
 
 \section{Reinforcement Learning}
-Reinforcement Learning (Bestärkendes Lernen) ist eine Maschine-Learning Methode bei der ein Agent mit Hilfe eines Environments, Policy, State, Actions und eines Rewards lernt eine ihm gegebene Aufgabe zu lösen. \\
+Reinforcement learning (Bestärkendes Lernen) ist eine Maschine-Learning Methode bei der ein Agent mit Hilfe eines Environments, Policy, State, Actions und eines Rewards lernt eine ihm gegebene Aufgabe zu lösen. \\
 Die Aufgabe ist in diesem Fall das Spiel Vier Gewinnt zu meistern.
 \colorbox{red!30}{TODO Bild state action agent environment abhängigkeiten}.
 
 \subsection{Environment}
-Das Environment beschreibt das gesamte Problem dass der Agent versucht zu lösen. Es beinhaltet alles was für das Spielen wichtig ist außer dem Spieler welcher von dem Agenten behandelt wird.  Dies ist bei den meisten Spielen ein Spielfeld mit den Positionen aller Akteure, Spielsteine oder sonstige Elemente die zum Spielen genutzt werden. Dazu kümmert sich das Environment auch noch um die Spiellogik. Die Spiellogik beschreibt alle Abläufe die durch die Regeln des Spiels definiert wurden. In dem Beispiel Vier Gewinnt wäre das unter anderem die Funktion dass die Spielsteine immer auf das untereste freie Feld fallen oder die überprüfung ob ein Spieler Gewonnen hat. Das letzte wichtige Element im Environment der meisten Spiele ist der Gegenspieler welcher im Falle von physikalischen Spielen normalerweise die selben Möglichkeiten besitzt wie der Spieler. Für das Verhalten des Gegenspielers werden im Normalfall Algorithmen genutzt die den bestmöglichen Zug errechnen, wie hier der Minmax Algorithmus. Für sehr komplexe Spiele bei denen sich kein optimalerZug berechnen lässt wird oft auf menschliche Spieler zurückgegriffen. Da ein Computer aber viel schneller im spielen ist und Reinforcement Learning viele Durchläufe absolvieren muss um Wirkung zu zeigen wird versucht dies zu vermeiden oder bestehende Datensätze genutzt.\\
+Das Environment beschreibt das gesamte Problem dass der Agent versucht zu lösen. Es beinhaltet alles was für das Spielen wichtig ist außer dem Spieler welcher von dem Agenten behandelt wird.  Dies ist bei den meisten Spielen ein Spielfeld mit den Positionen aller Akteure, Spielsteine oder sonstige Elemente die zum Spielen genutzt werden. Dazu kümmert sich das Environment auch noch um die Spiellogik. Die Spiellogik beschreibt alle Abläufe die durch die Regeln des Spiels definiert wurden. In dem Beispiel Vier Gewinnt wäre das unter anderem die Funktion dass die Spielsteine immer auf das untereste freie Feld fallen oder die überprüfung ob ein Spieler Gewonnen hat. Das letzte wichtige Element im Environment der meisten Spiele ist der Gegenspieler welcher im Falle von physikalischen Spielen normalerweise die selben Möglichkeiten besitzt wie der Spieler. Für das Verhalten des Gegenspielers werden im Normalfall Algorithmen genutzt die den bestmöglichen Zug errechnen, wie hier der Minmax Algorithmus. Für sehr komplexe Spiele bei denen sich kein optimalerZug berechnen lässt wird oft auf menschliche Spieler zurückgegriffen. Da ein Computer aber viel schneller im spielen ist und reinforcement learning viele Durchläufe absolvieren muss um Wirkung zu zeigen wird versucht dies zu vermeiden oder bestehende Datensätze von Spielen mit Menschen genutzt.\\
  \colorbox{red!30}{TODO Bsp Alpha Star etc}.
 
 
 \subsection{Agent}
 Bei dem Agenten handelt es sich um den Akteur der die ihm gegebene Aufgabe meistern soll. Er sieht das Environment und wählt mittels der Policy die ihm am besten erscheinende Action aus.
+https://es.mathworks.com/help/reinforcement-learning/ug/create-agents-for-reinforcement-learning.html
 
 \subsection{Policy}
-Mit der Policy wird das Verhalten beschrieben nach dem der Agent entscheidet welche der möglichen Actions die aktuell beste ist um den Reward zu maximieren.\\
+Mit der Policy wird das Verhalten beschrieben nach dem der Agent entscheidet welche der möglichen Aktionen die aktuell beste ist um den Reward zu maximieren.\\
 \colorbox{red!30}{TODO} %welche gibt es so?
 
 \subsection{State}
-Der State beschreibt den aktuellen Zustand des Environments welcher in jedem Zug  an den Agenten weitergereicht wird damit dieser seine Auswahl treffen kann . 
+Der State beschreibt den aktuellen Zustand des Environments welcher in jedem Zug  an den Agenten weitergereicht wird damit dieser seine Auswahl treffen kann. 
 
 \subsection{Actions}
 Actions sind die möglichen Aktionen zwischen denen sich der Agent je nach State entscheiden muss. Diese sind alle möglichen Züge die ein Spieler zu einer bestimmten Zeitpunkt ausführen kann.
 
 \subsection{Reward}
-Der Reward ist die Belohnung die der Agent für seine Aktionen bekommt. Hierbei ist es wichtig 
+Der Reward ist die Belohnung die der Agent für seine Aktionen bekommt. Diese Belohnung beschreibt wie gut es ist eine bestimmte Aktion auszuführen. Hieran passt der Agent dann wärend des Trainings seine Policy an \colorbox{red!30}{Values nicht policy}. Der Reward wird also benutzt um das Verhalten des Agenten zu beeinflussen. Möchte man ein bestimmtes verhalten wird hierfür ein positiver Reward vergeben möchte man ein anderes Verhalten nicht wird ein negativer Reward vergeben. Je besser die  Reward-Funktion gewählt wird desto eher wird der Agent gewolltes Verhalten zeigen. Bei der Wahl einer Reward-Funktion wird zwischen kontinuierlichen und diskreten Funktionen unterschieden.\\
+
+
+
+\colorbox{red!30}{Continuous vs Discrete Rewards} hier Discrete? \colorbox{red!30}{Every Step vs at the end}
 
 \colorbox{red!30}{TODO} %ausführen
 
 \subsection{Q-Funktion}
 \colorbox{red!30}{TODO} %ausführen
 
+\subsection{Markov Decision Process}
+\colorbox{red!30}{TODO} %ausführen
+
 \subsection{psychologischer Hintergrund}
-Reinforcement Learning funktioniert nach dem Prinzip von Trial-and-Error.\\
+Reinforcement learning funktioniert nach dem Prinzip von Trial-and-Error.\\
 \colorbox{red!30}{TODO} %ausführen
 
 
 
-
-
+\colorbox{red!30}{TODO Beispiele} %ausführen
 
 
 
@@ -79,7 +86,7 @@ Bei Tensorflow handelt es sich um ein open source Framework für Maschine-Learni
 \colorbox{red!30}{TODO mehr?}
 
 \subsection{Keras}
-Keras ist eine open source Bibliothek die auf Tensorflow aufbaut welche die möglichkeit bietet vereinfacht neuronale Netze zu erstellen um diese in reinforcement Learning Algorithmen zu benutzen.
+Keras ist eine open source Bibliothek die auf Tensorflow aufbaut welche die möglichkeit bietet vereinfacht neuronale Netze zu erstellen um diese in reinforcement learning Algorithmen zu benutzen.
 \colorbox{red!30}{TODO mehr?}
 
 \subsection{OpenAI Gym}
