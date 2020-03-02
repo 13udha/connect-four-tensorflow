@@ -1,11 +1,14 @@
 \chapter{Konzept}%
-       
 
 \label{cha:Konzept}
 
-In diesem Kapitel wird beschrieben was mit dieser Bachelorarbeit erreicht werden soll und wie dafür vorgegangen werden soll.\colorbox{red!30}{TODO}
+Im Folgenden wird nun beschrieben was mit dieser Bachelorarbeit erreicht werden soll und wie dafür vorgegangen werden soll.
 
+\section{Zielsetzung}
+\colorbox{red!30}{TODO mehr}\\
+Es soll gezeigt werden ob sich reinforcement learning zum erstellen von indviduellen Gegnern von Spielen eignet und wie sinnvoll hierbei das Lernen von einem guten Gegner ist. \\
 
-\section{Plan}
-\colorbox{red!30}{TODO}mehr\\
-Es wird ein Programm geschrieben, dass durch reinforcement learning erlernt das Spiel Vier Gewinnt zu meistern. Des weiteren werden dann aus diesem Lernprozess mehrere Versionen des gelernten Agenten extrahiert welche  unterschiedlich lange trainiert haben. Es soll dann mit einer Studie in der Menschen gegen die verschiedenen Varianten antretten beobachtet werden ob sich diese für Computergegner eignen und somit automatisch verschieden starke Computergegner mit hilfe von reinforcement learning erstellt werden können.\colorbox{red!30}{keine Studie mehr}
+\section{Methode}
+Es wird ein Programm geschrieben, dass durch reinforcement learning erlernt das Spiel Vier Gewinnt zu meistern. Um dies zu ermöglichen wird ein Gegner genutzt der möglichst optimal spielt. Hierfür wird ein Minimax Algorithmus sorgen. Es wird eine optimierung der Reward-Funktion stattfinden um das Lernverhalten zu verbessern. Das Verhalten des guten Gegners soll mit in den Lernprozess des Agenten einfließen. Um den Lernfortschritt besser beurteilen zu können wird der Minimax-Algorithmus um eine Wahrscheinlichkeitsverteilung erweitert. Hierdurch soll dann das erlernte Verhalten an leicht schlechteren Gegnern getestet werden können.
+\colorbox{red!30}{TODO mehr}
+
