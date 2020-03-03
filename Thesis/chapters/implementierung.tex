@@ -5,8 +5,6 @@
 
 \colorbox{red!30}{DQN Algoritmus zum lernen des Spiels}\\
 
-
-
 Es wurde sich für eine bestehende grundlegende Implementierung entschieden welche schon die Spiellogik von Vier Gewinnt sowie einen sehr einfachen Reinforcement Learning Ansatz enthält. In dieser Version lernt der Agent gegen einen Gegner zu gewinnen der zufällige Züge macht.\\
 Diese Implentierung wurde um einen Gegner erweitert der seine Züge nach dem Minimax Algorithmus auswählt.\\
 Weitergehend wurde die reinforcement learning Implementierung überarbeitet um gegen den Minimax Algorithmus gewinnen zu können.\\
@@ -50,7 +48,14 @@ Die Actions in Vier Gewinnt beschreiben die sieben Löcher in die der Agent Stei
 \subsection{Reward}
  Zuerst wurde eine einfache diskrete Implementierung erstellt welche den Reward immer zum Ende einer Partie ausgibt, wobei dieser beim Gewinn 1 beim Verlieren -1 und wenn die Partie unentschieden ausgeht 0 beträgt.
 Dies wurde durch die Anzahl der Züge um eine kontinuierliche Komponente erweitert. Hierfür wird der Reward der durch die diskrete Implementierung ermittelt wurde durch die Anzahl der Züge geteilt. Da es nicht möglich ist vor dem vierten Zug zu gewinnen wird erst ab diesem Zug gezählt. Es ergibt sich also die Formel: $$\frac{Reward}{Anzahl Züge-3}$$.
-Wie man in \colorbox{red!30}{TODO Bild von der Rewardkurve} gut sehen kann wird somit das schnelle Gewinnen mehr belohnt und das schnelle Verlieren mehr bestraft. \\
+Wie man in \ref{fig:reward_function} gut sehen kann wird somit das schnelle Gewinnen mehr belohnt (obere Linie) und das schnelle Verlieren mehr bestraft (untere Linie). Da nur wenn das Spielfeld komplett voll ist unentschieden gespielt wird, wird hier ein Reward von 0 gegeben (einzelner Punkt). \\
+
+\begin{figure}[h!]
+  \includegraphics[scale=0.5]{reward_plot.png}
+  \centering
+  \caption{Reward Funktion}
+  \label{fig:reward_function}
+\end{figure}
 
 \colorbox{red!30}{TODO credit assignment problem (bewertung nur am ende)}\\
 
@@ -58,7 +63,7 @@ Wie man in \colorbox{red!30}{TODO Bild von der Rewardkurve} gut sehen kann wird 
 \colorbox{red!30}{TODO} %ausführen
 
 \section{Lernen vom Gegner}
-Um das Lernen des Agenten zu verbessern wurde sich dazu entschieden, dass der Agent auch die Züge seines Gegners zum lernen nutzen kann. Dies ist für Vier Gewinnt erlaubt, da es sich um ein Spiel mit perfekter Information handelt. Es sind also jedem Spieler zum Zeitpunkt einer Entscheidung alle Informationen über das Spiel ersichtlich. Da ein menschlicher Anfänger in diesem Spiel, bei einer Niederlage an den Spielzügen seines Gegners lernen kann, wurde dies auch als sinnvoll für den Agenten angesehen. Um diese Informationen aufnehmen zu können wurden die Daten über das aktuelle Spielfeld und den gemachten Zug angepasst. Hierfür wird das gesammte Spiel einen halben Zug in der Vergangenheit betrachtet. Das heißt der Agent versetzt sich in die Rolle seines Gegners. Da der Agent weiß welche Zug sein Gegner gemacht hat kann er somit das negierte Spielfeld als Startzustand und den Zug seines Gegners als Aktion nutzen. 
+Um das Lernen des Agenten zu verbessern wurde sich dazu entschieden, dass der Agent auch die Züge seines Gegners zum Lernen nutzen kann. Dies ist für Vier Gewinnt erlaubt, da es sich um ein Spiel mit perfekter Information handelt. Es sind also jedem Spieler zum Zeitpunkt einer Entscheidung alle Informationen über das Spiel ersichtlich. Da ein menschlicher Anfänger in diesem Spiel, bei einer Niederlage an den Spielzügen seines Gegners lernen kann, wurde dies auch als sinnvoll für den Agenten angesehen. Um diese Informationen aufnehmen zu können wurden die Daten über das aktuelle Spielfeld und den gemachten Zug angepasst. Hierfür wird das gesammte Spiel einen halben Zug in der Vergangenheit betrachtet. Das heißt der Agent versetzt sich in die Rolle seines Gegners. Da der Agent weiß welche Zug sein Gegner gemacht hat kann er somit das negierte Spielfeld als Startzustand und den Zug seines Gegners als Aktion für sich nutzen. 
 
 \section{Graphische Darstellung}
 Um die Effektivität der verschiedenen Versionen zu vergleichen wird der Reward in einem Graphen geplottet. Dies wird mit dem Paket pyplot von matplotlib gemacht.\\

@@ -22,18 +22,17 @@ Der Negamax Algorithmus basiert auf der Annahme, dass der maximal beste Zug für
 Alpha-Beta Suche ist eine Variante des Minimax Algorithmus, die die Berechnung des Suchbaumes beschleunigt, indem sie bestimmte Teile der Suche nicht ausführt wenn es schon einen klar besseren Pfad gibt.
 
 \section{Reinforcement Learning}
-Reinforcement learning (Bestärkendes Lernen) ist eine Maschine-Learning Methode bei der ein Agent mit Hilfe eines Environments, Policy, State, Actions und eines Rewards lernt, eine ihm gegebene Aufgabe zu lösen.Es wird dabei Grundsätzlich wie in dem  \colorbox{red!30}{Bild} beschrieben vorgegangen. Diese Teile des reinfocement learnings werden hier nun einmal genauer beschrieben.\\
+Reinforcement learning (Bestärkendes Lernen) ist eine Maschine-Learning Methode bei der ein Agent mit Hilfe eines Environments, Policy, State, Actions und eines Rewards lernt, eine ihm gegebene Aufgabe zu lösen. Es wird dabei Grundsätzlich wie in dem  \colorbox{red!30}{Bild} beschrieben vorgegangen. Diese Teile des reinfocement learnings werden hier nun einmal genauer beschrieben.\\
  \colorbox{red!30}{TODO ausführen}\\
 \colorbox{red!30}{TODO Bild state action agent environment abhängigkeiten}.
 
 \subsection{Environment}
 Das Environment beschreibt das gesamte Problem dass der Agent versucht zu lösen. Es beinhaltet alles was für das Spielen wichtig ist außer dem Spieler, welcher von dem Agenten behandelt wird.  Dies ist bei den meisten Spielen ein Spielfeld mit den Positionen aller Akteure, Spielsteine oder sonstige Elemente die zum Spielen genutzt werden. Dazu kümmert sich das Environment auch noch um die Spiellogik. Die Spiellogik beschreibt alle Abläufe die durch die Regeln des Spiels definiert wurden. In dem Beispiel Vier Gewinnt wäre das unter anderem die Funktion, dass die Spielsteine immer auf das untereste freie Feld fallen oder die überprüfung ob ein Spieler Gewonnen hat. Das letzte wichtige Element im Environment der meisten Spiele ist der Gegenspieler welcher im Falle von physikalischen Spielen normalerweise die selben Möglichkeiten besitzt wie der Spieler. Für das Verhalten des Gegenspielers werden im Normalfall Algorithmen genutzt die den bestmöglichen Zug errechnen, wie hier der Minimax Algorithmus. Für sehr komplexe Spiele bei denen sich kein optimalerZug berechnen lässt wird oft auf menschliche Spieler zurückgegriffen. Da ein Computer aber viel schneller im spielen ist und reinforcement learning viele Durchläufe absolvieren muss um Wirkung zu zeigen wird versucht dies zu vermeiden oder bestehende Datensätze von Spielen mit Menschen genutzt.\\
- \colorbox{red!30}{TODO Bsp Alpha Star etc}.
 
 
 \subsection{Agent}
 Bei dem Agenten handelt es sich um den Akteur der die ihm gegebene Aufgabe meistern soll. Er sieht das Environment und wählt mittels der Policy die ihm am besten erscheinende Action aus um den Reward zu maximieren.\\
-\colorbox{red!30}{TODO https://es.mathworks.com/help/reinforcement-learning/ug/create-agents-for-reinforcement-learning.html}
+\colorbox{red!30}{done?}
 
 \subsection{Policy}
 Mit der Policy wird das Verhalten beschrieben nach dem der Agent entscheidet welche der möglichen Aktionen die aktuell beste ist um den Reward zu maximieren.\\
@@ -54,7 +53,7 @@ Wird sich für eine Mischung entschieden ist es wichtig, dass die aus beiden Tei
 
 
  \colorbox{red!30}{Every Step vs at the end}
-Bei Komplexeren Problemen ist es schwer für jeden Zug vorauszusehen wie Zielführend er ist. Deswegen wird hier dann eine Q-Funktion benutzt die anhand der gelernten Zustände versucht Fehlende zu Approximieren.
+Bei Komplexeren Problemen ist es schwer für jeden Zug vorauszusehen wie Zielführend er ist. Deswegen wird hier dann eine Q-Funktion benutzt die anhand der gelernten Zustände versucht Fehlende zu Approximieren.\colorbox{red!30}{TODO}
 
 \subsection{Q-Values}
 \colorbox{red!30}{TODO} %ausführen

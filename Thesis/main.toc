@@ -99,9 +99,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.7}Q-Funktion}{11}{subsection.4.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Lernen vom Gegner}{11}{section.4.3}
+\contentsline {section}{\numberline {4.3}Lernen vom Gegner}{12}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Graphische Darstellung}{11}{section.4.4}
+\contentsline {section}{\numberline {4.4}Graphische Darstellung}{12}{section.4.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.5}Visualsierung des Spiels}{12}{section.4.5}
 \defcounter {refsection}{0}\relax 
@@ -113,4 +113,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.1}Besonderheiten}{14}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Quellenverzeichnis}{15}{appendix*.7}
+\contentsline {chapter}{Quellenverzeichnis}{15}{appendix*.8}
