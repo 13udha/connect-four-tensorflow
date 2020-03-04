@@ -35,7 +35,16 @@ Der Agent ist einer der beiden Spieler von Vier Gewinnt, welcher lernt seine Zü
 \colorbox{red!30}{Done?} 
 
 \subsection{Policy}
-Als Policy wurde sich für die Epsilon-Greedy Policy entschieden da dies sehr gut für DQNs Funktioniert. Epsilon-Greedy beschreibt das Verhalten des Agenten welches entweder explorativ oder ausbeutend ist. Ist das Verhalten explorativ entscheidet sich der Agent für einen Zug den er vorher noch nicht oder selten gemacht hat um diesen zu erlernen. Ist das Verhalten ausbeutend so wird der Zug genommen welcher derzeitig die höchste Gewinnchance bietet. Zum Anfang des Lernens macht es natürlich Sinn, dass der Agent ganz viel erkundet da er noch kein Wissen über das Spiel besitzt. Hat der Agent dann einige Spiele hinter sich kann er auf die ausbeutende Strategie umschalten. Um dieses Verhalten des erstigen Erkundens und späteren Ausbeutens zu ermöglichen nutzt die Epsilon-Greedy Policy die Formel: $np.random.rand())<1-\epsilon$. Gibt diese Formel Wahr zurück so wird erkundet, gibt sie Falsch aus wird ausgebeutet. Der Wert von Epsilon ist am Anfang etwas mehr als Null und wird wärend der Lernphase langsam erhöht bis er etwas weniger als 1 erreicht hat. Somit ist das Ergebniss der Formel am Anfang meistens Wahr und später meistens Falsch.
+Für das erstellen einer Policy, für den reinforcement learning Agenten, wird ein Deep Q-Network genutzt. Dieses Deep Q-Network wird nach einer Epsilon-Greedy Policy trainiert.
+
+\subsubsection{Deep Q-Network}
+Das Deep Q-Network speichert zu jedem gespielten Zug den derzeitigen State, die ausgeführte Aktion, den erhaltenen Reward, der daraus folgende State und ob der neue State die Episode beendet hat in sein Memory. Aus diesem Memory wird dann, mit der Funktion $experience_replay$, eine gewisse Menge an zufälligen Proben genommen. Es ist sehr sinnvoll hier eine zufällige Probe zu nehmen, da sonst durch die in Reihe betrachteten Züge ein ungewollter Bias entstehen kann, welcher die Konvergenz des Trainingalgorithmuses stark verlangsamen kann.
+\colorbox{red!30}{Buch Seite 469}
+Für diese Proben werden dann ihre Q-Values vorhergesagt. Mit diesen Q-Values wird dann das Q-Network trainiert. Dieser Prozess wird immer wieder wiederholt, hierdurch werden die Q-Values immer genauer und dadurch ergibt sich dann eine Policy.
+
+
+\subsubsection{Epsilon-Greedy}
+Als Unterstützung des Deep Q-Network wurde sich für die Epsilon-Greedy Policy entschieden da diese sehr gut für Deep Q-Networks Funktioniert. Epsilon-Greedy beschreibt das Verhalten des Agenten welches entweder explorativ oder ausbeutend ist. Ist das Verhalten explorativ entscheidet sich der Agent für einen Zug den er vorher noch nicht oder selten gemacht hat um diesen zu erlernen. Ist das Verhalten ausbeutend so wird der Zug genommen welcher derzeitig die höchste Gewinnchance bietet. Zum Anfang des Lernens macht es natürlich Sinn, dass der Agent ganz viel erkundet da er noch kein Wissen über das Spiel besitzt. Hat der Agent dann einige Spiele hinter sich kann er auf die ausbeutende Strategie umschalten. Um dieses Verhalten des erstigen Erkundens und späteren Ausbeutens zu ermöglichen nutzt die Epsilon-Greedy Policy die Formel: $np.random.rand())<1-\epsilon$. Gibt diese Formel Wahr zurück so wird erkundet, gibt sie Falsch aus wird ausgebeutet. Der Wert von Epsilon ist am Anfang etwas mehr als Null und wird wärend der Lernphase langsam erhöht bis er etwas weniger als 1 erreicht hat. Somit ist das Ergebniss der Formel am Anfang meistens Wahr und später meistens Falsch. Somit kann das DQN am Anfang viele Daten bekommen um hieraus eine Policy zu erarbeiten und dann diese später nach und nach verbessern, wenn durch die Ausbeutung dann nach dieser Policy vorgegangen wird.
 
 \subsection{State}
  Für Vier Gewinnt beschreibt der State welche der 42 Felder mit welchen Steinen befüllt sind. Ein Beispiel für so einen State kann man in dem Abschnitt \hyperref[sec:visualisierung]{Visualsierung des Spiels} finden.\\
@@ -56,11 +65,7 @@ Wie man in \ref{fig:reward_function} gut sehen kann wird somit das schnelle Gewi
   \caption{Reward Funktion}
   \label{fig:reward_function}
 \end{figure}
-
-\colorbox{red!30}{TODO credit assignment problem (bewertung nur am ende)}\\
-
-\subsection{Q-Funktion}
-\colorbox{red!30}{TODO} %ausführen
+Da in Vier Gewinnt nur am Ende eines Spiels ein Reward ausgegeben wird, wird hier ein Deep Q-Network genutzt um dem credit assignment problem zu lösen.
 
 \section{Lernen vom Gegner}
 Um das Lernen des Agenten zu verbessern wurde sich dazu entschieden, dass der Agent auch die Züge seines Gegners zum Lernen nutzen kann. Dies ist für Vier Gewinnt erlaubt, da es sich um ein Spiel mit perfekter Information handelt. Es sind also jedem Spieler zum Zeitpunkt einer Entscheidung alle Informationen über das Spiel ersichtlich. Da ein menschlicher Anfänger in diesem Spiel, bei einer Niederlage an den Spielzügen seines Gegners lernen kann, wurde dies auch als sinnvoll für den Agenten angesehen. Um diese Informationen aufnehmen zu können wurden die Daten über das aktuelle Spielfeld und den gemachten Zug angepasst. Hierfür wird das gesammte Spiel einen halben Zug in der Vergangenheit betrachtet. Das heißt der Agent versetzt sich in die Rolle seines Gegners. Da der Agent weiß welche Zug sein Gegner gemacht hat kann er somit das negierte Spielfeld als Startzustand und den Zug seines Gegners als Aktion für sich nutzen. 

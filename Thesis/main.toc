@@ -49,13 +49,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.6}Reward}{5}{subsection.2.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.7}Q-Values}{6}{subsection.2.3.7}
+\contentsline {subsection}{\numberline {2.3.7}Q-Funktion}{6}{subsection.2.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.8}Q-Funktion}{6}{subsection.2.3.8}
+\contentsline {subsection}{\numberline {2.3.8}Q-Values}{6}{subsection.2.3.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.9}Markov Decision Process}{6}{subsection.2.3.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.10}DQN}{6}{subsection.2.3.10}
+\contentsline {subsection}{\numberline {2.3.10}Deep Q-Network}{6}{subsection.2.3.10}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.4}Software}{6}{section.2.4}
 \defcounter {refsection}{0}\relax 
@@ -91,13 +91,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.3}Policy}{10}{subsection.4.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.4}State}{10}{subsection.4.2.4}
+\contentsline {subsubsection}{Deep Q-Network}{10}{subsection.4.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Epsilon-Greedy}{10}{subsection.4.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.4}State}{11}{subsection.4.2.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.5}Actions}{11}{subsection.4.2.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.6}Reward}{11}{subsection.4.2.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.7}Q-Funktion}{11}{subsection.4.2.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Lernen vom Gegner}{12}{section.4.3}
 \defcounter {refsection}{0}\relax 
@@ -105,12 +107,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.5}Visualsierung des Spiels}{12}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Evaluierung}{13}{chapter.5}
+\contentsline {chapter}{\numberline {5}Evaluierung}{14}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Auswertung}{13}{section.5.1}
+\contentsline {section}{\numberline {5.1}Auswertung}{14}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Fazit}{14}{chapter.6}
+\contentsline {chapter}{\numberline {6}Fazit}{15}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Besonderheiten}{14}{section.6.1}
+\contentsline {section}{\numberline {6.1}Besonderheiten}{15}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Quellenverzeichnis}{15}{appendix*.8}
+\contentsline {chapter}{Quellenverzeichnis}{16}{appendix*.8}

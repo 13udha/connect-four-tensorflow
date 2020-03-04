@@ -51,20 +51,20 @@ Bei einer kontinuierlichen Reward-Funktion wird der Reward zu jedem Schritt durc
 Da diese beiden Arten von Reward-Funktionen das Verhalten des Agenten an unterschiedlichen Stellen beeinflussen, ist es oft sinnvoll eine Mischung dieser zu nutzen.
 Wird sich für eine Mischung entschieden ist es wichtig, dass die aus beiden Teilen kommenden Rewards in Relation zueinander stehen, denn sonst kann dies dazu führen, dass die Auswirkung von dem Teil mit kleineren Rewards von dem Teil mit größeren Rewards überschattet wird.\\
 
-
- \colorbox{red!30}{Every Step vs at the end}
-Bei Komplexeren Problemen ist es schwer für jeden Zug vorauszusehen wie Zielführend er ist. Deswegen wird hier dann eine Q-Funktion benutzt die anhand der gelernten Zustände versucht Fehlende zu Approximieren.\colorbox{red!30}{TODO}
-
-\subsection{Q-Values}
-\colorbox{red!30}{TODO} %ausführen
+Bei Komplexeren Environments ist es schwer für jeden Zug vorauszusehen wie Zielführend er ist. Um diesem credit assignment problem entgegen zu wirken wird Q-Learning genutzt.
+Deswegen wird hier dann eine Q-Funktion benutzt die anhand der gelernten Zustände versucht Fehlende zu Approximieren.\colorbox{red!30}{TODO}
 
 \subsection{Q-Funktion}
+\colorbox{red!30}{TODO} %ausführen
+
+\subsection{Q-Values}
 \colorbox{red!30}{TODO} %ausführen
 
 \subsection{Markov Decision Process}
 \colorbox{red!30}{TODO} %ausführen
 
-\subsection{DQN}
+\subsection{Deep Q-Network}
+Da es, bei einem Spiel mit einer Komplexität wie Vier Gewinnt, nicht möglich ist für alle Paare von State und Action einen erwarteten Reward zu bestimmen wird ein neuronales Netz genutzt welches versucht eine Policy für diese erwarteten Rewards zu bestimmen. Dieses Verfahren nennt sich Deep Q-Learning. Hierbei wird ein Deep Q-Network erstellt welches durch eine Sammlung zufälligen gespeicherter Spielen mit der aktuellen Policy diese anpasst.
 \colorbox{red!30}{TODO} %ausführen
 
 
