@@ -11,7 +11,7 @@ Vier Gewinnt ist ein Spiel für 2 Spieler in dem abwechselnd Spielsteine in ein 
 \begin{figure}[h!]
   \includegraphics[scale=0.1]{echtes_spiel.png}
   \centering
-  \caption{Das Spiel Vier Gewinnt}
+  \caption{Das Spiel Vier Gewinnt \cite{connect4}}
   \label{fig:echtes_spiel}
 \end{figure}
 
@@ -27,7 +27,7 @@ Der Negamax Algorithmus basiert auf der Annahme, dass der maximal beste Zug für
 Alpha-Beta Suche ist eine Variante des Minimax Algorithmus, die die Berechnung des Suchbaumes beschleunigt, indem sie bestimmte Teile der Suche nicht ausführt wenn es schon einen klar besseren Pfad gibt.
 
 \section{Reinforcement Learning}
-Reinforcement learning (Bestärkendes Lernen) ist eine Maschine-Learning Methode bei der ein Agent mit Hilfe eines Environments, Policy, State, Actions und eines Rewards lernt, eine ihm gegebene Aufgabe zu lösen. Es wird dabei Grundsätzlich wie in Abbildung \ref{fig:rl_basic} beschrieben vorgegangen. Der Agent bekommt also einen State vom Environment, und durch diesen sucht  er sich mittels seiner Policy eine Action aus. Diese Action beinflusst dann das Environment und dieses gibt dem Agenten einen Reward für seine Action. Durch den Reward kann der Agent dann seine Policy anpassen. Dazu bekommt der Agent dann den neuen State und kann dann, mit der angepassten Policy, wieder eine neue Action auswählen. Diese Teile des reinfocement learnings werden hier nun einmal genauer beschrieben.\\
+Reinforcement learning (Bestärkendes Lernen) ist eine Maschine-Learning Methode bei der ein Agent mit Hilfe eines Environments, Policy, State, Actions und eines Rewards lernt, eine ihm gegebene Aufgabe zu lösen. Hierfür bieten sich Probleme an die als Markow-Entscheidungsproblem\cite{Martijn2012} formuliert werden können, da diese alles abdecken was für ein Environment wichtig ist. Es wird dabei Grundsätzlich wie in Abbildung \ref{fig:rl_basic} beschrieben vorgegangen. Der Agent bekommt also einen State vom Environment, und durch diesen sucht  er sich mittels seiner Policy eine Action aus. Diese Action beinflusst dann das Environment und dieses gibt dem Agenten einen Reward für seine Action. Durch den Reward kann der Agent dann die Gewichtungen für seine Policy anpassen. Dazu bekommt der Agent dann den neuen State und kann dann, mit der angepassten Policy, wieder eine neue Action auswählen. Diese Teile des reinfocement learnings werden hier nun einmal genauer beschrieben.\\
 
 \begin{figure}[h!]
   \includegraphics[scale=0.5]{rl_basics.png}
@@ -69,12 +69,12 @@ Deswegen wird hier dann eine Q-Funktion benutzt die anhand der gelernten Zustän
 \subsection{Q-Values}
 \colorbox{red!30}{TODO} %ausführen
 
-\subsection{Markov Decision Process}
-\colorbox{red!30}{TODO} %ausführen
-
 \subsection{Deep Q-Network}
 Da es, bei einem Spiel mit einer Komplexität wie Vier Gewinnt, nicht möglich ist für alle Paare von State und Action einen erwarteten Reward zu bestimmen, wird ein neuronales Netz genutzt welches versucht eine Policy für diese erwarteten Rewards zu bestimmen. Dieses Verfahren nennt sich Deep Q-Learning. Hierbei wird ein Deep Q-Network erstellt, welches durch eine Sammlung zufälligen gespeicherter Spielen mit der aktuellen Policy diese anpasst.
 \colorbox{red!30}{TODO} %ausführen
+
+\subsection{Markow-Entscheidungsproblem}
+Das Markow-Entscheidungsproblem beschreibt eine Menge von State, Action, Probabillity,Reward Tupeln. Es gibt also für jeden State, Actions die eine Chance (Probabillity) haben in einen anderen State zu wechseln. Jede dieser Transitionen hat einen Reward der dieser Transition einen Wert zuweist. Das Entscheidungsproblem bezieht sich hier auf die Transition von einem Start-State zu einem Ziel-State, wobei versucht wird den Reward zu maximieren.
 
 \subsection{Episode}
 Eine Episode beschreibt einen einzelnen Durchlauf des Agenten im Environment.
@@ -92,18 +92,16 @@ Eine Epoche ist eine Sammlung von Episoden und beschreibt einen gesammten Lerndu
 
 \section{Software}
 Um die Problemstellung zu bearbeiten wurde eine Implementierung des Spiels in Python genutzt welches als ein OpenAI Gym Environment fungiert. An diesem Environment trainiert dann ein Agenten der mit Hilfe von  Keras erschaffen wurde.
-\colorbox{red!30}{TODO genaue versionen}
 
 \subsection{Python}
-Als Programmiersprache wurde sich für Python entschieden da ein gutes Vorwissen in dieser Sprache vorhanden war und alle für diese Arbeit wichtigen Packages in dieser Programmiersprache existieren.
-Der Schöpfer von Python beschreibt es selbst als einfach zu erlernende objektorientierte Programmiersprache, welche Leistung mit einer klaren Syntax verbindet.\\
-\colorbox{red!30}{TODO https://dl.acm.org/doi/book/10.5555/1593511}
+Als Programmiersprache wurde sich für Python\cite{python} entschieden da ein gutes Vorwissen in dieser Sprache vorhanden war und alle für diese Arbeit wichtigen Packages in dieser Programmiersprache existieren.
+Der Schöpfer von Python beschreibt es selbst als einfach zu erlernende objektorientierte Programmiersprache, welche Leistung mit einer klaren Syntax verbindet.\cite{PythonManual2009} \\
 
 \subsection{Tensorflow}
-Bei Tensorflow handelt es sich um ein open source Framework für Maschine-Learning welches ursprünglich für den internen Bedarf bei Google, für zum Beispiel Spracherkennung oder Google Maps, entwickelt wurde. 
+Bei Tensorflow \cite{tensorflow} handelt es sich um ein open source Framework für Maschine-Learning welches ursprünglich für den internen Bedarf bei Google, für zum Beispiel Spracherkennung oder Google Maps, entwickelt wurde. 
 
 \subsection{Keras}
-Keras ist eine open source Bibliothek die auf Tensorflow aufbaut welche die Möglichkeit bietet vereinfacht neuronale Netze zu erstellen um diese in reinforcement learning Algorithmen zu benutzen.
+Keras\cite{keras} ist eine open source Bibliothek die auf Tensorflow aufbaut welche die Möglichkeit bietet vereinfacht neuronale Netze zu erstellen um diese in reinforcement learning Algorithmen zu benutzen.
 
 \subsection{OpenAI Gym}
 Gym \cite{gym} ist ein Werkzeug zum Entwickeln und Vergleichen von reinforcement learning Algorithmen welches von OpenAI, einem Forschungslabor aus San Francisco, zur Verfügung gestellt wird. Es bietet einen Standard zwischen dem Environment und dem Agenten. Hierdurch können neue Agenten und Environments nach gewissen Vorgaben erstellt werden. Somit ist es mit Gym einfacher möglich verschiedene Agenten an einem Environment zu Trainieren und diese zu vergleichen oder den selben Agenten an verschiedenen Environments auf seine Anpassungsfähigkeit zu testen.

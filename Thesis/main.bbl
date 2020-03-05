@@ -1,0 +1,231 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{PythonManual2009}{book}{}
+      \name{author}{1}{}{%
+        {{hash=8d8cfdeb9aca1989fe49d45ee2946f32}{%
+           family={Guido\bibnamedelimb Van\bibnamedelima Rossum},
+           familyi={G\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Fred\bibnamedelimb L.\bibnamedelimi Drake},
+           giveni={F\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Scotts Valley}%
+      }
+      \list{publisher}{1}{%
+        {CreateSpace}%
+      }
+      \strng{namehash}{8d8cfdeb9aca1989fe49d45ee2946f32}
+      \strng{fullhash}{8d8cfdeb9aca1989fe49d45ee2946f32}
+      \strng{bibnamehash}{8d8cfdeb9aca1989fe49d45ee2946f32}
+      \strng{authorbibnamehash}{8d8cfdeb9aca1989fe49d45ee2946f32}
+      \strng{authornamehash}{8d8cfdeb9aca1989fe49d45ee2946f32}
+      \strng{authorfullhash}{8d8cfdeb9aca1989fe49d45ee2946f32}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{langid}{english}
+      \field{title}{Python 3 Reference Manual}
+      \field{year}{2009}
+    \endentry
+    \entry{keras}{software}{}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Keras}
+      \verb{urlraw}
+      \verb https://keras.io/
+      \endverb
+      \verb{url}
+      \verb https://keras.io/
+      \endverb
+    \endentry
+    \entry{Thill2012}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=d71c1e7fec804ee73218086d317a1b65}{%
+           family={Markus\bibnamedelima Thill},
+           familyi={M\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Patrick\bibnamedelimb Koch\bibnamedelimb und\bibnamedelimb Wolfgang\bibnamedelima Konen},
+           giveni={P\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim u\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Department of Computer Science, Cologne University of Applied Sciences}%
+      }
+      \list{location}{1}{%
+        {Gummersbach, Germany}%
+      }
+      \strng{namehash}{d71c1e7fec804ee73218086d317a1b65}
+      \strng{fullhash}{d71c1e7fec804ee73218086d317a1b65}
+      \strng{bibnamehash}{d71c1e7fec804ee73218086d317a1b65}
+      \strng{authorbibnamehash}{d71c1e7fec804ee73218086d317a1b65}
+      \strng{authornamehash}{d71c1e7fec804ee73218086d317a1b65}
+      \strng{authorfullhash}{d71c1e7fec804ee73218086d317a1b65}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{title}{Reinforcement Learning with N-tuples on theGame Connect-4}
+      \field{type}{Part of the Lecture Notes in Computer Science book series (LNCS, volume 7491)}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://www.researchgate.net/profile/Wolfgang_Konen/publication/235219697_Reinforcement_Learning_with_N-tuples_on_the_Game_Connect-4/links/0912f510811c0942f6000000.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/profile/Wolfgang_Konen/publication/235219697_Reinforcement_Learning_with_N-tuples_on_the_Game_Connect-4/links/0912f510811c0942f6000000.pdf
+      \endverb
+    \endentry
+    \entry{Martijn2012}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=64fe09dcb19575dec01be76d71877020}{%
+           family={Martijn\bibnamedelimb van\bibnamedelima Otterlo},
+           familyi={M\bibinitperiod\bibinitdelim v\bibinitperiod\bibinitdelim O\bibinitperiod},
+           given={Marco\bibnamedelima Wiering},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Springer}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \strng{namehash}{64fe09dcb19575dec01be76d71877020}
+      \strng{fullhash}{64fe09dcb19575dec01be76d71877020}
+      \strng{bibnamehash}{64fe09dcb19575dec01be76d71877020}
+      \strng{authorbibnamehash}{64fe09dcb19575dec01be76d71877020}
+      \strng{authornamehash}{64fe09dcb19575dec01be76d71877020}
+      \strng{authorfullhash}{64fe09dcb19575dec01be76d71877020}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Reinforcement Learning and Markov Decision Processes}
+      \field{type}{Reinforcement Learning. Adaptation, Learning, and Optimization, vol 12}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://www.ai.rug.nl/~mwiering/Intro_RLBOOK.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.ai.rug.nl/~mwiering/Intro_RLBOOK.pdf
+      \endverb
+    \endentry
+    \entry{gym}{software}{}
+      \field{sortinit}{O}
+      \field{sortinithash}{ff8d4eeb5101e3cf3809959b3592d942}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{OpenAI Gym}
+      \verb{urlraw}
+      \verb https://gym.openai.com/
+      \endverb
+      \verb{url}
+      \verb https://gym.openai.com/
+      \endverb
+    \endentry
+    \entry{python}{software}{}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Python}
+      \verb{urlraw}
+      \verb https://www.python.org/
+      \endverb
+      \verb{url}
+      \verb https://www.python.org/
+      \endverb
+    \endentry
+    \entry{Stephan2018}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=13557919d3fd12628370a3ff2df7cf78}{%
+           family={Stephan},
+           familyi={S\bibinitperiod},
+           given={Lukas},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Universität Bremen, Informatik}%
+      }
+      \list{location}{1}{%
+        {Bremen, Deutschland}%
+      }
+      \strng{namehash}{13557919d3fd12628370a3ff2df7cf78}
+      \strng{fullhash}{13557919d3fd12628370a3ff2df7cf78}
+      \strng{bibnamehash}{13557919d3fd12628370a3ff2df7cf78}
+      \strng{authorbibnamehash}{13557919d3fd12628370a3ff2df7cf78}
+      \strng{authornamehash}{13557919d3fd12628370a3ff2df7cf78}
+      \strng{authorfullhash}{13557919d3fd12628370a3ff2df7cf78}
+      \field{sortinit}{S}
+      \field{sortinithash}{c319cff79d99c853d775f88277d4e45f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{german}
+      \field{month}{6}
+      \field{title}{Implementierung und Evaluation eines intelligenten Spielagenten mit Reinforcement Learning}
+      \field{type}{Bachelorarbeit}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb unpublished
+      \endverb
+      \verb{url}
+      \verb unpublished
+      \endverb
+    \endentry
+    \entry{tensorflow}{software}{}
+      \field{sortinit}{T}
+      \field{sortinithash}{51f9faf24c60c62ca764a77f78cf5666}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Tensorflow}
+      \verb{urlraw}
+      \verb https://www.tensorflow.org/
+      \endverb
+      \verb{url}
+      \verb https://www.tensorflow.org/
+      \endverb
+    \endentry
+    \entry{connect4}{online}{}
+      \field{sortinit}{V}
+      \field{sortinithash}{02432525618c08e2b03cac47c19764af}
+      \field{labeltitlesource}{title}
+      \field{month}{3}
+      \field{title}{Vier Gewinnt Spiel}
+      \field{urlday}{5}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cdn.anyfinder.eu/assets/5a6903838df2f5833889cbf45eb7599de9b858bb1821dc321540fb0bf4dca517
+      \endverb
+      \verb{url}
+      \verb https://cdn.anyfinder.eu/assets/5a6903838df2f5833889cbf45eb7599de9b858bb1821dc321540fb0bf4dca517
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
