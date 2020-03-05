@@ -8,7 +8,12 @@ Die wichtigsten dieser Technologien werden hier erklärt, um das weitere Verstä
 
 \section{Vier Gewinnt}
 Vier Gewinnt ist ein Spiel für 2 Spieler in dem abwechselnd Spielsteine in ein vertikales Spielfeld der größe 7 * 6 eingeworfen werden. Jeder Spieler kann sich in seinem Zug zwischen einem von sieben Einwurflöchern entscheiden. Wird ein Spielstein eingeworfen so fällt dieser auf die niedrigste der sechs Positionen die noch nicht durch andere Spielsteine gefüllt ist. Hierdurch ergibt sich ein Spielfeld mit 42 Feldern.  Sind schon sechs Spielsteine in ein bestimmtest Einwurfloch gesteckt wurden so darf hier kein weiterer Spielstein eingeworfen werden. Ein Spieler gewinnt das Spiel wenn er es geschafft  hat, dass sich vier seiner Spielsteine in einer Reihe befinden. Eine Reihe kann horizontal, vertikal oder diagonal gebildet werden. Werden alle 42 Positionen mit Spielsteinen befüllt ohne eine Reihe von vier Steinen des selben Spielers zu bilden geht die Partie unentschieden aus.
-\colorbox{red!30}{TODO BILD}
+\begin{figure}[h!]
+  \includegraphics[scale=0.1]{echtes_spiel.png}
+  \centering
+  \caption{Das Spiel Vier Gewinnt}
+  \label{fig:echtes_spiel}
+\end{figure}
 
 
 \section{Minimax Algorithmus}
@@ -22,9 +27,14 @@ Der Negamax Algorithmus basiert auf der Annahme, dass der maximal beste Zug für
 Alpha-Beta Suche ist eine Variante des Minimax Algorithmus, die die Berechnung des Suchbaumes beschleunigt, indem sie bestimmte Teile der Suche nicht ausführt wenn es schon einen klar besseren Pfad gibt.
 
 \section{Reinforcement Learning}
-Reinforcement learning (Bestärkendes Lernen) ist eine Maschine-Learning Methode bei der ein Agent mit Hilfe eines Environments, Policy, State, Actions und eines Rewards lernt, eine ihm gegebene Aufgabe zu lösen. Es wird dabei Grundsätzlich wie in dem  \colorbox{red!30}{Bild} beschrieben vorgegangen. Diese Teile des reinfocement learnings werden hier nun einmal genauer beschrieben.\\
- \colorbox{red!30}{TODO ausführen}\\
-\colorbox{red!30}{TODO Bild state action agent environment abhängigkeiten}.
+Reinforcement learning (Bestärkendes Lernen) ist eine Maschine-Learning Methode bei der ein Agent mit Hilfe eines Environments, Policy, State, Actions und eines Rewards lernt, eine ihm gegebene Aufgabe zu lösen. Es wird dabei Grundsätzlich wie in Abbildung \ref{fig:rl_basic} beschrieben vorgegangen. Der Agent bekommt also einen State vom Environment, und durch diesen sucht  er sich mittels seiner Policy eine Action aus. Diese Action beinflusst dann das Environment und dieses gibt dem Agenten einen Reward für seine Action. Durch den Reward kann der Agent dann seine Policy anpassen. Dazu bekommt der Agent dann den neuen State und kann dann, mit der angepassten Policy, wieder eine neue Action auswählen. Diese Teile des reinfocement learnings werden hier nun einmal genauer beschrieben.\\
+
+\begin{figure}[h!]
+  \includegraphics[scale=0.5]{rl_basics.png}
+  \centering
+  \caption{grundsätzliches Konzept von reinforcement learning}
+  \label{fig:rl_basic}
+\end{figure}
 
 \subsection{Environment}
 Das Environment beschreibt das gesamte Problem dass der Agent versucht zu lösen. Es beinhaltet alles was für das Spielen wichtig ist außer dem Spieler, welcher von dem Agenten behandelt wird.  Dies ist bei den meisten Spielen ein Spielfeld mit den Positionen aller Akteure, Spielsteine oder sonstige Elemente die zum Spielen genutzt werden. Dazu kümmert sich das Environment auch noch um die Spiellogik. Die Spiellogik beschreibt alle Abläufe die durch die Regeln des Spiels definiert wurden. In dem Beispiel Vier Gewinnt wäre das unter anderem die Funktion, dass die Spielsteine immer auf das untereste freie Feld fallen oder die Überprüfung ob ein Spieler gewonnen hat. Das letzte wichtige Element im Environment der meisten Spiele ist der Gegenspieler welcher im Falle von physikalischen Spielen normalerweise die selben Möglichkeiten besitzt wie der Spieler. Für das Verhalten des Gegenspielers werden im Normalfall Algorithmen genutzt die den bestmöglichen Zug errechnen, wie hier der Minimax Algorithmus. Für sehr komplexe Spiele bei denen sich kein optimalerZug berechnen lässt wird oft auf menschliche Spieler zurückgegriffen. Da ein Computer aber viel schneller im spielen ist und reinforcement learning viele Durchläufe absolvieren muss um Wirkung zu zeigen wird versucht dies zu vermeiden oder bestehende Datensätze von Spielen mit Menschen genutzt.\\
@@ -32,7 +42,6 @@ Das Environment beschreibt das gesamte Problem dass der Agent versucht zu lösen
 
 \subsection{Agent}
 Bei dem Agenten handelt es sich um den Akteur der die ihm gegebene Aufgabe meistern soll. Er sieht das Environment und wählt mittels der Policy die ihm am besten erscheinende Action aus um den Reward zu maximieren.\\
-\colorbox{red!30}{done?}
 
 \subsection{Policy}
 Mit der Policy wird das Verhalten beschrieben nach dem der Agent entscheidet welche der möglichen Aktionen die aktuell beste ist um den Reward zu maximieren.\\
@@ -74,7 +83,6 @@ Eine Episode beschreibt einen einzelnen Durchlauf des Agenten im Environment.
 Eine Epoche ist eine Sammlung von Episoden und beschreibt einen gesammten Lerndurchlauf.
 
 
-
 %\colorbox{red!30}{TODO Beispiele} %ausführen
 
 
@@ -93,12 +101,10 @@ Der Schöpfer von Python beschreibt es selbst als einfach zu erlernende objektor
 
 \subsection{Tensorflow}
 Bei Tensorflow handelt es sich um ein open source Framework für Maschine-Learning welches ursprünglich für den internen Bedarf bei Google, für zum Beispiel Spracherkennung oder Google Maps, entwickelt wurde. 
-\colorbox{red!30}{TODO mehr?}
 
 \subsection{Keras}
 Keras ist eine open source Bibliothek die auf Tensorflow aufbaut welche die Möglichkeit bietet vereinfacht neuronale Netze zu erstellen um diese in reinforcement learning Algorithmen zu benutzen.
-\colorbox{red!30}{TODO mehr?}
 
 \subsection{OpenAI Gym}
-Gym ist ein Werkzeug zum entwickeln und vergleichen von reinforcement learning Algorithmen welches von OpenAI, einem Forschungslabor aus San Francisco, zur Verfügung gestellt wird. Es bietet einen Standard zwischen dem Environment und dem Agenten. Hierdurch können neue Agenten und Environments nach gewissen Vorgaben erstellt werden. Somit ist es mit Gym einfacher möglich verschiedene Agenten an einem Environment zu Trainieren und diese zu vergleichen oder den selben Agenten an verschiedenen Environments auf seine Anpassungsfähigkeit zu testen.
+Gym \cite{gym} ist ein Werkzeug zum Entwickeln und Vergleichen von reinforcement learning Algorithmen welches von OpenAI, einem Forschungslabor aus San Francisco, zur Verfügung gestellt wird. Es bietet einen Standard zwischen dem Environment und dem Agenten. Hierdurch können neue Agenten und Environments nach gewissen Vorgaben erstellt werden. Somit ist es mit Gym einfacher möglich verschiedene Agenten an einem Environment zu Trainieren und diese zu vergleichen oder den selben Agenten an verschiedenen Environments auf seine Anpassungsfähigkeit zu testen.
 
