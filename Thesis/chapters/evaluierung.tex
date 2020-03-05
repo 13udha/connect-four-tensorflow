@@ -2,15 +2,125 @@
 
 \label{cha:Eval}
 
-Um die Effektivität der verschiedenen Versionen des reinforcement learning Agenten zu Evaluieren werden diese hier verglichen. Weitergehend werden alle Versionen noch mit diesen Anzahlen von Episoden trainiert um die Effektivität über längere trainingsabläufe zu vergleichen.
+In diesem Kapitel wird nun der Implementierte reinforcement learning Agent evaluiert. Hierfür wird zuerst, mit Hilfe von einem deterministischen Gegner und einem Gegner der in jedem Zug eine zufällige Aktion auswählt, gezeigt, ob die neu gewählte Reward-Funktion einen Vorteil beim Lernen gibt. Danach wird dann an diesen beiden Gegnern gezeigt, ob das Lernen mit Einbezug der gegnerischen Züge eine Veränderung im Lernverhalten zeigt. Hiernach wird dann gegen den Minimax Algorithmus trainiert um zu zeigen wie gut der reinforcement learning Agent werden kann. \\Es folgen nun die Graphen dieser Evaluierung, wobei immer ein Paar von Graphen die selbe Lernepoche beschreibt. Der eine Graph beschreibt den absoluten Reward, also den genauen Wert, zu jeder Episode. Der andere Graph beschreibt den durchschnittlichen Reward zu jeder Episode im Bezug auf alle vorherigen Episoden dieser Epoche.
+Es wurde sich für eine Epoche von 1000 entschieden, da sich hier schon das Verhalten des Agenten abzeichnet und das berrechnen von längeren Epochen einen sehr hohen Zeitaufwand bedeuten würde.\\
 
-\colorbox{red!30}{jede veränderung auflisten und verschieden lange lernperioden bennen}
+Wichtig ist es beim betrachten der Graphen darauf zu achten, dass der durchschnittliche Reward (immer der rechte Graph) meist nicht das komplette Spektrum von 1 bis -1 abdeckt.
+
+\section{Reward-Funktion}
+Als erstes evaluieren wir die Verbesserung durch die verbesserte Reward-Funktion. Hierfür vergleichen wir Abbildung \ref{fig:randomFF} mit Abbildung \ref{fig:randomTF} sowie Abbildung \ref{fig:leftiFF} mit Abbildung \ref{fig:leftiTF}.\\
+Abbildung \ref{fig:randomFF} (b) und Abbildung \ref{fig:randomTF} (b) verhalten sich fundamental sehr ähnlich. Beide erreichen einen durchschnittlichen Reward von 0.5 nach etwa 250 Episoden. Wobei die einfache Reward-Funktion aber einen abfallenden, und die Reward-Funktion einen konstanteren, Trent aufweißt.\\
+
+\begin{figure}%
+    \centering
+    \subfloat[absoluter Reward]{{\includegraphics[width=6cm]{RandomFFallreward_plot.png} }}%
+    \qquad
+    \subfloat[durchschnittlicher Reward]{{\includegraphics[width=6cm]{RandomFFaveragereward_plot.png} }}%
+    \caption{Reinforcement learning an zufällig werfendem Gegner mit einfacher Reward-Funktion und ohne die Züge des Gegners mitzulernen.}%
+    \label{fig:randomFF}%
+\end{figure}
 
 
-\section{Auswertung}
-\colorbox{red!30}{Ergebnisse in Text übersetzen-> Graph, Durchschnitt,...}
+\begin{figure}%
+    \centering
+    \subfloat[absoluter Reward]{{\includegraphics[width=6cm]{RandomTFallreward_plot.png} }}%
+    \qquad
+    \subfloat[durchschnittlicher Reward]{{\includegraphics[width=6cm]{RandomTFaveragereward_plot.png} }}%
+    \caption{Reinforcement learning an zufällig werfendem Gegner mit verbesserter Reward-Funktion und ohne die Züge des Gegners mitzulernen.}%
+    \label{fig:randomTF}%
+\end{figure}
 
-\colorbox{red!30}{Schlüsse die aus den Daten gezogen werden können -> Signifikantstest?}
+Abbildung \ref{fig:leftiFF}(b) zeigt einen starken Abfall in gewonnenen Spielen nach etwa der 300. Episode. Dieses verhalten ist auch sehr stark in Abbildung \ref{fig:leftiFF}(a) zu erkennen ist.\\
+Im vergleich zu der einfachen Reward-Funktion wird in Abbildung \ref{fig:leftiTF}(b) eine Annäherung an 0 aufzeigt was auf eine 50\% Gewinnchance hinweißt.
+
+\begin{figure}%
+    \centering
+    \subfloat[absoluter Reward]{{\includegraphics[width=6cm]{LeftiFFallreward_plot.png} }}%
+    \qquad
+    \subfloat[durchschnittlicher Reward]{{\includegraphics[width=6cm]{LeftiFFaveragereward_plot.png} }}%
+    \caption{Reinforcement learning an deterministisch werfendem Gegner mit einfacher Reward-Funktion und ohne die Züge des Gegners mitzulernen.}%
+    \label{fig:leftiFF}%
+\end{figure}
+
+\begin{figure}%
+    \centering
+    \subfloat[absoluter Reward]{{\includegraphics[width=6cm]{LeftiTFallreward_plot.png} }}%
+    \qquad
+    \subfloat[durchschnittlicher Reward]{{\includegraphics[width=6cm]{LeftiTFaveragereward_plot.png} }}%
+    \caption{Reinforcement learning an deterministisch werfendem Gegner mit verbesserter Reward-Funktion und ohne die Züge des Gegners mitzulernen.}%
+    \label{fig:leftiTF}%
+\end{figure}
+Es wurde gezeigt, dass durch die verbesserte Reward-Funktion, besser gegen den zufälligen und den deterministischen Gegner gespielt wurde.
+Hieraus schließe ich, dass die verbesserte Reward-Funktion einen positiven Effetkt auf das Lernverhalten des reinforcement learning Agenten.
+Aus diesem Grund wird in allen fortlaufenden Evaluierungen mit der verbesserten Reward-Funktion gearbeitet.
+
+\section{Lernen vom Gegner}
+Nun wird evaluiert ob das Lernen von den Zügen des Gegners einen positiven Einfluss auf das Lernverhalten des Agenten hat. Hierfür werden wieder der deterministisch und der zufällig ziehende Gegner genutzt.\\
+Wie in Abbildung \ref{fig:randomTT} (b) zu sehen ist, ist das Ergebnis hier im vergleich zu Abbildung \ref{fig:randomTF} (b) wesentlich schlechter. Dies ergibt aber Sinn, da der Gegner ja komplett zufällig spielt und somit das lernen seiner Züge eher als Nachteil betrachtet werden muss.\\
+Abbildung \ref{fig:leftiTT} zeigt hingegen eine sehr starke Verbesserung im vergleich zu Abbildung \ref{fig:leftiTF}. Wie in Abbildung \ref{fig:leftiTT}(a) zu sehen ist sind die meisten Rewards überhalb von 0, dies war in Abbildung \ref{fig:leftiTF}(a) nicht der Fall.
+
+
+\begin{figure}%
+    \centering
+    \subfloat[absoluter Reward]{{\includegraphics[width=6cm]{RandomTTallreward_plot.png} }}%
+    \qquad
+    \subfloat[durchschnittlicher Reward]{{\includegraphics[width=6cm]{RandomTTaveragereward_plot.png} }}%
+    \caption{Reinforcement learning an zufällig werfendem Gegner mit verbesserter Reward-Funktion, wobei die Züge des Gegners mitgelernent werden.}%
+    \label{fig:randomTT}%
+\end{figure}
+
+\begin{figure}%
+    \centering
+    \subfloat[absoluter Reward]{{\includegraphics[width=6cm]{LeftiTTallreward_plot.png} }}%
+    \qquad
+    \subfloat[durchschnittlicher Reward]{{\includegraphics[width=6cm]{LeftiTTaveragereward_plot.png} }}%
+    \caption{Reinforcement learning an zufällig werfendem Gegner mit verbesserter Reward-Funktion, wobei die Züge des Gegners mitgelernent werden.}%
+    \label{fig:leftiTT}%
+\end{figure}
+
+Somit wurde gezeigt, dass das nutzen der Züge eines Gegners mit zielführender Strategie zu einer verbesserung des Lernverhaltens des reinforcement learning Agenten führt.
+Da in den folgenden Tests nur noch gegen Gegner mit einer Zielführenden Strategie gelernt wird, wird das Lernen von Gegnerischen Zügen für alle folgenden Evaluationen genutzt.
+
+\section{Minimax}
+Die letzte Evaluierung sollte zeigen, dass ein reinforcement learning Agent mit den zuvor gezeigten Verbesserungen unterschiedlich schnell zu einer guten Strategie finden kann. 
+Hierfür wurde der reinforcement learning Agent gegen den Minimax-Algorithmus mit verschieden starker Wahrscheinlichkeitsverteilung trainiert.\\
+Die in Abbildung \ref{fig:MiniMaxReward1} und Abbildung \ref{fig:MiniMaxReward2} gezeigten Graphen zeigen das Trainingsverhalten gegen den Minimax Algorithmus mit steigender Wahrscheinlichkeit den besten Zug zu wählen. Das erste Paar in Abbildung \ref{fig:MiniMaxReward1} (a und b) hat somit die niedrigste Wahrscheinlichkeit den besten Zug zu wählen und das letzte Paar in Abbildung \ref{fig:MiniMaxReward2} (c und d) den höchsten.\\
+Leider ließ sich hier nicht mal bei der niedrigsten Wahrscheinlichkeit ein Lernvortschritt feststellen. 
+
+\begin{figure}%
+    \centering
+    \subfloat[absoluter Reward]{{\includegraphics[width=6cm]{MM00001allreward_plot.png} }}%
+    \qquad
+    \subfloat[durchschnittlicher Reward]{{\includegraphics[width=6cm]{MM00001averagereward_plot.png} }}%
+    \qquad
+    \subfloat[absoluter Reward]{{\includegraphics[width=6cm]{MM0001allreward_plot.png} }}%
+    \qquad
+    \subfloat[durchschnittlicher Reward]{{\includegraphics[width=6cm]{MM0001averagereward_plot.png} }}%
+    \qquad
+    \subfloat[absoluter Reward]{{\includegraphics[width=6cm]{MM001allreward_plot.png} }}%
+    \qquad
+    \subfloat[durchschnittlicher Reward]{{\includegraphics[width=6cm]{MM001averagereward_plot.png} }}%
+    \qquad
+    \subfloat[absoluter Reward]{{\includegraphics[width=6cm]{MM01allreward_plot.png} }}%
+    \qquad
+    \subfloat[durchschnittlicher Reward]{{\includegraphics[width=6cm]{MM01averagereward_plot.png} }}%
+    \caption{Reinforcement learning an Minimax Gegner mit verbesserter Reward-Funktion, wobei die Züge des Gegners mitgelernent werden. Teil 1}%
+    \label{fig:MiniMaxReward1}%
+\end{figure}
+\begin{figure}%
+    \centering
+    \subfloat[absoluter Reward]{{\includegraphics[width=6cm]{MM1allreward_plot.png} }}%
+    \qquad
+    \subfloat[durchschnittlicher Reward]{{\includegraphics[width=6cm]{MM1averagereward_plot.png} }}%
+    \qquad
+    \subfloat[absoluter Reward]{{\includegraphics[width=6cm]{MM10allreward_plot.png} }}%
+    \qquad
+    \subfloat[durchschnittlicher Reward]{{\includegraphics[width=6cm]{MM10averagereward_plot.png} }}%
+    \caption{Reinforcement learning an Minimax Gegner mit verbesserter Reward-Funktion, wobei die Züge des Gegners mitgelernent werden. Teil 2}%
+    \label{fig:MiniMaxReward2}%
+\end{figure}
+
+
 
 
 

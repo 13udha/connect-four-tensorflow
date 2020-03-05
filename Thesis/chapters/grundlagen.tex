@@ -27,7 +27,7 @@ Reinforcement learning (Bestärkendes Lernen) ist eine Maschine-Learning Methode
 \colorbox{red!30}{TODO Bild state action agent environment abhängigkeiten}.
 
 \subsection{Environment}
-Das Environment beschreibt das gesamte Problem dass der Agent versucht zu lösen. Es beinhaltet alles was für das Spielen wichtig ist außer dem Spieler, welcher von dem Agenten behandelt wird.  Dies ist bei den meisten Spielen ein Spielfeld mit den Positionen aller Akteure, Spielsteine oder sonstige Elemente die zum Spielen genutzt werden. Dazu kümmert sich das Environment auch noch um die Spiellogik. Die Spiellogik beschreibt alle Abläufe die durch die Regeln des Spiels definiert wurden. In dem Beispiel Vier Gewinnt wäre das unter anderem die Funktion, dass die Spielsteine immer auf das untereste freie Feld fallen oder die überprüfung ob ein Spieler Gewonnen hat. Das letzte wichtige Element im Environment der meisten Spiele ist der Gegenspieler welcher im Falle von physikalischen Spielen normalerweise die selben Möglichkeiten besitzt wie der Spieler. Für das Verhalten des Gegenspielers werden im Normalfall Algorithmen genutzt die den bestmöglichen Zug errechnen, wie hier der Minimax Algorithmus. Für sehr komplexe Spiele bei denen sich kein optimalerZug berechnen lässt wird oft auf menschliche Spieler zurückgegriffen. Da ein Computer aber viel schneller im spielen ist und reinforcement learning viele Durchläufe absolvieren muss um Wirkung zu zeigen wird versucht dies zu vermeiden oder bestehende Datensätze von Spielen mit Menschen genutzt.\\
+Das Environment beschreibt das gesamte Problem dass der Agent versucht zu lösen. Es beinhaltet alles was für das Spielen wichtig ist außer dem Spieler, welcher von dem Agenten behandelt wird.  Dies ist bei den meisten Spielen ein Spielfeld mit den Positionen aller Akteure, Spielsteine oder sonstige Elemente die zum Spielen genutzt werden. Dazu kümmert sich das Environment auch noch um die Spiellogik. Die Spiellogik beschreibt alle Abläufe die durch die Regeln des Spiels definiert wurden. In dem Beispiel Vier Gewinnt wäre das unter anderem die Funktion, dass die Spielsteine immer auf das untereste freie Feld fallen oder die Überprüfung ob ein Spieler gewonnen hat. Das letzte wichtige Element im Environment der meisten Spiele ist der Gegenspieler welcher im Falle von physikalischen Spielen normalerweise die selben Möglichkeiten besitzt wie der Spieler. Für das Verhalten des Gegenspielers werden im Normalfall Algorithmen genutzt die den bestmöglichen Zug errechnen, wie hier der Minimax Algorithmus. Für sehr komplexe Spiele bei denen sich kein optimalerZug berechnen lässt wird oft auf menschliche Spieler zurückgegriffen. Da ein Computer aber viel schneller im spielen ist und reinforcement learning viele Durchläufe absolvieren muss um Wirkung zu zeigen wird versucht dies zu vermeiden oder bestehende Datensätze von Spielen mit Menschen genutzt.\\
 
 
 \subsection{Agent}
@@ -64,8 +64,14 @@ Deswegen wird hier dann eine Q-Funktion benutzt die anhand der gelernten Zustän
 \colorbox{red!30}{TODO} %ausführen
 
 \subsection{Deep Q-Network}
-Da es, bei einem Spiel mit einer Komplexität wie Vier Gewinnt, nicht möglich ist für alle Paare von State und Action einen erwarteten Reward zu bestimmen wird ein neuronales Netz genutzt welches versucht eine Policy für diese erwarteten Rewards zu bestimmen. Dieses Verfahren nennt sich Deep Q-Learning. Hierbei wird ein Deep Q-Network erstellt welches durch eine Sammlung zufälligen gespeicherter Spielen mit der aktuellen Policy diese anpasst.
+Da es, bei einem Spiel mit einer Komplexität wie Vier Gewinnt, nicht möglich ist für alle Paare von State und Action einen erwarteten Reward zu bestimmen, wird ein neuronales Netz genutzt welches versucht eine Policy für diese erwarteten Rewards zu bestimmen. Dieses Verfahren nennt sich Deep Q-Learning. Hierbei wird ein Deep Q-Network erstellt, welches durch eine Sammlung zufälligen gespeicherter Spielen mit der aktuellen Policy diese anpasst.
 \colorbox{red!30}{TODO} %ausführen
+
+\subsection{Episode}
+Eine Episode beschreibt einen einzelnen Durchlauf des Agenten im Environment.
+
+\subsection{Epoche}
+Eine Epoche ist eine Sammlung von Episoden und beschreibt einen gesammten Lerndurchlauf.
 
 
 
