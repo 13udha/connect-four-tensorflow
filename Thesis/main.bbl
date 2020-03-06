@@ -19,6 +19,35 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{HandsOn2017}{book}{}
+      \name{author}{1}{}{%
+        {{hash=e54e6c9ce5d233c7046a00f7b3faa6c0}{%
+           family={Géron},
+           familyi={G\bibinitperiod},
+           given={Aurélien},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Gravenstein Highway North, Sebastopol, CA95472}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media Inc.}%
+      }
+      \strng{namehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{fullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{bibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorbibnamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authornamehash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \strng{authorfullhash}{e54e6c9ce5d233c7046a00f7b3faa6c0}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{langid}{english}
+      \field{title}{Hands-On Machine Learning with Scikit-Learn and Tensorflow}
+      \field{year}{2017}
+    \endentry
     \entry{PythonManual2009}{book}{}
       \name{author}{1}{}{%
         {{hash=8d8cfdeb9aca1989fe49d45ee2946f32}{%
@@ -86,7 +115,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
-      \field{month}{6}
       \field{title}{Reinforcement Learning with N-tuples on theGame Connect-4}
       \field{type}{Part of the Lecture Notes in Computer Science book series (LNCS, volume 7491)}
       \field{year}{2012}

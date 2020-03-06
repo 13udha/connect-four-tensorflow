@@ -67,8 +67,8 @@ Da in Vier Gewinnt nur am Ende eines Spiels ein Reward ausgegeben wird, wird hie
 Dieses Deep Q-Network wird nach einer Epsilon-Greedy Policy trainiert.
 
 \subsubsection{Deep Q-Network}
-Das Deep Q-Network speichert zu jedem gespielten Zug den derzeitigen State, die ausgeführte Aktion, den erhaltenen Reward, der daraus folgende State und ob der neue State die Episode beendet hat in sein Memory. Aus diesem Memory wird dann, mit der Funktion $experience\_replay$, eine gewisse Menge an zufälligen Proben genommen. Es ist sehr sinnvoll hier eine zufällige Probe zu nehmen, da sonst durch die in Reihe betrachteten Züge ein ungewollter Bias entstehen kann, welcher die Konvergenz des Trainingalgorithmuses stark verlangsamen kann.
-\colorbox{red!30}{Buch Seite 469}
+Das Deep Q-Network speichert zu jedem gespielten Zug den derzeitigen State, die ausgeführte Aktion, den erhaltenen Reward, der daraus folgende State und ob der neue State die Episode beendet hat in sein Memory. Aus diesem Memory wird dann, mit der Funktion $experience\_replay$, eine gewisse Menge an zufälligen Proben genommen. Es ist sehr sinnvoll hier eine zufällige Probe zu nehmen, da sonst durch die in Reihe betrachteten Züge ein ungewollter Bias entstehen kann, welcher die Konvergenz des Trainingalgorithmuses stark verlangsamen kann
+\cite[Seite 469]{HandsOn2017}.
 Für diese Proben werden dann die Q-Values vorhergesagt. Mit diesen Q-Values wird dann das Q-Network trainiert. 
 Dieser Prozess wird so häufig wiederholt, dass hierdurch die Q-Values immer genauer  werden und dadurch ergibt sich dann eine ziehlführende Policy.
 

@@ -2192,6 +2192,7 @@
     <bcf:citekey order="8">tensorflow</bcf:citekey>
     <bcf:citekey order="9">keras</bcf:citekey>
     <bcf:citekey order="10">gym</bcf:citekey>
+    <bcf:citekey order="11">HandsOn2017</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

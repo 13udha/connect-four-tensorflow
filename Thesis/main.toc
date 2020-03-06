@@ -35,11 +35,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.2}Alpha-Beta Suche}{4}{subsection.2.2.2}%
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.3}Wahrscheinlichkeitsverteilung}{4}{subsection.2.2.3}%
+\defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Reinforcement Learning}{4}{section.2.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.1}Environment}{5}{subsection.2.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Agent}{5}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.2}Agent}{6}{subsection.2.3.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.3}Policy}{6}{subsection.2.3.3}%
 \defcounter {refsection}{0}\relax 
@@ -57,13 +59,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.10}Markow-Entscheidungsproblem}{7}{subsection.2.3.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.11}Episode}{7}{subsection.2.3.11}%
+\contentsline {subsection}{\numberline {2.3.11}credit assignment problem}{7}{subsection.2.3.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.12}Epoche}{7}{subsection.2.3.12}%
+\contentsline {subsection}{\numberline {2.3.12}Episode}{7}{subsection.2.3.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Software}{7}{section.2.4}%
+\contentsline {subsection}{\numberline {2.3.13}Epoche}{8}{subsection.2.3.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}Python}{7}{subsection.2.4.1}%
+\contentsline {section}{\numberline {2.4}Software}{8}{section.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.1}Python}{8}{subsection.2.4.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.4.2}Tensorflow}{8}{subsection.2.4.2}%
 \defcounter {refsection}{0}\relax 
@@ -135,4 +139,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Software}{22}{section*.21}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Online-Quellen}{22}{section*.22}%
+\contentsline {section}{Online-Quellen}{23}{section*.22}%
