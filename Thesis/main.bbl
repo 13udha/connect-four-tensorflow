@@ -19,6 +19,99 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{Meire2017}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=e53be66e1ff6e8e403145464fc7ceb83}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Meire\bibnamedelima Fortunato},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Cornell University}%
+      }
+      \list{location}{1}{%
+        {Ithaca, New York}%
+      }
+      \strng{namehash}{e53be66e1ff6e8e403145464fc7ceb83}
+      \strng{fullhash}{e53be66e1ff6e8e403145464fc7ceb83}
+      \strng{bibnamehash}{e53be66e1ff6e8e403145464fc7ceb83}
+      \strng{authorbibnamehash}{e53be66e1ff6e8e403145464fc7ceb83}
+      \strng{authornamehash}{e53be66e1ff6e8e403145464fc7ceb83}
+      \strng{authorfullhash}{e53be66e1ff6e8e403145464fc7ceb83}
+      \field{sortinit}{a}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Noisy Networks for Exploration}
+      \field{type}{Machine Learning (cs.LG)}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://arxiv.org/pdf/1706.10295.pdf?source=post_page---------------------------
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/pdf/1706.10295.pdf?source=post_page---------------------------
+      \endverb
+    \endentry
+    \entry{alphastar}{online}{}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{title}{AlphaStar: Mastering the Real-Time Strategy Game StarCraft II}
+      \field{urlday}{5}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://deepmind.com/blog/article/alphastar-mastering-real-time-strategy-game-starcraft-ii
+      \endverb
+      \verb{url}
+      \verb https://deepmind.com/blog/article/alphastar-mastering-real-time-strategy-game-starcraft-ii
+      \endverb
+    \endentry
+    \entry{ARMANTIER2004221}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3e78468d6b2b2d31cfd1c7811347391d}{%
+           family={Armantier},
+           familyi={A\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{3e78468d6b2b2d31cfd1c7811347391d}
+      \strng{fullhash}{3e78468d6b2b2d31cfd1c7811347391d}
+      \strng{bibnamehash}{3e78468d6b2b2d31cfd1c7811347391d}
+      \strng{authorbibnamehash}{3e78468d6b2b2d31cfd1c7811347391d}
+      \strng{authornamehash}{3e78468d6b2b2d31cfd1c7811347391d}
+      \strng{authorfullhash}{3e78468d6b2b2d31cfd1c7811347391d}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A common value auction experiment is run to compare the relative influence of observation and experience on learning. It is shown that the ex-post observation of opponents' actions and payoffs homogenizes behavior and accelerates learning toward the Nash equilibrium. Additionally, experiential, and observational learning are both relevant and of comparable magnitude. A general reinforcement model for continuous strategies, encompassing choice reinforcement learning, direction learning and payoff dependent imitation, performs well in explaining the experimental data, and it dominates competing models such as the reinforcement of best response strategies.}
+      \field{issn}{0899-8256}
+      \field{journaltitle}{Games and Economic Behavior}
+      \field{number}{2}
+      \field{title}{Does observation influence learning?}
+      \field{volume}{46}
+      \field{year}{2004}
+      \field{pages}{221\bibrangedash 239}
+      \range{pages}{19}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S0899-8256(03)00124-6
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S0899825603001246
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S0899825603001246
+      \endverb
+      \keyw{Learning,Observation,Continuous reinforcement,Structural estimation}
+    \endentry
     \entry{connectfork}{software}{}
       \field{sortinit}{c}
       \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
@@ -90,6 +183,74 @@
       \field{title}{Python 3 Reference Manual}
       \field{year}{2009}
     \endentry
+    \entry{NIPS2016_6391}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=2ac2ca10b22e4d13af1767e87495412f}{%
+           family={Ho},
+           familyi={H\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=160929a7e6ceecdf3f7c9a13abd5ea35}{%
+           family={Ermon},
+           familyi={E\bibinitperiod},
+           given={Stefano},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{editor}{5}{}{%
+        {{hash=dc777b608117794a5ff6308cfbba8945}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={D.\bibnamedelimi D.},
+           giveni={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=0ef91066dee98e654f9aebd57da00647}{%
+           family={Sugiyama},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=56e73897155d476124481b099f125669}{%
+           family={Luxburg},
+           familyi={L\bibinitperiod},
+           given={U.\bibnamedelimi V.},
+           giveni={U\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=e7e74de725116358b68a6e890c026145}{%
+           family={Guyon},
+           familyi={G\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=36b98b7ab533936cf1b5716148de704f}{%
+           family={Garnett},
+           familyi={G\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{d2c2729ff759e9862fc32bdfb994a71c}
+      \strng{fullhash}{d2c2729ff759e9862fc32bdfb994a71c}
+      \strng{bibnamehash}{d2c2729ff759e9862fc32bdfb994a71c}
+      \strng{authorbibnamehash}{d2c2729ff759e9862fc32bdfb994a71c}
+      \strng{authornamehash}{d2c2729ff759e9862fc32bdfb994a71c}
+      \strng{authorfullhash}{d2c2729ff759e9862fc32bdfb994a71c}
+      \strng{editorbibnamehash}{21d9daab5c7d1d638944b0bfa6ad4aef}
+      \strng{editornamehash}{21d9daab5c7d1d638944b0bfa6ad4aef}
+      \strng{editorfullhash}{070d5597ded4754ff563759b82b5aa4c}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems 29}
+      \field{title}{Generative Adversarial Imitation Learning}
+      \field{year}{2016}
+      \field{pages}{4565\bibrangedash 4573}
+      \range{pages}{9}
+      \verb{urlraw}
+      \verb http://papers.nips.cc/paper/6391-generative-adversarial-imitation-learning.pdf
+      \endverb
+      \verb{url}
+      \verb http://papers.nips.cc/paper/6391-generative-adversarial-imitation-learning.pdf
+      \endverb
+    \endentry
     \entry{keras}{software}{}
       \field{sortinit}{K}
       \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
@@ -101,6 +262,24 @@
       \endverb
       \verb{url}
       \verb https://keras.io/
+      \endverb
+    \endentry
+    \entry{mario}{online}{}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labeltitlesource}{title}
+      \field{month}{6}
+      \field{title}{MarI/O - Machine Learning for Video Gamesl}
+      \field{urlday}{5}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://youtu.be/qv6UVOQ0F44
+      \endverb
+      \verb{url}
+      \verb https://youtu.be/qv6UVOQ0F44
       \endverb
     \endentry
     \entry{Thill2012}{thesis}{}
@@ -186,6 +365,38 @@
       \verb https://gym.openai.com/
       \endverb
     \endentry
+    \entry{price1999implicit}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=9e389e032dd8ccaad9bde7eabb2d8c24}{%
+           family={Price},
+           familyi={P\bibinitperiod},
+           given={Bob},
+           giveni={B\bibinitperiod}}}%
+        {{hash=049505423af7aff38a0e953619ee8317}{%
+           family={Boutilier},
+           familyi={B\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{321a55425bc06265e6b85c299c756ff8}
+      \strng{fullhash}{321a55425bc06265e6b85c299c756ff8}
+      \strng{bibnamehash}{321a55425bc06265e6b85c299c756ff8}
+      \strng{authorbibnamehash}{321a55425bc06265e6b85c299c756ff8}
+      \strng{authornamehash}{321a55425bc06265e6b85c299c756ff8}
+      \strng{authorfullhash}{321a55425bc06265e6b85c299c756ff8}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{ICML}
+      \field{title}{Implicit imitation in multiagent reinforcement learning}
+      \field{year}{1999}
+      \field{pages}{325\bibrangedash 334}
+      \range{pages}{10}
+    \endentry
     \entry{python}{software}{}
       \field{sortinit}{P}
       \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
@@ -198,6 +409,35 @@
       \verb{url}
       \verb https://www.python.org/
       \endverb
+    \endentry
+    \entry{Sutton2018}{book}{}
+      \name{author}{1}{}{%
+        {{hash=48782ceccc8ae6710491ea7fe1bf0756}{%
+           family={Richard\bibnamedelimb S.\bibnamedelimi Sutton},
+           familyi={R\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Andrew\bibnamedelimb G.\bibnamedelimi Barto},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, Massachusetts}%
+      }
+      \list{publisher}{1}{%
+        {The MIT Press}%
+      }
+      \strng{namehash}{48782ceccc8ae6710491ea7fe1bf0756}
+      \strng{fullhash}{48782ceccc8ae6710491ea7fe1bf0756}
+      \strng{bibnamehash}{48782ceccc8ae6710491ea7fe1bf0756}
+      \strng{authorbibnamehash}{48782ceccc8ae6710491ea7fe1bf0756}
+      \strng{authornamehash}{48782ceccc8ae6710491ea7fe1bf0756}
+      \strng{authorfullhash}{48782ceccc8ae6710491ea7fe1bf0756}
+      \field{sortinit}{R}
+      \field{sortinithash}{b9c68a358aea118dfa887b6e902414a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{langid}{english}
+      \field{title}{Reinforcement Learning An Introduction}
+      \field{year}{2018}
     \endentry
     \entry{Stephan2018}{thesis}{}
       \name{author}{1}{}{%

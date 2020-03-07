@@ -2190,10 +2190,19 @@
     <bcf:citekey order="6">tensorflow</bcf:citekey>
     <bcf:citekey order="7">keras</bcf:citekey>
     <bcf:citekey order="8">gym</bcf:citekey>
-    <bcf:citekey order="9">Stephan2018</bcf:citekey>
-    <bcf:citekey order="10">Thill2012</bcf:citekey>
-    <bcf:citekey order="11">connectfork</bcf:citekey>
-    <bcf:citekey order="12">HandsOn2017</bcf:citekey>
+    <bcf:citekey order="9">Sutton2018</bcf:citekey>
+    <bcf:citekey order="10">mario</bcf:citekey>
+    <bcf:citekey order="11">alphastar</bcf:citekey>
+    <bcf:citekey order="12">gym</bcf:citekey>
+    <bcf:citekey order="13">Sutton2018</bcf:citekey>
+    <bcf:citekey order="14">NIPS2016_6391</bcf:citekey>
+    <bcf:citekey order="14">ARMANTIER2004221</bcf:citekey>
+    <bcf:citekey order="14">price1999implicit</bcf:citekey>
+    <bcf:citekey order="15">Stephan2018</bcf:citekey>
+    <bcf:citekey order="16">Thill2012</bcf:citekey>
+    <bcf:citekey order="17">connectfork</bcf:citekey>
+    <bcf:citekey order="18">HandsOn2017</bcf:citekey>
+    <bcf:citekey order="19">Meire2017</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

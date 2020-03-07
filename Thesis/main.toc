@@ -7,11 +7,9 @@
 \contentsline {chapter}{Erkl\"arung}{iii}{chapter*.1}%
 \babel@toc {ngerman}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Vorwort}{vi}{chapter*.3}%
+\contentsline {chapter}{Kurzfassung}{vi}{chapter*.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Kurzfassung}{vii}{chapter*.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Abstract}{viii}{chapter*.5}%
+\contentsline {chapter}{Abstract}{vii}{chapter*.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
 \defcounter {refsection}{0}\relax 
@@ -73,7 +71,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Stand der Technik}{8}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Related work}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Arbeiten mit ähnlichem Inhalt}{8}{section.3.1}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Konzept}{9}{chapter.4}%
 \defcounter {refsection}{0}\relax 
@@ -137,10 +135,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Fazit}{22}{chapter.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Quellenverzeichnis}{23}{appendix*.19}%
+\contentsline {chapter}{Quellenverzeichnis}{23}{appendix*.18}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatur}{23}{section*.20}%
+\contentsline {section}{Literatur}{23}{section*.19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Software}{23}{section*.21}%
+\contentsline {section}{Software}{24}{section*.20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Online-Quellen}{24}{section*.22}%
+\contentsline {section}{Online-Quellen}{24}{section*.21}%

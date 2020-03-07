@@ -1,9 +1,19 @@
 \chapter{Stand der Technik}
 \label{cha:Technik}
 
-\section{Related work}
+In den letzten Jahrzehnten wurde für viele Spiele, die bis dahin als zu komplex galten, Programme geschaffen, die diese spielen können und dies sogar auf dem Level der besten menschlichen Spieler oder besser.
+Dies liegt zu einem großen Teil an den Vortschritten in der Hardware welche es ermöglicht, große künstliche neronale Netzwerke zu erstellen und trainieren. Einige der bekanntesten Erfolge sind zum Beispiel deep Blue für Schach und Alpha Go für das Spiel Go.\cite{Sutton2018}\\
+Weitere Erfolge aus den letzten Jahren sind Agenten die Computerspiele meistern, wie zum Beispiel MarI/O \cite{mario} welcher Super Mario spielt oder AlphaStar \cite{alphastar} welcher Starcraft II spielen kann.\\
+
+Die veröffentlichung von OpenAI Gym\cite{gym}, welche unter anderem eine Menge an Atari-Spielen zur Verfügung stellt, eröffnete das Thema reinforcement learning für Spiele für die gesammte Welt. \\
+
+Wie in dem Buch von Sutton und Barto \cite{Sutton2018} gezeigt wurde lassen sich Markow-Entscheidungsprobleme mit Hilfe von reinforcement learning lösen.   
+Dass das Lernen, durch das imitieren, von dem Verhalten eines Profis verbessert werden kann wurde unter anderm von Oliver Amantier gezeigt. \cite{NIPS2016_6391,ARMANTIER2004221,price1999implicit}
+
+
+
+\section{Arbeiten mit ähnlichem Inhalt}
 Ich habe zwei Arbeiten gefunden die auch mit Hilfe von reinforcement learning versuchen, das Spiel Vier Gewinnt zu meistern. Einmal die Arbeit von Lukas Stephan \cite{Stephan2018}, welcher das Problem mit einer Java Implementierung angegagen ist und den Lernalgorithmus mit einer Mustererkennung ausgestattet hat. Zweitens die Arbeit von Markus Thill, Patrick Koch und Wolfgang Konen \cite{Thill2012}, welche N-Tupel-Systeme nutzt, um einen Agenten zu Trainieren. Anders als diese Arbeiten ist mein Ansatz nicht das Erkennen von Mustern, sondern das Lernen durch das Verhalten des Gegners.
-%related work???
 
 
 
