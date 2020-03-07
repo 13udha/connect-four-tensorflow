@@ -2,44 +2,47 @@
 \label{cha:Einleitung}
 
 %Was will ich machen?
-In der Bachelorarbeit wurde ein Programm entwickelt, das mit Hilfe von reinforcement learning trainiert um das Spiel Vier Gewinnt zu erlernen. 
-Es wird ein reinforcement learning Ansatz gewählt, da hierdurch automatisiert individuelle Gegner geschaffen werden können, die das Können unterschiedlicher Spieler widerspiegeln.%???
+%In der Bachelorarbeit wurde ein Programm entwickelt, das mit Hilfe von reinforcement learning trainiert um das Spiel Vier Gewinnt zu erlernen. 
+%Es wird ein reinforcement learning Ansatz gewählt, da hierdurch automatisiert individuelle Gegner geschaffen werden können, die das Können unterschiedlicher Spieler widerspiegeln.%???
 %Spiele müssen competetiv bleiben um spannend zu sein daher anpassen wichtig
 %Klassische spiele digital umsetzen bsp alpha go
 
 
 \section{Motivation}
 %Warum will ich das machen?
-Warum spielen wir? Wir spielen um Fähigkeiten zu erlernen, ein Kind lernt Objekte nach Formen zu sortieren oder eine Katze lernt spielerisch das Jagen von Beute. Doch auch erwachsene Menschen spielen noch und können hierdurch ihre Fähigkeiten verbessern. Um den bestmöglichen Effekt zu haben muss das Spiel einen gewissen Schwierigkeitsgrad haben der aber noch zu bewältigen sein muss. Da aber jeder Mensch, egal wie erfahren, das Spiel spielen soll ist es oft hilfreich einen Gegner zu haben der ein ähnliches Level an Erfahrung mitbringt. Wenn nun diese Rolle des Gegners nicht von einem Menschen besetzt werden kann ist es naheliegend einen Computergegner zu erschaffen. Die Frage die ich in dieser Bachelorarbeit versuche zu beantworten ist:   Ist es möglich, das Spiel Vier Gewinnt durch reinforcement learning zu erlernen und wie hilfreich ist dabei das Lernen vom Gegner.
+%Warum spielen wir? Wir spielen um Fähigkeiten zu erlernen, ein Kind lernt Objekte nach Formen zu sortieren oder eine Katze lernt spielerisch das Jagen von Beute. 
+
+Spiele machen Spaß und können genutzt werden um neue Fähigkeiten zu lernen oder verbessern. Das Lernen beim Spielen funktioniert dann am besten, wenn das Spiel einen gewissen Schwierigkeitsgrad hat, welcher aber noch zu bewältigen sein muss. Ist das Spiel zu einfach, wird der Spieler gelangweilt, ist es zu schwer, wird er frustriert. In beiden Fällen sucht er sich wahrscheinlich sehr bald eine andere Beschäftigung. Hiergegen kann es helfen einen anderen Spieler zu haben, welcher ein ähnliches Level an Erfahrung mitbringt. Wenn nun die Rolle des Gegners nicht von einem Menschen besetzt werden kann ist es naheliegend einen Computergegner zu erschaffen. Solch ein Computergegner wird normalerweise mit Algorithmen umgesetzt, die einen optimalen Zug errechnen. Seit einigen Jahren ist es, durch den Vortschritt in Hardware und Wissenschaft, möglich Computergegner zu erschaffen, die ihr können durch Neuronale Netze antrainiert haben. 
+
+% Da aber jeder Mensch, egal wie erfahren, das Spiel spielen soll ist es oft hilfreich einen Gegner zu haben der ein ähnliches Level an Erfahrung mitbringt.
+%Um den bestmöglichen Effekt zu haben muss das Spiel einen gewissen Schwierigkeitsgrad haben der aber noch zu bewältigen sein muss.
+
+% Die Frage die ich in dieser Bachelorarbeit versuche zu beantworten ist:   Ist es möglich, das Spiel Vier Gewinnt durch reinforcement learning zu erlernen und wie hilfreich ist dabei das Lernen vom Gegner.
 %Gehören schon immer zum menschlichen miteinander... barrieren abbauen
 
 
 \section{Problemstellung}
 %Was steht zur Verfügung? Was ist das Problem genau(mathematisch)? Random vs best move every turn~
 %genau das spiel beschreiben und was das problem dann ist und wie das gelöst werden kann
-Ein Computergegner der für das Spiel Vier Gewinnt erschaffen wird kann auf verschiedenen Algorithmen basieren er könnte zum Beispiel in jedem Zug einfach zufällig eines der sieben möglichen Einwurflöcher bedienen oder er könnte durch einen Minimax Algorithmus zu jedem Zeitpunkt den bestmöglichen Zug errechnen. 
-Das Problem hieran ist, dass jeder einzelne Algorithmus programmiert werden muss und somit ein enormer Arbeitsaufwand entsteht.
-Ein Lösungsansatz für diese Problem sind selbstlernende Algorithmen die mit Hilfe von reinforement learning und neuronalen Netzen selbstständig ähnlich wie ein Mensch erlernen wie das Spiel zu gewinnen ist. Hierraus können dann automatisch Computergegner generiert werden. 
+
+Computergegner die mit Hilfe von Neuronalen Netzen trrainiert wurden, haben das Problem, dass sie nur gut werden können wenn es auch einen guten Gegner gibt oder eine enorme Menge an Spielaufzeichnungen existiert, an denen sie trainieren können. Da dieses training erst richtigen Effekt zeigt, wenn sehr viele Spiele gespielt wurden, ist es nicht wirklich möglich einen Menschen als Trainer zu nutzen. Also wird hier normalerweise auf einen weiteren Computergegner zurückgegriffen, welcher das Spiel beherrscht ohne dies mit Neuronalen Netzen erlernt zu haben. Es wäre schön wenn die Anzahl der benötigten Spiele beim training reduziert werden könnte, um schneller bessere Ergebnisse zu erziehlen oder sogar nur mit einem Mensch lernen zu können.
+
+
+
+%Ein Computergegner der für das Spiel Vier Gewinnt erschaffen wird kann auf verschiedenen Algorithmen basieren er könnte zum Beispiel in jedem Zug einfach zufällig eines der sieben möglichen Einwurflöcher bedienen oder er könnte durch einen Minimax Algorithmus zu jedem Zeitpunkt den bestmöglichen Zug errechnen. 
 
 \section{Umsetzung}
+
+Meine Idee ist es, das Training durch das Mitlernen der Züge des Gegners zu verbessern. Dies erscheint sinnvoll, da der Gegner das Spiel schon beherrscht und daher tendenziell gute Züge machen wird. 
+
+%Ein Lösungsansatz für diese Problem sind selbstlernende Algorithmen die mit Hilfe von reinforement learning und neuronalen Netzen selbstständig ähnlich wie ein Mensch erlernen wie das Spiel zu gewinnen ist. Hierraus können dann automatisch Computergegner generiert werden. 
 %Wie gehe ich vor?
 %Minimax algorithmus als gegner erstellen und an dem dann trainieren
 %minimax da für dieses spiel möglich
 
-Es wird eine digitale Version des Spiels Vier Gewinnt genutzt und eine Schnittstelle erschafft die es ermöglicht auszuwählen ob ein Mensch oder der Computer die Rolle der Spieler übernimmt. Dies ist wichtig da ein selbstlernender Algorithmus viele Spiele durchlaufen muss um einen Lernfortschritt aufzuzeigen. Somit kann in der Simulation dann trainiert werden ohne jedes einzelne Spiel gegen einen Menschen spielen zu müssen. Spielt der Computer soll zwischen verschieden effektiven Varianten von einem Minimax Algorithmus ausgewählt werden können. Somit kann der reinforcement learning Agent schnell viele Spiele gegen einen guten Gegner spielen und so effektiv lernen. 
-Der Agent wird mit verschiedenen Voraussetzungen lernen um vergleichen zu können was besser und schlechter beim lernen hilft.
 
 
-%Wie wird das am Ende evaluiert? 
-%was macht hier sinn? betreuer nochmal fragen
-\section{Evaluation}
-Je nachdem wie gut der selbstlernende Agent nach dem Lernen gegen unterschiedlich effektive Varianten des Minimax Algorithmus ist zeigt dann wie gut das reinforcement learning funktioniert hat.
-Hieran wird dann verglichen wie gut verschiedene Techniken des reinforcement learnings sind um den bestmöglichen Agenten zu erschaffen.
-Endgültig soll sich dann zeigen, dass durch das reinforcement learning Gegner auf automatisierte Weise geschaffen werden können die einen fein granularen Schwierigkeitsanstieg bieten können. \colorbox{red!30}{TODO}
 
-\section{Related work}
-Ich habe zwei Arbeiten gefunden die auch mit Hilfe von reinforcement learning versuchen, das Spiel Vier Gewinnt zu meistern. Einmal die Arbeit von Lukas Stephan \cite{Stephan2018}, welcher das Problem mit einer Java Implementierung angegagen ist und den Lernalgorithmus mit einer Mustererkennung ausgestattet hat. Zweitens die Arbeit von Markus Thill, Patrick Koch und Wolfgang Konen \cite{Thill2012}, welche N-Tupel-Systeme nutzt, um einen Agenten zu Trainieren. Anders als diese Arbeiten ist mein Ansatz nicht das Erkennen von Mustern, sondern das Lernen durch das Verhalten des Gegners.
-%related work???
 
 
 

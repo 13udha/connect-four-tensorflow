@@ -2182,17 +2182,18 @@
     <bcf:datasource type="file" datatype="bibtex">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">Stephan2018</bcf:citekey>
-    <bcf:citekey order="2">Thill2012</bcf:citekey>
-    <bcf:citekey order="3">connect4</bcf:citekey>
-    <bcf:citekey order="4">connect4</bcf:citekey>
-    <bcf:citekey order="5">Martijn2012</bcf:citekey>
-    <bcf:citekey order="6">python</bcf:citekey>
-    <bcf:citekey order="7">PythonManual2009</bcf:citekey>
-    <bcf:citekey order="8">tensorflow</bcf:citekey>
-    <bcf:citekey order="9">keras</bcf:citekey>
-    <bcf:citekey order="10">gym</bcf:citekey>
-    <bcf:citekey order="11">HandsOn2017</bcf:citekey>
+    <bcf:citekey order="1">connect4</bcf:citekey>
+    <bcf:citekey order="2">connect4</bcf:citekey>
+    <bcf:citekey order="3">Martijn2012</bcf:citekey>
+    <bcf:citekey order="4">python</bcf:citekey>
+    <bcf:citekey order="5">PythonManual2009</bcf:citekey>
+    <bcf:citekey order="6">tensorflow</bcf:citekey>
+    <bcf:citekey order="7">keras</bcf:citekey>
+    <bcf:citekey order="8">gym</bcf:citekey>
+    <bcf:citekey order="9">Stephan2018</bcf:citekey>
+    <bcf:citekey order="10">Thill2012</bcf:citekey>
+    <bcf:citekey order="11">connectfork</bcf:citekey>
+    <bcf:citekey order="12">HandsOn2017</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

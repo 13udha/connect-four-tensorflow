@@ -19,6 +19,19 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{connectfork}{software}{}
+      \field{sortinit}{c}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{connect-four-tensorflow by alexisjanvier}
+      \verb{urlraw}
+      \verb https://github.com/marmelab/connect-four-tensorflow
+      \endverb
+      \verb{url}
+      \verb https://github.com/marmelab/connect-four-tensorflow
+      \endverb
+    \endentry
     \entry{HandsOn2017}{book}{}
       \name{author}{1}{}{%
         {{hash=e54e6c9ce5d233c7046a00f7b3faa6c0}{%

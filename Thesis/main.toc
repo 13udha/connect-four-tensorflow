@@ -19,124 +19,128 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}Problemstellung}{1}{section.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Umsetzung}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.3}Umsetzung}{1}{section.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Evaluation}{2}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Grundlagen}{2}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.5}Related work}{2}{section.1.5}%
+\contentsline {section}{\numberline {2.1}Vier Gewinnt}{2}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Grundlagen}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.2}Minimax Algorithmus}{2}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Vier Gewinnt}{3}{section.2.1}%
+\contentsline {subsection}{\numberline {2.2.1}Negamax Algorithmus}{3}{subsection.2.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Minimax Algorithmus}{3}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.2}Alpha-Beta Suche}{3}{subsection.2.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Negamax Algorithmus}{4}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.3}Wahrscheinlichkeitsverteilung}{3}{subsection.2.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Alpha-Beta Suche}{4}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Reinforcement Learning}{3}{section.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}Wahrscheinlichkeitsverteilung}{4}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Environment}{4}{subsection.2.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Reinforcement Learning}{4}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.2}Agent}{5}{subsection.2.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Environment}{5}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.3}Policy}{5}{subsection.2.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.2}Agent}{6}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.4}State}{5}{subsection.2.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}Policy}{6}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.5}Actions}{5}{subsection.2.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.4}State}{6}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.6}Reward}{5}{subsection.2.3.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.5}Actions}{6}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.7}Q-Funktion}{6}{subsection.2.3.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.6}Reward}{6}{subsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.3.8}Q-Values}{6}{subsection.2.3.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.7}Q-Funktion}{7}{subsection.2.3.7}%
+\contentsline {subsection}{\numberline {2.3.9}Deep Q-Network}{6}{subsection.2.3.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.8}Q-Values}{7}{subsection.2.3.8}%
+\contentsline {subsection}{\numberline {2.3.10}Markow-Entscheidungsproblem}{6}{subsection.2.3.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.9}Deep Q-Network}{7}{subsection.2.3.9}%
+\contentsline {subsection}{\numberline {2.3.11}credit assignment problem}{6}{subsection.2.3.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.10}Markow-Entscheidungsproblem}{7}{subsection.2.3.10}%
+\contentsline {subsection}{\numberline {2.3.12}Episode}{6}{subsection.2.3.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.11}credit assignment problem}{7}{subsection.2.3.11}%
+\contentsline {subsection}{\numberline {2.3.13}Epoche}{7}{subsection.2.3.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.12}Episode}{7}{subsection.2.3.12}%
+\contentsline {section}{\numberline {2.4}Software}{7}{section.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.13}Epoche}{8}{subsection.2.3.13}%
+\contentsline {subsection}{\numberline {2.4.1}Python}{7}{subsection.2.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Software}{8}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.2}Tensorflow}{7}{subsection.2.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.1}Python}{8}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.3}Keras}{7}{subsection.2.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.2}Tensorflow}{8}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.4}OpenAI Gym}{7}{subsection.2.4.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.3}Keras}{8}{subsection.2.4.3}%
+\contentsline {chapter}{\numberline {3}Stand der Technik}{8}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4.4}OpenAI Gym}{8}{subsection.2.4.4}%
+\contentsline {section}{\numberline {3.1}Related work}{8}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Konzept}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Konzept}{9}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Zielsetzung}{9}{section.3.1}%
+\contentsline {section}{\numberline {4.1}Zielsetzung}{9}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Methode}{9}{section.3.2}%
+\contentsline {section}{\numberline {4.2}Methode}{9}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Implementierung}{10}{chapter.4}%
+\contentsline {section}{\numberline {4.3}Evaluation}{9}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Gegner mit Minimax Algorithmus}{10}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Implementierung}{10}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}check\_next\_actions}{10}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {5.0.1}Vier Gewinnt}{10}{subsection.5.0.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}find\_best\_move}{10}{subsection.4.1.2}%
+\contentsline {section}{\numberline {5.1}Gegner mit Minimax Algorithmus}{10}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.3}Wahrscheinlichkeitsverteilung}{11}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {5.1.1}check\_next\_actions}{11}{subsection.5.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Gegner mit schlechten Strategien}{11}{section.4.2}%
+\contentsline {subsection}{\numberline {5.1.2}find\_best\_move}{11}{subsection.5.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Gegner mit deterministischen Aktionen}{11}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {5.1.3}Wahrscheinlichkeitsverteilung}{11}{subsection.5.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Gegner mit zufälligen Aktionen}{11}{subsection.4.2.2}%
+\contentsline {section}{\numberline {5.2}Gegner mit schlechten Strategien}{11}{section.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Reinforcement Learning}{11}{section.4.3}%
+\contentsline {subsection}{\numberline {5.2.1}Gegner mit deterministischen Aktionen}{11}{subsection.5.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Environment}{11}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {5.2.2}Gegner mit zufälligen Aktionen}{11}{subsection.5.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Agent}{11}{subsection.4.3.2}%
+\contentsline {section}{\numberline {5.3}Reinforcement Learning}{11}{section.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}State}{11}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {5.3.1}Environment}{11}{subsection.5.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.4}Actions}{12}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {5.3.2}Agent}{12}{subsection.5.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.5}Reward}{12}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {5.3.3}State}{12}{subsection.5.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.6}Policy}{12}{subsection.4.3.6}%
+\contentsline {subsection}{\numberline {5.3.4}Actions}{12}{subsection.5.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Deep Q-Network}{13}{subsection.4.3.6}%
+\contentsline {subsection}{\numberline {5.3.5}Reward}{12}{subsection.5.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Epsilon-Greedy}{13}{subsection.4.3.6}%
+\contentsline {subsection}{\numberline {5.3.6}Policy}{12}{subsection.5.3.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Lernen vom Gegner}{13}{section.4.4}%
+\contentsline {subsubsection}{Deep Q-Network}{13}{subsection.5.3.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Graphische Darstellung}{14}{section.4.5}%
+\contentsline {subsubsection}{Epsilon-Greedy}{13}{subsection.5.3.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Visualsierung des Spiels}{14}{section.4.6}%
+\contentsline {section}{\numberline {5.4}Lernen vom Gegner}{14}{section.5.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Evaluierung}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.5}Graphische Darstellung}{14}{section.5.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Reward-Funktion}{15}{section.5.1}%
+\contentsline {section}{\numberline {5.6}Visualsierung des Spiels}{14}{section.5.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Lernen vom Gegner}{16}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Evaluierung}{16}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Minimax}{18}{section.5.3}%
+\contentsline {section}{\numberline {6.1}Reward-Funktion}{16}{section.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Besonderheiten}{20}{section.5.4}%
+\contentsline {section}{\numberline {6.2}Lernen vom Gegner}{17}{section.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Fazit}{21}{chapter.6}%
+\contentsline {section}{\numberline {6.3}Minimax}{19}{section.6.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Quellenverzeichnis}{22}{appendix*.19}%
+\contentsline {section}{\numberline {6.4}Besonderheiten}{21}{section.6.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Literatur}{22}{section*.20}%
+\contentsline {chapter}{\numberline {7}Fazit}{22}{chapter.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Software}{22}{section*.21}%
+\contentsline {chapter}{Quellenverzeichnis}{23}{appendix*.19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Online-Quellen}{23}{section*.22}%
+\contentsline {section}{Literatur}{23}{section*.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Software}{23}{section*.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Online-Quellen}{24}{section*.22}%

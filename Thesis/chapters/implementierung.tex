@@ -2,13 +2,14 @@
 
 \label{cha:Implementierung}
 %was man alles anpassen muss
-
-\colorbox{red!30}{DQN Algoritmus zum lernen des Spiels}\\
-
-Es wurde sich für eine bestehende grundlegende Implementierung entschieden welche schon die Spiellogik von Vier Gewinnt sowie einen sehr einfachen Reinforcement Learning Ansatz enthält. In dieser Version lernt der Agent gegen einen Gegner zu gewinnen der zufällige Züge macht.\\
+Es wurde sich für eine bestehende grundlegende Implementierung entschieden welche schon die Spiellogik von Vier Gewinnt sowie einen sehr einfachen reinforcement learning Ansatz enthält. In dieser Version lernt der Agent gegen einen Gegner zu gewinnen der zufällige Züge macht.\cite{connectfork}\\
 Diese Implentierung wurde um einen Gegner erweitert der seine Züge nach dem Minimax Algorithmus auswählt.\\
 Weitergehend wurde die reinforcement learning Implementierung überarbeitet um gegen den Minimax Algorithmus gewinnen zu können.\\
 Diese Implementierungen werden hier einmal genauer beschrieben:\\
+
+\subsection{Vier Gewinnt}
+Die Implementierung des Spiels Vier Gewinnt deckt alle, für das Spiel wichtigen, Regeln ab. Es wird sich darum gekümmert welcher Spieler aktuell dran ist. Hat dieser sich dann für eine Action entschieden übernimmt das Spiel die korrekte Platzierung der Spielsteine, sowie die Überprüfung auf den Abschluss eines Spiels.\\ 
+Es wurde sich dafür entschieden, dass der reinforcement learning Agent immer mit einer Partie beginnt, um somit die Menge an möglichen States zu halbieren, wodurch das gesammte Problem vereinfacht wird.
 
 \section{Gegner mit Minimax Algorithmus}
 Der Minimax Algorithmus wurde als Teil des Environments implementiert und besteht im Groben aus zwei Teilen. Einmal die Funktion $check\_next\_actions$ die den Suchbaum für die nächsten Züge aufbaut. Und die Funktion $find\_best\_move$ die den Suchbaum nach dem besten Zug durchsucht. Hierdurch kann sich dieser Gegner zu jedem State den besten nächsten Zug errechnen. Da dies im Optimalfall ein unschlagbarer Gegner ist wird hier noch mit einer Wahrscheinlichkeitsverteilung gearbeitet um den Gegner schlagbarer zu machen.
@@ -20,7 +21,7 @@ Das Erstellen des Suchbaums funktioniert nach dem Negamax Algorithmus, es wird a
 Das Suchen des besten Zuges wird durch die Alpha-Beta Suche beschleunigt indem bestimmte Äste des Suchbaumes, die sicher nicht zum gewünschten besten Zug führen, nicht weiter betrachtet werden. Dazu wurde noch eine Funktion zur Wahrscheinlichkeitsverteilung implementiert, die dafür sorgt, dass der Minimax Algorithmus in bestimmten Situationen mit einer gewissen Chance nicht optimal spielt.
 
 \subsection{Wahrscheinlichkeitsverteilung}
-\colorbox{red!30}{TODO}
+Durch die Wahrscheinlichkeitsverteilung wird es ermöglicht einen zufälligen Zug aus den vom Minimax Algorithmus errechneten Zügen zu wählen. Hierbei macht die Gewinnchance eines Zuges aus, wie wahrscheinlich es ist, dass dieser ausgewählt wird. Diese Wahrscheinlichkeit kann mit einer $Variable$ angepasst werden, wodurch die  Wahrscheinlichkeit steigt dass einer der suboptimalen Züge, die vom Minimax Algorithmuses berechnet wurden, ausgewählt wird. 
 
 \section{Gegner mit schlechten Strategien}
 Um das Lernverhalten zu beobachten wurden zwei Gegner mit schlechten Strategien geschaffen.
@@ -33,15 +34,14 @@ Es wurde ein Gegner geschaffen der zu jeden Zug in ein zufälliges Loch des Spie
 
 
 \section{Reinforcement Learning}
+Für das reinforcement learning wird ein Deep Q-Network genutzt, welches einen Agenten an dem Environment trainiert. Im Folgenden wird die Implementierung der hierfür notwendigen Komponenten beschrieben. 
 
-\colorbox{red!30}{TODO link}
 
 \subsection{Environment}
-In Vier Gewinnt ist dies das Spielfeld und der Gegner. Das Spielfeld ist hier ein zweidimensionales Array der Länge 6 * 7. Der Gegner ist während des Lernens ein Computergegner der nach dem Minimax Algorithmus handelt. \\
+In Vier Gewinnt ist dies das Spielfeld und der Gegner. Das Spielfeld ist hier ein zweidimensionales Array der Länge 6 * 7. Der Gegner ist während des Lernens ein Computergegner der nach unterschiedlichen Strategien wie zum Beispiel dem Minimax Algorithmus handelt. \\
 
 \subsection{Agent}
 Der Agent ist einer der beiden Spieler von Vier Gewinnt, welcher lernt seine Züge durch die ihm gegebene Policy auszuwählen, um einen möglichst hohen Reward zu erhalten.\\
-
 
 \subsection{State}
  Für Vier Gewinnt beschreibt der State welche der 42 Felder mit welchen Steinen befüllt sind. Ein Beispiel für so einen State kann man in dem Abschnitt \hyperref[sec:visualisierung]{Visualsierung des Spiels} finden.\\
@@ -63,7 +63,7 @@ Wie man in Abbildung \ref{fig:reward_function} gut sehen kann wird somit das sch
 \end{figure}
 
 \subsection{Policy}
-Da in Vier Gewinnt nur am Ende eines Spiels ein Reward ausgegeben wird, wird hier ein Deep Q-Network genutzt um das credit assignment problem zu lösen. 
+Da in Vier Gewinnt nur am Ende eines Spiels ein Reward ausgegeben werden kann, wird hier ein Deep Q-Network genutzt um das credit assignment problem zu lösen. 
 Dieses Deep Q-Network wird nach einer Epsilon-Greedy Policy trainiert.
 
 \subsubsection{Deep Q-Network}
@@ -78,7 +78,8 @@ Als Unterstützung des Deep Q-Network wurde sich für die Epsilon-Greedy Policy 
 
 
 \section{Lernen vom Gegner}
-Um das Lernen des Agenten zu verbessern wurde sich dazu entschieden, dass der Agent auch die Züge seines Gegners zum Lernen nutzen kann. Dies ist für Vier Gewinnt angemessen, da es sich um ein Spiel mit perfekter Information handelt. Es sind also jedem Spieler zum Zeitpunkt einer Entscheidung alle Informationen über das Spiel ersichtlich. Da ein menschlicher Anfänger in diesem Spiel, bei einer Niederlage an den Spielzügen seines Gegners lernen kann, wurde dies auch als sinnvoll für den Agenten angesehen. Um diese Informationen aufnehmen zu können wurden die Daten über das aktuelle Spielfeld und den gemachten Zug angepasst. Hierfür wird das gesammte Spiel einen halben Zug in der Vergangenheit betrachtet. Das heißt der Agent versetzt sich in die Rolle seines Gegners. Da der Agent weiß, welche Zug sein Gegner gemacht hat kann er somit das negierte Spielfeld als Startzustand und den Zug seines Gegners als Aktion für sich nutzen. 
+Um das Lernen des Agenten zu verbessern wurde sich dazu entschieden, dass der Agent auch die Züge seines Gegners zum Lernen nutzen kann. Dies ist für Vier Gewinnt angemessen, da es sich um ein Spiel mit perfekter Information handelt. Es sind also jedem Spieler zum Zeitpunkt einer Entscheidung alle Informationen über das Spiel ersichtlich. Da ein menschlicher Anfänger in diesem Spiel, bei einer Niederlage an den Spielzügen seines Gegners lernen kann, wurde dies auch als sinnvoll für den Agenten angesehen. Hierfür mussten einige Anpassungen vorgenommen werden. Da der reinforcement learning Agent immer der erste der beiden Spieler ist, der seinen Zug macht, fehlen dem Deep Q-Network Informationen über den Zug nach seinem Gegner. 
+Um diese Informationen zu erhalten wird das gesammte Spiel einen halben Zug in der Vergangenheit betrachtet. Somit kann dann der alte Zug des Gegners als der eigene betrachtet werden und der eigene Zug als Antwort auf diesen. Damit der reinforcement learning Agent dies dann verarbeiten kann muss noch das ganze Spielfeld negiert werden. Es werden also die Steine beider Spieler getauscht damit es wieder wie eine ganz normale Zugabfolge aussieht. 
 
 \section{Graphische Darstellung}
 Um die Effektivität der verschiedenen Versionen zu vergleichen wird der Reward in einem Graphen geplottet. Dies wird mit dem Paket pyplot von matplotlib gemacht. Beispiele hierfür findet man im Kapitel \ref{cha:Eval}  Evaluierung. \\
