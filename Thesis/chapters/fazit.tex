@@ -1,11 +1,17 @@
 \chapter{Fazit}%
 
 \label{cha:Fazit}
-Es wurde festgestellt, dass das Lernen der Züge des Gegners einen positiven Effekt auf das Lernverhalten eines reinforcement learning Agenten haben kann. 
-Des weiteren wurde gezeigt, dass die  gewählte Reward-Funktion angemessen war und somit zur Verbesserung des Lernverhalten beigetragen hat.
-Dies konnte leider nur am Beispiel von Gegnern mit schlechten und sehr einfach zielführenden Strategien, und nicht am Gegner mit sehr guter Strategie gezeigt werden.
-Ob sich dieses Verhalten auch gegen bessere Gegner zeigt, müsste in weiteren Untersuchungen durch Vereinfachung der Problemstellung oder durch Verlängerung der Lernepoche getestet werden.
-Diese Veränderungen waren auf Grund des Rahmens der Bachelorarbeit leider nicht möglich.
+
+
+Mit dieser Bachelorarbeit sollte geprüft werden, ob das Lernen der Züge des Gegners eine positive Auswirkung auf das Lernverhalten des Reinforcement-Learning-Agenten hat.
+Hierzu wurde die für diese Arbeit entwickelte Implementierung des Spiels Vier Gewinnt genutzt. In der Evaluierung konnte beim Vergleich der verschiedenen Versionen (mit und ohne Lernen der gegnerischen Züge) an Gegnern mit einfachen Strategien ein positiver Effekt festgestellt werden. Des weiteren wurde gezeigt, dass die  gewählte Reward-Funktion angemessen war und somit zur Verbesserung des Lernverhaltens beigetragen hat.
+Diese Verbesserungen konnten vorerst leider nur am Beispiel von Gegnern mit schlechten und sehr einfach zielführenden Strategien, jedoch nicht am Gegner mit sehr guter Strategie gezeigt werden.
+Die Vermutung liegt nahe, dass dieses Verhalten auch bei der sehr guten Strategie eintritt, wenn eine längere Lernepoche absolviert wird.
+Da das Training des Agenten, welches in dieser Arbeit gemacht wurde, trotz der vorgenommenen Optimierungen schon sehr viel Zeit in Anspruch genommen hat, wurde davon abgesehen das Verhalten in längeren Lernepochen zu beobachten. Es spricht aber tendeziell nichts dagegen, dass sich ein Lernerfolg gegen den Minimax-Algorithmus zeigen kann.\\
+
+In weiteren Untersuchungen könnte versucht werden, ob sich das hier gezeigte positive Verhalten auch beim Trainieren mit besseren Gegnern zeigen lassen kann. 
+Hierfür müsste dann gegebenenfalls die Problemstellung vereinfacht oder der Algorithmus verbessert werden, sodass längere Lernepochen in überschaubarer Zeit absolviert werden können.
+
 
 
 %Negamax with alpha beta pruning and transposition tables TODO das erwähnen

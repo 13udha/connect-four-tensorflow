@@ -19,6 +19,67 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{abdelbar2012alpha}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6fae7cd35ec46725bc0846cd47528b31}{%
+           family={Abdelbar},
+           familyi={A\bibinitperiod},
+           given={Ashraf\bibnamedelima M},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Molecular Diversity Preservation International}%
+      }
+      \strng{namehash}{6fae7cd35ec46725bc0846cd47528b31}
+      \strng{fullhash}{6fae7cd35ec46725bc0846cd47528b31}
+      \strng{bibnamehash}{6fae7cd35ec46725bc0846cd47528b31}
+      \strng{authorbibnamehash}{6fae7cd35ec46725bc0846cd47528b31}
+      \strng{authornamehash}{6fae7cd35ec46725bc0846cd47528b31}
+      \strng{authorfullhash}{6fae7cd35ec46725bc0846cd47528b31}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Algorithms}
+      \field{number}{4}
+      \field{title}{Alpha-Beta Pruning and Alth{ö}fer’s Pathology-Free Negamax Algorithm}
+      \field{volume}{5}
+      \field{year}{2012}
+      \field{pages}{521\bibrangedash 528}
+      \range{pages}{8}
+    \endentry
+    \entry{agogino2004unifying}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=a54a68e49fc2e3ec7786f83c64b71035}{%
+           family={Agogino},
+           familyi={A\bibinitperiod},
+           given={Adrian\bibnamedelima K},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=e30627b1c33bc56b2f7eb3a05eb3ad58}{%
+           family={Tumer},
+           familyi={T\bibinitperiod},
+           given={Kagan},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE Computer Society}%
+      }
+      \strng{namehash}{66db85306de65c6620b42ce24476b5d3}
+      \strng{fullhash}{66db85306de65c6620b42ce24476b5d3}
+      \strng{bibnamehash}{66db85306de65c6620b42ce24476b5d3}
+      \strng{authorbibnamehash}{66db85306de65c6620b42ce24476b5d3}
+      \strng{authornamehash}{66db85306de65c6620b42ce24476b5d3}
+      \strng{authorfullhash}{66db85306de65c6620b42ce24476b5d3}
+      \field{sortinit}{A}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Third International Joint Conference on Autonomous Agents and Multiagent Systems-Volume 2}
+      \field{title}{Unifying temporal and structural credit assignment problems}
+      \field{year}{2004}
+      \field{pages}{980\bibrangedash 987}
+      \range{pages}{8}
+    \endentry
     \entry{Meire2017}{thesis}{}
       \name{author}{1}{}{%
         {{hash=e53be66e1ff6e8e403145464fc7ceb83}{%
@@ -112,6 +173,70 @@
       \endverb
       \keyw{Learning,Observation,Continuous reinforcement,Structural estimation}
     \endentry
+    \entry{baier2006alpha}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2718144d8d7be110a1b2d5ed401c6349}{%
+           family={Baier},
+           familyi={B\bibinitperiod},
+           given={Hendrik},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{2718144d8d7be110a1b2d5ed401c6349}
+      \strng{fullhash}{2718144d8d7be110a1b2d5ed401c6349}
+      \strng{bibnamehash}{2718144d8d7be110a1b2d5ed401c6349}
+      \strng{authorbibnamehash}{2718144d8d7be110a1b2d5ed401c6349}
+      \strng{authornamehash}{2718144d8d7be110a1b2d5ed401c6349}
+      \strng{authorfullhash}{2718144d8d7be110a1b2d5ed401c6349}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bachelor Arbeit}
+      \field{title}{Der alpha-beta-algorithmus und erweiterungen bei vier gewinnt}
+      \field{year}{2006}
+    \endentry
+    \entry{borovska2007efficiency}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=97cd2235e46d90a4fd91b9b384f72d82}{%
+           family={Borovska},
+           familyi={B\bibinitperiod},
+           given={Plamenka},
+           giveni={P\bibinitperiod}}}%
+        {{hash=680ac3106a046261fe5d2328629ebe36}{%
+           family={Lazarova},
+           familyi={L\bibinitperiod},
+           given={Milena},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4bde251109852b5957cdb139e2626fad}
+      \strng{fullhash}{4bde251109852b5957cdb139e2626fad}
+      \strng{bibnamehash}{4bde251109852b5957cdb139e2626fad}
+      \strng{authorbibnamehash}{4bde251109852b5957cdb139e2626fad}
+      \strng{authornamehash}{4bde251109852b5957cdb139e2626fad}
+      \strng{authorfullhash}{4bde251109852b5957cdb139e2626fad}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2007 international conference on Computer systems and technologies}
+      \field{title}{Efficiency of parallel minimax algorithm for game tree search}
+      \field{year}{2007}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+    \endentry
+    \entry{colorama}{software}{}
+      \field{sortinit}{c}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{colorama}
+      \verb{urlraw}
+      \verb https://pypi.org/project/colorama/
+      \endverb
+      \verb{url}
+      \verb https://pypi.org/project/colorama/
+      \endverb
+    \endentry
     \entry{connectfork}{software}{}
       \field{sortinit}{c}
       \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
@@ -124,6 +249,40 @@
       \verb{url}
       \verb https://github.com/marmelab/connect-four-tensorflow
       \endverb
+    \endentry
+    \entry{diederich2003simple}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9b90d5de9be5c78215ccdd23bf58eba7}{%
+           family={Diederich},
+           familyi={D\bibinitperiod},
+           given={Adele},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6bc913f8f889b2031f72495c94d5e92d}{%
+           family={Busemeyer},
+           familyi={B\bibinitperiod},
+           given={Jerome\bibnamedelima R},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{34387d80eb0abf1772d54670a4198928}
+      \strng{fullhash}{34387d80eb0abf1772d54670a4198928}
+      \strng{bibnamehash}{34387d80eb0abf1772d54670a4198928}
+      \strng{authorbibnamehash}{34387d80eb0abf1772d54670a4198928}
+      \strng{authornamehash}{34387d80eb0abf1772d54670a4198928}
+      \strng{authorfullhash}{34387d80eb0abf1772d54670a4198928}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Mathematical Psychology}
+      \field{number}{3}
+      \field{title}{Simple matrix methods for analyzing diffusion models of choice probability, choice response time, and simple response time}
+      \field{volume}{47}
+      \field{year}{2003}
+      \field{pages}{304\bibrangedash 322}
+      \range{pages}{19}
     \endentry
     \entry{HandsOn2017}{book}{}
       \name{author}{1}{}{%
@@ -352,6 +511,58 @@
       \verb https://www.ai.rug.nl/~mwiering/Intro_RLBOOK.pdf
       \endverb
     \endentry
+    \entry{mnih2013playing}{article}{}
+      \name{author}{7}{}{%
+        {{hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{%
+           family={Mnih},
+           familyi={M\bibinitperiod},
+           given={Volodymyr},
+           giveni={V\bibinitperiod}}}%
+        {{hash=481308b301166b521c74fde6566e97e6}{%
+           family={Kavukcuoglu},
+           familyi={K\bibinitperiod},
+           given={Koray},
+           giveni={K\bibinitperiod}}}%
+        {{hash=89dbd30410c2085cd059f32c57d4593e}{%
+           family={Silver},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=dfca94b0427da7f9088af596e23b46c0}{%
+           family={Graves},
+           familyi={G\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=af540e84ef1ecdaa70b1f7c90f59fd7d}{%
+           family={Antonoglou},
+           familyi={A\bibinitperiod},
+           given={Ioannis},
+           giveni={I\bibinitperiod}}}%
+        {{hash=d7805381550fb5f8360345f7f72c0b49}{%
+           family={Wierstra},
+           familyi={W\bibinitperiod},
+           given={Daan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9449802bcb467309c0ebced658096818}{%
+           family={Riedmiller},
+           familyi={R\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{fullhash}{2860d669102abb5e113bf4232d6d5997}
+      \strng{bibnamehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{authorbibnamehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{authornamehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{authorfullhash}{2860d669102abb5e113bf4232d6d5997}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1312.5602}
+      \field{title}{Playing atari with deep reinforcement learning}
+      \field{year}{2013}
+    \endentry
     \entry{gym}{software}{}
       \field{sortinit}{O}
       \field{sortinithash}{ff8d4eeb5101e3cf3809959b3592d942}
@@ -396,6 +607,19 @@
       \field{year}{1999}
       \field{pages}{325\bibrangedash 334}
       \range{pages}{10}
+    \endentry
+    \entry{pyplot}{software}{}
+      \field{sortinit}{p}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{pyplot}
+      \verb{urlraw}
+      \verb https://matplotlib.org/api/pyplot_api.html
+      \endverb
+      \verb{url}
+      \verb https://matplotlib.org/api/pyplot_api.html
+      \endverb
     \endentry
     \entry{python}{software}{}
       \field{sortinit}{P}

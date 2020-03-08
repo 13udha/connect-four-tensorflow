@@ -5,18 +5,18 @@
 Im Folgenden wird nun beschrieben, was das inhaltliche Ziel dieser Bachelorarbeit ist und wie vorgegangen werden soll um dieses Ziel zu erreichen.
 
 \section{Zielsetzung}
-Es soll am Beispiel Vier Gewinnt gezeigt werden wie ein Spieler funktioniert, welcher die Spielstrategie mit Hilfe von reinforcement learning erlernt hat und ob diese Technik durch das imitieren des Gegners verbessert werden kann.
+Es soll am Beispiel des Spiels Vier Gewinnt gezeigt werden wie ein Agent funktioniert, welcher die Spielstrategie mit Hilfe von Reinforcement-Learning erlernt hat und ob diese Technik durch das Imitieren des Gegners verbessert werden kann.
 
 \section{Methode}
 %
-Es wird eine digitale Version des Spiels Vier Gewinnt genutzt und eine Schnittstelle erschafft die es ermöglicht auszuwählen ob ein Mensch oder der Computer die Rolle der Spieler übernimmt. Dies ist wichtig da ein selbstlernender Algorithmus viele Spiele durchlaufen muss um einen Lernfortschritt aufzuzeigen. Somit kann in der Simulation dann trainiert werden ohne jedes einzelne Spiel gegen einen Menschen spielen zu müssen. Spielt der Computer soll zwischen verschieden effektiven Strategien ausgewählt werden können. Die Strategien sind: komplett zufällige Züge wählen, immer so weit wie möglich links ins Spielfeld werfen und ein Minimax Algorithmus welcher verschieden starke Varianten unterstützt.
-An diesen Strategien soll der Agent mit verschiedenen Voraussetzungen trainieren um dann vergleichen zu können was besser und schlechter beim lernen hilft.
+Es wird eine digitale Version des Spiels Vier Gewinnt genutzt und eine Schnittstelle erschaffen die es ermöglicht auszuwählen, ob ein Mensch oder der Computer die Rolle der Spieler übernimmt. Dies ist wichtig, da ein selbstlernender Algorithmus viele Spiele durchlaufen muss, um einen Lernfortschritt aufzuzeigen. Somit kann in der Simulation trainiert werden, ohne jedes einzelne Spiel gegen einen Menschen spielen zu müssen. Spielt der Computer, soll zwischen verschiedenen Strategien ausgewählt werden können, welche unterschiedlich effektiv sind. Die Strategien sind: komplett zufällige Züge wählen, immer so weit wie möglich links ins Spielfeld werfen und ein Minimax-Algorithmus, welcher verschieden starke Varianten unterstützt. Es wurde sich für diese Strategien entschieden, da bei den einfachen Strategien das Lernverhalten besser zu erkennen ist. Für den Minimax-Algorithmus wurde sich entschieden um dann das Lernverhalten gegen einen sehr guten Gegner zu zeigen.
+An diesen Strategien soll der Agent mit verschiedenen Voraussetzungen trainieren, um dann vergleichen zu können, was besser und schlechter beim Lernen hilft.
 %
 
 %Es wird ein Programm geschrieben, das durch reinforcement learning erlernt das Spiel Vier Gewinnt zu meistern. Um dies zu ermöglichen wird ein Gegner genutzt, der möglichst optimal spielt. Hierfür wird ein Minimax Algorithmus sorgen. Es wird eine optimierung der Reward-Funktion stattfinden um das Lernverhalten zu verbessern. Das Verhalten des guten Gegners soll mit in den Lernprozess des Agenten einfließen. Um den Lernfortschritt besser beurteilen zu können wird der Minimax-Algorithmus um eine Wahrscheinlichkeitsverteilung erweitert. Hierdurch soll dann das erlernte Verhalten an leicht schlechteren Gegnern getestet werden können.
 % old
+\newpage
 
-
-\section{Evaluation}
-Je nachdem wie gut der selbstlernende Agent nach dem Trainieren gegen die unterschiedlich effektiven Strategien ist, zeigt dann wie gut das reinforcement learning mit den verschiedenen Vorraussetzungen funktioniert hat. Somit kann dann gezeigt werden welche Veränderungen besser sind um einen guten reinforcement learning Agenten zu erschaffen.
+\section{Evaluierung}
+Je nachdem wie gut der selbstlernende Agent nach dem Trainieren gegen die unterschiedlich effektiven Strategien ist, zeigt sich dann, wie gut das Reinforcement-Learning mit den verschiedenen Voraussetzungen funktioniert hat. Somit kann dann gezeigt werden welche Veränderungen besser sind, um einen guten Reinforcement-Learning Agenten zu erschaffen. Es sollte sich dann auch zeigen ob das Lernen des Verhalten des Gegners zu einer Verbesserung des Lernverhaltens des Reinforcement-Learning-Agenten führt.
 
